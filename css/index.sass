@@ -243,6 +243,7 @@ section.bng-introduce
         margin-bottom: 80px
         opacity: 0
         transform: translateY(30px)
+        text-shadow: 0 0 10px #000
         transition: all 0.5s
         &.showUp
             opacity: 1
@@ -804,16 +805,19 @@ footer
 @media screen and ( max-width: 767px )
     header
         padding: 5px
+        height: 60px
         .logo
             width: 100px
             margin: 5px 0
         nav
-            +size(25px)
+            +size(30px)
             border-radius: 50%
             transition: all .5s
             .menu-mb-icon
                 +size(25px)
-                background: url("../images/others/menu.svg") no-repeat
+                background: url("../images/others/menu.svg") right no-repeat
+                transition: all 0.3s
+                cursor: pointer
             ul
                 display: none
                 border-radius: 50%
@@ -822,13 +826,21 @@ footer
                 position: absolute
                 top: 0
                 right: 0
-                background-color: #474747
+                background-color: rgba(#000,0.8)
                 transform: scale(1)
                 border-radius: 0
                 ul
-                    display: block
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    align-items: center
+                    +size(100%,100vh)
                 .menu-mb-icon
-                    background: url("../images/others/menu.svg") no-repeat
+                    position: absolute
+                    right: 0
+                    background: url("../images/others/menu_close.svg") right no-repeat
+        .switch-lang-list
+            display: none
 
     .top_film
         height: 100vw
@@ -844,7 +856,7 @@ footer
         .desc
             padding: 20px 10px 10px 10px
             h3
-                font-size: 28px
+                font-size: 32px
     section.bng-introduce
         .bng-introduce-desc
             text-align: center
@@ -857,14 +869,14 @@ footer
             p
                 padding: 0 10px
         .bng-introduce-main
-            height: 480px
             figure
                 +size(100%,400px)
                 left: -8%
             .every-value
                 transform: scale(1)
-                left: 0%
+                left: 50%
                 top: 0%
+                transform: translateX(-50%)
                 .hexagon
                     +size(380px)
                     .eachValue
@@ -926,11 +938,23 @@ footer
                     border-radius: 0
                     background-color: $mainGreen
                     +size(30px,3px)
-    section.news .news-slides .swiper-news-container .swiper-wrapper .swiper-slide
-        a
-            h5
-                font-size: .9rem
-                font-weight: bold
+    section.news .news-slides .swiper-news-container
+        width: 95%
+        .swiper-wrapper .swiper-slide
+            &:hover
+                border-color: initial
+            .date-tag
+                +size(48px)
+                span
+                    &.date
+                        font-size: 24px
+                    &.month
+                        font-weight: 600
+                        font-size: 14px
+            a
+                h5
+                    font-size: 14px
+                    font-weight: bold
     section.our-partner
         padding-top: 40px
         h3
@@ -977,9 +1001,11 @@ footer
                         padding: 0 15px
                         a
                             font-size: 14px
-
         .footer-all-links
             display: none
+@media screen and ( max-width: 375px )
+    section.news .news-slides .swiper-news-container .swiper-wrapper .swiper-slide a h5
+        font-size: 12px
 @media screen and ( min-width: 767px )
     .our-features .feature-slide-mb,footer .footer-info .footer-sns,.footer-nav.mb
         display: none

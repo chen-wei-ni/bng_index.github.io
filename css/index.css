@@ -285,6 +285,7 @@ section.bng-introduce .bng-introduce-desc {
   margin-bottom: 80px;
   opacity: 0;
   transform: translateY(30px);
+  text-shadow: 0 0 10px #000;
   transition: all 0.5s;
 }
 section.bng-introduce .bng-introduce-desc.showUp {
@@ -992,21 +993,24 @@ footer .contact-infomation .footer-nav ul li:hover {
 @media screen and (max-width: 767px) {
   header {
     padding: 5px;
+    height: 60px;
   }
   header .logo {
     width: 100px;
     margin: 5px 0;
   }
   header nav {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     transition: all 0.5s;
   }
   header nav .menu-mb-icon {
     width: 25px;
     height: 25px;
-    background: url("../images/others/menu.svg") no-repeat;
+    background: url("../images/others/menu.svg") right no-repeat;
+    transition: all 0.3s;
+    cursor: pointer;
   }
   header nav ul {
     display: none;
@@ -1018,15 +1022,25 @@ footer .contact-infomation .footer-nav ul li:hover {
     position: absolute;
     top: 0;
     right: 0;
-    background-color: #474747;
+    background-color: rgba(0, 0, 0, 0.8);
     transform: scale(1);
     border-radius: 0;
   }
   header nav.openMenu ul {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
   }
   header nav.openMenu .menu-mb-icon {
-    background: url("../images/others/menu.svg") no-repeat;
+    position: absolute;
+    right: 0;
+    background: url("../images/others/menu_close.svg") right no-repeat;
+  }
+  header .switch-lang-list {
+    display: none;
   }
   .top_film {
     height: 100vw;
@@ -1048,7 +1062,7 @@ footer .contact-infomation .footer-nav ul li:hover {
     padding: 20px 10px 10px 10px;
   }
   section .desc h3 {
-    font-size: 28px;
+    font-size: 32px;
   }
   section.bng-introduce .bng-introduce-desc {
     text-align: center;
@@ -1063,9 +1077,6 @@ footer .contact-infomation .footer-nav ul li:hover {
   section.bng-introduce .bng-introduce-desc p {
     padding: 0 10px;
   }
-  section.bng-introduce .bng-introduce-main {
-    height: 480px;
-  }
   section.bng-introduce .bng-introduce-main figure {
     width: 100%;
     height: 400px;
@@ -1073,8 +1084,9 @@ footer .contact-infomation .footer-nav ul li:hover {
   }
   section.bng-introduce .bng-introduce-main .every-value {
     transform: scale(1);
-    left: 0%;
+    left: 50%;
     top: 0%;
+    transform: translateX(-50%);
   }
   section.bng-introduce .bng-introduce-main .every-value .hexagon {
     width: 380px;
@@ -1154,8 +1166,25 @@ footer .contact-infomation .footer-nav ul li:hover {
     width: 30px;
     height: 3px;
   }
+  section.news .news-slides .swiper-news-container {
+    width: 95%;
+  }
+  section.news .news-slides .swiper-news-container .swiper-wrapper .swiper-slide:hover {
+    border-color: initial;
+  }
+  section.news .news-slides .swiper-news-container .swiper-wrapper .swiper-slide .date-tag {
+    width: 48px;
+    height: 48px;
+  }
+  section.news .news-slides .swiper-news-container .swiper-wrapper .swiper-slide .date-tag span.date {
+    font-size: 24px;
+  }
+  section.news .news-slides .swiper-news-container .swiper-wrapper .swiper-slide .date-tag span.month {
+    font-weight: 600;
+    font-size: 14px;
+  }
   section.news .news-slides .swiper-news-container .swiper-wrapper .swiper-slide a h5 {
-    font-size: 0.9rem;
+    font-size: 14px;
     font-weight: bold;
   }
   section.our-partner {
@@ -1217,6 +1246,11 @@ footer .contact-infomation .footer-nav ul li:hover {
   }
   footer .footer-all-links {
     display: none;
+  }
+}
+@media screen and (max-width: 375px) {
+  section.news .news-slides .swiper-news-container .swiper-wrapper .swiper-slide a h5 {
+    font-size: 12px;
   }
 }
 @media screen and (min-width: 767px) {

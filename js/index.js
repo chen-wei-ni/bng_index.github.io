@@ -19,14 +19,15 @@ window.addEventListener("scroll", () => {
 });
 
 // lang switch
-const langSwitch = document.querySelector(".lang");
-let list = document.querySelector(".switch-lang-list");
-langSwitch.addEventListener("click", (e) => {
-    e.preventDefault();
-    list.style.display = "block"
-    list.classList.toggle("showUp");
-})
-
+function switchLang() {
+    const langSwitch = document.querySelector(".lang");
+    let list = document.querySelector(".switch-lang-list");
+    langSwitch.addEventListener("click", (e) => {
+        e.preventDefault();
+        list.style.display = "block"
+        list.classList.toggle("showUp");
+    });
+}
 // game 輪播
 const gameSlider = document.querySelector(".slide");
 const gameSlide = document.querySelectorAll(".swiper-slide");
@@ -47,7 +48,8 @@ let mySwiper = new Swiper(".swiper-container1", {
     },
     breakpoints: {
         320: {
-            slidesPerView: 2
+            slidesPerView: 2,
+            allowTouchMove: true,
         },
         640: {
             slidesPerView: 4
@@ -254,6 +256,7 @@ function featureSwitch() {
     })
 }
 if (window.innerWidth > 767) {
+    switchLang();
     featureSwitch();
     // footer標題加+
     document.querySelector(".allrights h6").textContent = "ALL RIGHTS RESERVED";
@@ -262,14 +265,18 @@ if (window.innerWidth > 767) {
     footerShow();
     menuShow();
 }
+
 // mobile menu
+let menu = document.querySelector("nav");
 function menuShow() {
-    let btn = document.querySelector("header nav");
+    let btn = document.querySelector(" nav .menu-mb-icon");
     btn.addEventListener("click", function () {
-        this.classList.add("openMenu");
+        menu.classList.toggle("openMenu");
     })
 }
+
 // footer資料顯現
+
 function footerShow() {
     let a = document.querySelector(".allrights h6");
     let b = document.querySelector(".about-bng h6");
@@ -407,12 +414,33 @@ function scrollShowPrint() {
         return
     }
 }
+
+function debounce(fn, delay = 1000) {
+    let timer;
+    return function () {
+        window.clearTimeout(timer);
+        timer = setTimeout(() => {
+            fn.apply(this, arguments);
+            window.clearTimeout(timer);
+        }, delay);
+    }
+}
+
+// 进行函数防抖				
+let debounced = debounce(function () {
+    console.log('debounce');
+});
+
+// resize事件				
 window.addEventListener("resize", () => {
+    debounced();
     if (window.innerWidth > 767) {
         featureSwitch();
         document.querySelector(".allrights h6").textContent = "ALL RIGHTS RESERVED";
         document.querySelector(".about-bng h6").textContent = "ABOUT BNG";
     } else {
         footerShow();
+        menuShow();
+        document.querySelector(".switch-lang-list").style.display = "none"
     }
 })
