@@ -18,16 +18,41 @@ window.addEventListener("scroll", () => {
     scrollShowPrint();
 });
 
+// login area
+const loginBtn = document.querySelector(".login");
+loginBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    let a = document.querySelector(".login-popup");
+    let b = document.querySelector(".forgot-password-popup")
+    let c = document.querySelectorAll(".login-close-btn");
+    a.style.display = "flex";
+    let f = a.querySelector(".forgot-password");
+    f.addEventListener("click", (e) => {
+        e.preventDefault();
+        a.style.display = "none";
+        b.style.display = "flex";
+    })
+    c.forEach((d) => {
+        d.addEventListener("click", () => {
+            a.style.display = "none";
+            b.style.display = "none";
+        });
+    });
+});
+
 // lang switch
 function switchLang() {
-    const langSwitch = document.querySelector(".lang");
+    const langSwitch = document.querySelectorAll(".lang");
     let list = document.querySelector(".switch-lang-list");
-    langSwitch.addEventListener("click", (e) => {
-        e.preventDefault();
-        list.style.display = "block"
-        list.classList.toggle("showUp");
-    });
+    langSwitch.forEach((e) => {
+        e.addEventListener("click", (e) => {
+            e.preventDefault();
+            list.classList.toggle("showUp");
+        });
+    })
+
 }
+switchLang();
 // game 輪播
 const gameSlider = document.querySelector(".slide");
 const gameSlide = document.querySelectorAll(".swiper-slide");
@@ -69,7 +94,6 @@ let mySwiper = new Swiper(".swiper-container1", {
 });
 
 //if mouseover the slide will stop
-
 gameSlider.addEventListener("mouseover", loadingStop);
 gameSlider.addEventListener("mouseleave", loadingStart);
 function loadingStop() {
@@ -79,7 +103,6 @@ function loadingStop() {
     this.swiper.setTranslate(this.swiper.getTranslate())
     this.swiper.autoplay.stop();
 }
-
 function loadingStart() {
     mySwiper.autoplay.start();
     let s = ""
@@ -255,16 +278,7 @@ function featureSwitch() {
         })
     })
 }
-if (window.innerWidth > 767) {
-    switchLang();
-    featureSwitch();
-    // footer標題加+
-    document.querySelector(".allrights h6").textContent = "ALL RIGHTS RESERVED";
-    document.querySelector(".about-bng h6").textContent = "ABOUT BNG";
-} else {
-    footerShow();
-    menuShow();
-}
+featureSwitch();
 
 // mobile menu
 let menu = document.querySelector("nav");
@@ -272,23 +286,16 @@ function menuShow() {
     let btn = document.querySelector(" nav .menu-mb-icon");
     btn.addEventListener("click", function () {
         menu.classList.toggle("openMenu");
-    })
-}
-
-// footer資料顯現
-
-function footerShow() {
-    let a = document.querySelector(".allrights h6");
-    let b = document.querySelector(".about-bng h6");
-    a.textContent = "ALL RIGHTS RESERVED +";
-    b.textContent = "ABOUT BNG +";
-    a.addEventListener("click", () => {
-        document.querySelector(".allrights p").classList.toggle("showUp")
+        console.log(menu.className)
     });
-    b.addEventListener("click", () => {
-        document.querySelector(".about-bng p").classList.toggle("showUp")
+    let lang = document.querySelector(".mb-lang");
+    lang.addEventListener("click", function (e) {
+        e.preventDefault();
+        slideToggle(document.querySelector(".switch-lang-list-mb"), 200);
     })
+
 }
+menuShow();
 
 // mobile 切換our features
 const mbSwiper = new Swiper('.feature-slide-mb', {
@@ -415,32 +422,77 @@ function scrollShowPrint() {
     }
 }
 
-function debounce(fn, delay = 1000) {
-    let timer;
-    return function () {
-        window.clearTimeout(timer);
-        timer = setTimeout(() => {
-            fn.apply(this, arguments);
-            window.clearTimeout(timer);
-        }, delay);
+// footer資料顯現
+function footerShow() {
+    let a = document.querySelectorAll(".footer-info .mb h6")
+    let b = document.querySelectorAll(".footer-info .mb p")
+    for (let i = 0; i < 2; i++) {
+        a[i].addEventListener("click", function () {
+            // b[i].classList.toggle("showUp");
+            slideToggle(b[i], 200);
+        })
     }
 }
+footerShow();
 
-// 进行函数防抖				
-let debounced = debounce(function () {
-    console.log('debounce');
-});
+// sliding droplist
+function slideUp(target, duration) {
+    target.style.transitionProperty = 'height, margin, padding';
+    target.style.transitionDuration = duration + 'ms';
+    target.style.boxSizing = 'border-box';
+    target.style.height = target.offsetHeight + 'px';
+    target.style.height = 0;
+    target.style.paddingTop = 0;
+    target.style.paddingBottom = 0;
+    target.style.marginTop = 0;
+    target.style.marginBottom = 0;
+    target.style.overflow = 'hidden';
+    window.setTimeout(() => {
+        target.style.display = 'none';
+        target.style.removeProperty('height');
+        target.style.removeProperty('padding-top');
+        target.style.removeProperty('padding-bottom');
+        target.style.removeProperty('margin-top');
+        target.style.removeProperty('margin-bottom');
+        target.style.removeProperty('overflow');
+        target.style.removeProperty('transition-duration');
+        target.style.removeProperty('transition-property');
+    }, duration);
+}
+let slideDown = (target, duration = 500) => {
+    target.style.removeProperty('display');
+    let display = window.getComputedStyle(target).display;
+    if (display === 'none')
+        display = 'block';
+    target.style.display = display;
+    let height = target.offsetHeight;
+    target.style.overflow = 'hidden';
+    target.style.height = 0;
+    target.style.paddingTop = 0;
+    target.style.paddingBottom = 0;
+    target.style.marginTop = 0;
+    target.style.marginBottom = 0;
+    target.offsetHeight;
+    target.style.boxSizing = 'border-box';
+    target.style.transitionProperty = "height, margin, padding";
+    target.style.transitionDuration = duration + 'ms';
+    target.style.height = height + 'px';
+    target.style.removeProperty('padding-top');
+    target.style.removeProperty('padding-bottom');
+    target.style.removeProperty('margin-top');
+    target.style.removeProperty('margin-bottom');
+    window.setTimeout(() => {
+        target.style.removeProperty('height');
+        target.style.removeProperty('overflow');
+        target.style.removeProperty('transition-duration');
+        target.style.removeProperty('transition-property');
+    }, duration);
+}
 
-// resize事件				
-window.addEventListener("resize", () => {
-    debounced();
-    if (window.innerWidth > 767) {
-        featureSwitch();
-        document.querySelector(".allrights h6").textContent = "ALL RIGHTS RESERVED";
-        document.querySelector(".about-bng h6").textContent = "ABOUT BNG";
+let slideToggle = (target, duration) => {
+    if (window.getComputedStyle(target).display === 'none') {
+        return slideDown(target, duration);
     } else {
-        footerShow();
-        menuShow();
-        document.querySelector(".switch-lang-list").style.display = "none"
+        return slideUp(target, duration);
     }
-})
+}

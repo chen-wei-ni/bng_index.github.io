@@ -28,17 +28,35 @@
             <li><a href="">NEWS</a></li>
             <li><a href="">PARTNERS</a></li>
             <li><a href="">CONTACT</a></li>
-            <li><a href="">LOGIN</a></li>
-            <li>
+            <li><a href="" class="login">LOGIN</a></li>
+            <li class="pc-lang">
               <a href="" class="lang"
                 ><span class="flag">
                   <img src="./images/others/EN.svg" alt="" /> </span
                 >EN</a
               >
             </li>
+            <li>
+              <a href="" class="mb-lang"
+                ><span class="flag">
+                  <img src="./images/others/EN.svg" alt="" /> </span
+                >EN</a
+              >
+            </li>
+            <div class="switch-lang-list-mb">
+              <ul>
+                <li><a href="">简体中文</a></li>
+                <li><a href="">English</a></li>
+                <li><a href="" class="selected">한국어</a></li>
+                <li><a href="">ภาษาไทย</a></li>
+                <li><a href="">Tiếng Việt</a></li>
+                <li><a href="">日本語</a></li>
+                <li><a href="">Bahasa Indonesia</a></li>
+              </ul>
+            </div>
           </ul>
         </nav>
-        <div class="switch-lang-list">
+        <div class="switch-lang-list pc">
           <ul>
             <li><a href="">简体中文</a></li>
             <li><a href="">English</a></li>
@@ -51,6 +69,39 @@
         </div>
         </div>
       </header>
+      <div class="login-popup popup">
+        <div class="input-block">
+          <div class="login-close-btn">
+            <img src="./images/others/menu_close.svg" alt="">
+          </div>
+          <h3>LOGIN</h3>
+          <div class="input-area">
+            <label >Email</label>
+            <input type="text">
+            <label>Password</label>
+            <input type="password">
+          </div>
+          <div class="submit-area">
+            <button type="submit">login</button>
+            <a href="" class="forgot-password">Forgot password?</a>
+          </div>
+        </div>
+      </div>
+      <div class="forgot-password-popup popup">
+        <div class="input-block">
+          <div class="login-close-btn">
+            <img src="./images/others/menu_close.svg" alt="">
+          </div>
+          <h3>FORGOT PASSWORD</h3>
+          <div class="input-area">
+            <label>Email</label>
+            <input type="email">
+          </div>
+          <div class="submit-area">
+            <button type="submit">Reset Password</button>
+          </div>
+        </div>        
+      </div>
       <div class="top_film">
         <video
           autoplay
@@ -65,11 +116,13 @@
           <h1>BNG GAMES</h1>
           <h2>MORE SURPRISES UNEXPECTED</h2>
           <div class="arrowDown">
-            <img src="./images/others/arrowDown.png" alt="" />
+            <a href="#hot-games" >
+              <img src="./images/others/arrowDown.png" alt="" />
+            </a>
           </div>
         </div>
       </div>
-      <section class="hot-games">
+      <section class="hot-games" id="hot-games">
         <div class="hot-games-desc desc">
           <h3>HOT GAMES</h3>
           <div class="hot-games-texts">
@@ -699,7 +752,7 @@
             </div>
           </div>
           <div class="line"></div>
-          <div class="footer-terms">
+          <div class="footer-terms pc">
             <div class="allrights">
               <h6>ALL RIGHTS RESERVED</h6>
               <p>
@@ -710,6 +763,24 @@
             </div>
             <div class="about-bng">
               <h6>ABOUT BNG</h6>
+              <p>
+                BNG is a progressive game studio creating fantastic
+                cross-platform HD video slots for free-to-play and online
+                gambling market.
+              </p>
+            </div>
+          </div>
+          <div class="footer-terms mb">
+            <div class="allrights" data-foot="a">
+              <h6>ALL RIGHTS RESERVED +</h6>
+              <p>
+                BNG's logos and graphic material is the company's intellectual
+                property and may not be copied, reproduced, distributed or
+                displayed without the written consent of BNG Entertainment.
+              </p>
+            </div>
+            <div class="about-bng" data-foot="b">
+              <h6>ABOUT BNG +</h6>
               <p>
                 BNG is a progressive game studio creating fantastic
                 cross-platform HD video slots for free-to-play and online
@@ -753,7 +824,7 @@
                   <li><a href="">CONTACT</a></li>
                   <li><a href="">LOGIN</a></li>
                   <li>
-                    <a href=""
+                    <a href="" class="lang"
                       ><span><img src="./images/others/EN.svg" alt="" /></span
                       >EN</a
                     >

@@ -79,33 +79,34 @@ header
     .switch-lang-list
         position: absolute
         opacity: 0
-        display: none
-        top: 110px
-        right: 15px
-        filter: blur(4px)
+        top: 100px
+        right: -1000px
         background: rgba(#000,0.6)
         backdrop-filter: blur(5px)
-        transition: all .3s
+        box-shadow: 0 0 2px $mainGreen
+        transition: all .5s
         &.showUp
             opacity: 1
-            filter: blur(0)
-        &::before
-            content: ""
-            position: absolute
-            +size(30px)
+            top: 90px
             right: 15px
-            top: -30px
-            display: block
-            background: rgba(#000,0.6)
-            clip-path: polygon(50% 28%, 0 100%, 35% 100%)
         ul
-            padding: 5px 20px
+            display: flex
+            padding: 10px 0
             li
-                margin: 10px 0
+                margin: 0 10px
                 position: relative
+                &:nth-last-child(1)
+                    &::after
+                        display: none
+                &::after
+                    content: ""
+                    display: inline-block
+                    +size(1px,10px)
+                    margin-left: 10px
+                    background-color: $titleGray
                 &:hover
                     a
-                        color: #fff
+                        color: $mainGreen
                 a
                     color: #b5b5b5
                     position: relative
@@ -113,6 +114,67 @@ header
                     transition: color 0.2s
                     &.selected
                         color: $mainGreen
+
+.popup
+    position: fixed
+    justify-content: center
+    align-items: center
+    width: 100%
+    height: 100vh
+    background-color: rgba(#000,0.8)
+    display: none
+    z-index: 50
+    .input-block
+        position: relative
+        +size(420px,270px)
+        background-color: $backgroundGray
+        padding: 0 1.8rem
+        box-shadow: 0 0 25px #000
+        h3
+            color: $mainGreen
+            font-weight: normal
+            font-size: 24px
+            text-align: center
+            padding: 1rem
+        .login-close-btn
+            +size(30px)
+            position: absolute
+            left: 90%
+            top: -50px
+            cursor: pointer
+        .input-area
+            display: flex
+            flex-direction: column
+            label
+                color: #fff
+                font-size: 14px
+                padding-bottom: 2px
+            input
+                color: #cacaca
+                font-size: 16px
+                background-color: transparent
+                border: 1.5px solid $titleGray
+                border-radius: 10px
+                padding: 5px 0 5px 8px
+                margin-bottom: 12px
+        .submit-area
+            display: flex
+            justify-content: space-between
+            margin-top: 15px
+            button
+                width: 120px
+                border: none
+                background-color: $mainGreen
+                color: $backgroundBlack
+                border-radius: 100vmax
+                padding: 5px 0
+                cursor: pointer
+    &.forgot-password-popup
+        .input-block
+            height: 200px
+            .submit-area
+                justify-content: center
+                button
 
 .top_film
     position: sticky
@@ -125,7 +187,7 @@ header
         position: relative
         object-fit: cover
     .mask
-        +size(100%)
+        +size(101%)
         position: absolute
         top: 0
         background: radial-gradient(ellipse at 50% 50%, transparent 0% , rgba(#000,0.9) 60% , #000 100%)
@@ -813,14 +875,20 @@ footer
             +size(30px)
             border-radius: 50%
             transition: all .5s
+            ul
+                display: none
+                border-radius: 50%
+                li
+                    a
+                        color: #fff
+                        &.current-page
+                            &::after
+                                display: none
             .menu-mb-icon
                 +size(25px)
                 background: url("../images/others/menu.svg") right no-repeat
                 transition: all 0.3s
                 cursor: pointer
-            ul
-                display: none
-                border-radius: 50%
             &.openMenu
                 +size(100%,100vh)
                 position: absolute
@@ -835,13 +903,43 @@ footer
                     justify-content: center
                     align-items: center
                     +size(100%,100vh)
+                    li
+                        width: 85%
+                        text-align: center
+                        padding: 1.2rem 0
+                        margin: 0 auto
+                        border-bottom: 2px dashed $titleGray
+                        &:nth-last-child(2)
+                            border-bottom: none
+                        a
+                            display: block
+                        &.pc-lang
+                            display: none
+                    .switch-lang-list-mb
+                        display: none
+                        ul
+                            flex-direction: row
+                            flex-wrap: wrap
+                            width: 85%
+                            height: auto
+                            margin: 0 auto
+
+                            li
+                                width: 25%
+                                padding: 10px 0
+                                border-bottom: none
+                                a
+                                    font-size: 0.9rem
+                                    &.selected
+                                        color: $mainGreen
                 .menu-mb-icon
                     position: absolute
-                    right: 0
+                    right: 5%
+                    top: 5%
                     background: url("../images/others/menu_close.svg") right no-repeat
         .switch-lang-list
-            display: none
-
+            &.showUp
+                display: none
     .top_film
         height: 100vw
         .text-content
@@ -987,8 +1085,8 @@ footer
                     cursor: pointer
                 p
                     display: none
-                    &.showUp
-                        display: block
+            &.pc
+                display: none
 
         .contact-infomation
             display: block
@@ -1007,5 +1105,11 @@ footer
     section.news .news-slides .swiper-news-container .swiper-wrapper .swiper-slide a h5
         font-size: 12px
 @media screen and ( min-width: 767px )
-    .our-features .feature-slide-mb,footer .footer-info .footer-sns,.footer-nav.mb
-        display: none
+    header .switch-lang-list-mb,
+    .switch-lang-list-mb,
+    header nav ul li .mb-lang,
+    .our-features .feature-slide-mb,
+    footer .footer-info .footer-sns,
+    footer .footer-info .mb,
+    .footer-nav.mb
+        display: none !important
