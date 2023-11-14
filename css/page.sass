@@ -1,0 +1,53 @@
+// color definition
+$mainGreen: #00ffc7
+$mainBlue: #00fcfb
+$titleGray: #7a7a7a
+$wordGray: #575757
+$backgroundGray: #1c1c1c
+$backgroundBlack: #0e0e0e
+
+@mixin size($w,$h:$w)
+    width: $w
+    height: $h
+@mixin pos($l,$t:inherit)
+    position: absolute
+    left: $l
+    top: $t
+
+// 輪播banner
+.slide-banner
+    position: relative
+.swiper-container
+    overflow: hidden
+    .swiper-pagination
+        width: 300px
+        padding: 5px
+        border-radius: 100vmax
+        bottom: 5%
+        left: 38%
+        transform: translateX(-50%)
+        background-color: rgba($wordGray,0.7)
+        span
+            +size(50px)
+            background: url("../images/games/swiper-page1.png") top center no-repeat
+            background-size: contain
+            -webkit-filter: grayscale(1)
+            opacity: 1
+            &.swiper-pagination-bullet-active
+                -webkit-filter: saturate(1)
+
+// 遊戲
+section.games
+    .filter-area
+        width: 1170px
+        margin: 0 auto
+        .theme-and-search
+            display: flex
+            justify-content: space-between
+            .provider-and-theme
+                ul
+                    display: flex
+                    li
+                        span.icon
+                            display: block
+                            +size(25px)
