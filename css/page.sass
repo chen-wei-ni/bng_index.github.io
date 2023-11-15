@@ -14,14 +14,18 @@ $backgroundBlack: #0e0e0e
     left: $l
     top: $t
 
+body
+    background-color: $backgroundGray
+
 // 輪播banner
 .slide-banner
+    width: 100%
     position: relative
-.swiper-container
+.swiper-container-pc
     overflow: hidden
     .swiper-pagination
         width: 300px
-        padding: 5px
+        padding: 4px 0 0 0
         border-radius: 100vmax
         bottom: 5%
         left: 38%
@@ -29,7 +33,7 @@ $backgroundBlack: #0e0e0e
         background-color: rgba($wordGray,0.7)
         span
             +size(50px)
-            background: url("../images/games/swiper-page1.png") top center no-repeat
+            background: url("../images/games/swiper-page1.png") no-repeat
             background-size: contain
             -webkit-filter: grayscale(1)
             opacity: 1
@@ -38,6 +42,7 @@ $backgroundBlack: #0e0e0e
 
 // 遊戲
 section.games
+    margin-top: 40px
     .filter-area
         width: 1170px
         margin: 0 auto
@@ -45,9 +50,140 @@ section.games
             display: flex
             justify-content: space-between
             .provider-and-theme
+                color: $titleGray
                 ul
                     display: flex
-                    li
-                        span.icon
+                    align-items: center
+                    li.icon
+                        margin-right: 15px
+                        span
                             display: block
                             +size(25px)
+                    li
+                        &:nth-child(2)
+                            &::after
+                                content: ""
+                                display: inline-block
+                                +size(2px,10px)
+                                background-color: #b6b6b6
+                                margin: 0 20px
+            .search-input
+                input
+                    background-color: transparent
+                    outline: none
+                    border: 2px solid $titleGray
+                    border-radius: 100vmax
+                    padding: 5px 28px 5px 10px
+                    color: $mainGreen
+                    background: url("../images/games/search.svg") no-repeat
+                    background-size: 18px
+                    background-position: 96% 50%
+        form
+            border-top: 2px solid $titleGray
+            border-bottom: 2px solid $titleGray
+            padding: 20px 0
+            margin: 20px 0 40px 0
+            .all-options
+                .provider-options
+                    margin-bottom: 5px
+                span
+                    color: $mainGreen
+                    margin-right: 10px
+                label
+                    color: #fff
+                    margin-right: 10px
+                input[type='radio']
+                    appearance: none
+                    padding: 0
+                    +size(10px)
+                    border: 1px solid #fff
+                    background-color: $titleGray
+                    border-radius: 50%
+                    cursor: pointer
+                    transition: 0.3s
+                    &:checked
+                        background-color: $mainGreen
+.games-area
+    margin: 0 auto
+    padding: 0 40px
+    display: grid
+    grid-column-gap: 14px
+    grid-row-gap: 18px
+    // align-content: start
+    justify-content: center
+    grid-template-columns: repeat(auto-fit, minmax(292px ,1fr))
+    margin-bottom: 40px
+    a
+        position: relative
+        &::before,&::after
+            content: ""
+            position: absolute
+            z-index: 5
+            width: 0px
+            height: 0px
+            transition: 0.4s ease-in-out
+            opacity: 0
+        &::before
+            top: -3px
+            left: -3px
+            border-top: 3px solid $mainGreen
+            border-left: 3px solid $mainGreen
+        &::after
+            right: -3px
+            bottom: -3px
+            border-bottom: 3px solid $mainGreen
+            border-right: 3px solid $mainGreen
+        &:hover
+            &::before,&::after
+                width: calc(100% + 3px)
+                height: calc(100% + 3px)
+                opacity: 1
+footer
+    background-color: $backgroundGray
+
+@media screen and ( max-width: 1680px )
+    .games-area
+        grid-template-columns: repeat(5,1fr)
+@media screen and ( max-width: 1270px )
+    section.games
+        .filter-area
+            width: 100%
+            padding: 0 40px
+    .games-area
+        grid-template-columns: repeat(4,1fr)
+@media screen and ( max-width: 768px )
+    section.games
+        .filter-area
+            width: 100%
+            padding: 0 20px
+    .slide-banner
+        .swiper-container-pc
+            display: none
+        .swiper-container-mb
+            overflow: hidden
+            .swiper-pagination
+                top: inherit
+                bottom: inherit
+                .swiper-pagination-bullet
+                    border-radius: 0
+                    background-color: $mainGreen
+                    +size(30px,4px)
+    section.games
+        .filter-area .theme-and-search
+            flex-direction: column
+            .provider-and-theme
+                ul
+                    li
+                        &:nth-child(2),&:nth-child(3)
+                            display: none
+
+    .games-area
+        padding: 0 20px
+        grid-template-columns: repeat(3,1fr)
+@media screen and ( max-width: 440px )
+    .games-area
+        grid-template-columns: repeat(2,1fr)
+@media screen and ( min-width:767px )
+    .slide-banner
+        .swiper-container-mb
+            display: none

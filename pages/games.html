@@ -116,7 +116,7 @@
         </div>
       </div>
       <section class="slide-banner">
-        <div class="swiper-container">
+        <div class="swiper-container-pc">
           <ul class="swiper-wrapper">
             <li class="swiper-slide">
               <a href=""
@@ -166,16 +166,54 @@
           </ul>
           <div class="swiper-pagination"></div>
         </div>
+        <div class="swiper-container-mb">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+              <a href=""
+                ><img
+                  src="../images/games/mb-games-bn.jpg"
+                  alt="crustal scarabs"
+              /></a>
+            </li>
+            <li class="swiper-slide">
+              <a href=""
+                ><img
+                  src="../images/games/mb-games-bn.jpg"
+                  alt="crustal scarabs"
+              /></a>
+            </li>
+            <li class="swiper-slide">
+              <a href=""
+                ><img
+                  src="../images/games/mb-games-bn.jpg"
+                  alt="crustal scarabs"
+              /></a>
+            </li>
+            <li class="swiper-slide">
+              <a href=""
+                ><img
+                  src="../images/games/mb-games-bn.jpg"
+                  alt="crustal scarabs"
+              /></a>
+            </li>
+            <li class="swiper-slide">
+              <a href=""
+                ><img
+                  src="../images/games/mb-games-bn.jpg"
+                  alt="crustal scarabs"
+              /></a>
+            </li>
+          </ul>
+          <div class="swiper-pagination"></div>
+        </div>
       </section>
       <section class="games">
         <div class="filter-area">
           <div class="theme-and-search">
             <div class="provider-and-theme">
               <ul>
-                <li>
-                  <span class="icon"
-                    ><img src="../images/games/engine.svg" alt=""
-                  /></span>
+                <li class="icon">
+                  <span><img src="../images/games/engine.svg" alt="" /></span>
                 </li>
                 <li>Provider : <span>all</span></li>
                 <li>Theme : <span>all</span></li>
@@ -185,11 +223,11 @@
               <input type="text" placeholder="SEARCH" />
             </div>
           </div>
-          <form action="">
+          <form name="games">
             <div class="all-options">
               <div class="provider-options">
                 <span>Providers : </span>
-                <input type="radio" name="Providers" value="All" />
+                <input type="radio" name="Providers" value="All" checked />
                 <label>All</label>
                 <input type="radio" name="Providers" value="BNG" />
                 <label>BNG</label>
@@ -198,7 +236,7 @@
               </div>
               <div class="theme-options">
                 <span>Theme : </span>
-                <input type="radio" name="Theme" value="All" />
+                <input type="radio" name="Theme" value="All" checked />
                 <label>All Games</label>
                 <input type="radio" name="Theme" value="Buy Feature" />
                 <label>Buy Feature</label>
@@ -217,20 +255,23 @@
           </form>
         </div>
         <div class="games-area">
-          <a href="">
+          <a href="" data-provider="BNG" data-theme="Buy Feature">
             <img src="../images/games/game-ex1.jpg" alt="Crystal scarabs" />
           </a>
-          <a href="">
+          <a href="" data-provider="BNG" data-theme="Hot">
             <img src="../images/games/game-ex2.jpg" alt="Crystal scarabs" />
           </a>
-          <a href="">
+          <a href="" data-provider="BNG" data-theme="New">
             <img src="../images/games/game-ex3.jpg" alt="Crystal scarabs" />
           </a>
-          <a href="">
+          <a href="" data-provider="BNG" data-theme="High">
             <img src="../images/games/game-ex4.jpg" alt="Crystal scarabs" />
           </a>
-          <a href="">
+          <a href="" data-provider="Playson" data-theme="Medium">
             <img src="../images/games/game-ex5.jpg" alt="Crystal scarabs" />
+          </a>
+          <a href="" data-provider="Playson" data-theme="Hold and Win">
+            <img src="../images/games/game-ex1.jpg" alt="Crystal scarabs" />
           </a>
         </div>
       </section>
