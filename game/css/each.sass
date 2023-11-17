@@ -1,0 +1,84 @@
+// color definition
+$mainGreen: #00ffc7
+$mainBlue: #00fcfb
+$titleGray: #7a7a7a
+$wordGray: #575757
+$backgroundGray: #1c1c1c
+$backgroundBlack: #0e0e0e
+@mixin size($w,$h:$w)
+    width: $w
+    height: $h
+section
+    position: relative
+    width: 1170px
+    margin: 0 auto
+section.game-screen
+    margin-top: 126px
+    .switch-lang
+        position: absolute
+        right: 0
+        top: -35px
+        +size(30px)
+        background: url(../images/lang.svg) right no-repeat
+    .screen
+        +size(100%,620px)
+        background-color: #fff
+section.main
+    .banner-and-values
+        display: flex
+        align-items: center
+        margin: 40px 0
+        .banner
+            width: 350px
+            margin-right: 8%
+        .values
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr
+            row-gap: 25px
+            column-gap: 40px
+            div
+                display: flex
+                flex-direction: column
+                text-align: center
+                strong
+                    font-size: 32px
+                    color: $mainGreen
+                span
+                    color: #fff
+    article
+        h2
+            color: $mainGreen
+            font-weight: normal
+        p
+            color: #fff
+            line-height: 1.6
+    .similar-game
+        margin: 60px 0
+        div.title
+            display: flex
+            justify-content: space-between
+            align-items: center
+            padding: 0 0 15px 0
+            border-bottom: 2px solid $titleGray
+            h3
+                color: #fff
+                font-weight: normal
+                font-size: 24px
+            a
+                color: #fff
+                span
+                    padding-left: 5px
+                    svg
+                        width: 10px
+
+        ul
+            display: grid
+            grid-template-columns: repeat(5,1fr)
+            column-gap: 25px
+            margin-top: 25px
+            li
+footer
+    background-color: $backgroundGray
+    display: flex
+    align-items: center
+    .footer-info
