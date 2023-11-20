@@ -1,0 +1,205 @@
+.wrapper {
+  width: 1170px;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 80px;
+}
+
+.switch-page {
+  margin: 20px 0 40px 0;
+}
+.switch-page ul {
+  display: flex;
+  place-content: center;
+  border-top: 2px solid #7a7a7a;
+  border-bottom: 2px solid #7a7a7a;
+  padding: 25px 0;
+}
+.switch-page ul li {
+  margin: 0 20px;
+}
+.switch-page ul li a {
+  color: #7a7a7a;
+  transition: all 0.3s;
+}
+.switch-page ul li a.selected {
+  color: #00ffc7;
+}
+.switch-page ul li a:hover {
+  color: #00ffc7;
+}
+
+.timeline {
+  position: relative;
+  margin: 20px auto;
+  padding: 3rem 0;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: #3b3939;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+.timeline .container {
+  position: relative;
+  background-color: inherit;
+  display: grid;
+  grid-template-columns: 550px 480px;
+  grid-template-rows: 250px 50px;
+  justify-content: center;
+  /* The circles on the timeline */
+}
+.timeline .container:nth-child(2) {
+  transition-delay: 200ms;
+}
+.timeline .container:nth-child(3) {
+  transition-delay: 300ms;
+}
+.timeline .container:hover .banner {
+  filter: drop-shadow(0 0 5px #00ffc7);
+}
+.timeline .container:hover .content {
+  border-color: #00ffc7;
+}
+.timeline .container:hover .content a {
+  color: #00ffc7;
+}
+.timeline .container:hover .content a span .st0 {
+  fill: #00ffc7;
+}
+.timeline .container:hover::after, .timeline .container:hover::before {
+  background-color: #00ffc7;
+}
+.timeline .container .banner {
+  width: 100%;
+  padding: 0 70px 0 0;
+  transition: all 0.3s;
+}
+.timeline .container .content {
+  border: 1px solid #7a7a7a;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 15px;
+  transition: all 0.3s;
+}
+.timeline .container .content h6 {
+  color: #7a7a7a;
+  font-size: 14px;
+  font-weight: normal;
+}
+.timeline .container .content h3 {
+  color: #00ffc7;
+  font-size: 24px;
+  font-weight: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.timeline .container .content p {
+  color: #fff;
+  line-height: 1.2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}
+.timeline .container .content a {
+  color: #7a7a7a;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+.timeline .container .content a span {
+  display: inline-block;
+  width: 8px;
+  animation: arrow 0.5s infinite alternate;
+}
+.timeline .container .content a span .st0 {
+  transition: all 0.3s;
+}
+.timeline .container.even {
+  grid-template-columns: 480px 550px;
+}
+.timeline .container.even .banner {
+  order: 2;
+  padding: 0 0 0 70px;
+}
+.timeline .container.even::before {
+  left: initial;
+  right: 50%;
+}
+.timeline .container::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #9b9a9a;
+  top: 50px;
+  left: 49.5%;
+  border-radius: 50%;
+  z-index: 1;
+  transition: all 0.3s;
+}
+.timeline .container::before {
+  content: "";
+  position: absolute;
+  width: 36px;
+  height: 1px;
+  top: 55px;
+  left: 50%;
+  background-color: #9b9a9a;
+  transition: all 0.3s;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(150px);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+footer {
+  background-color: #1c1c1c;
+  display: flex;
+  align-items: center;
+}
+
+@keyframes arrow {
+  100% {
+    transform: translateX(3px);
+  }
+}
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    width: 100%;
+  }
+  .wrapper .switch-page {
+    margin: 25px;
+  }
+  .timeline .container {
+    grid-template-columns: 400px 328px;
+    grid-template-rows: 180px 50px;
+  }
+  .timeline .container .content h3 {
+    font-size: 18px;
+  }
+  .timeline .container .content p {
+    font-size: 14px;
+  }
+  .timeline .container .content a {
+    font-size: 14px;
+  }
+  .timeline .container.even {
+    grid-template-columns: 328px 400px;
+  }
+}/*# sourceMappingURL=news.css.map */

@@ -1,0 +1,172 @@
+// color definition
+$mainGreen: #00ffc7
+$mainBlue: #00fcfb
+$titleGray: #7a7a7a
+$wordGray: #575757
+$backgroundGray: #1c1c1c
+$backgroundBlack: #0e0e0e
+
+@mixin size($w,$h:$w)
+    width: $w
+    height: $h
+
+.wrapper
+    width: 1170px
+    margin: 0 auto
+    position: relative
+    padding-top: 80px
+.switch-page
+    margin: 20px 0 40px 0
+    ul
+        display: flex
+        place-content: center
+        border-top: 2px solid $titleGray
+        border-bottom: 2px solid $titleGray
+        padding: 25px 0
+        li
+            margin: 0 20px
+            a
+                color: $titleGray
+                transition: all 0.3s
+                &.selected
+                    color: $mainGreen
+                &:hover
+                    color: $mainGreen
+.timeline
+    position: relative
+    margin: 20px auto
+    padding: 3rem 0
+    &::before
+        content: ""
+        position: absolute
+        width: 6px
+        background-color: #3b3939
+        top: 0
+        bottom: 0
+        left: 50%
+        margin-left: -3px
+    .container
+        position: relative
+        background-color: inherit
+        display: grid
+        grid-template-columns: 550px 480px
+        grid-template-rows: 250px 50px
+        justify-content: center
+        &:nth-child(2)
+            transition-delay: 200ms
+        &:nth-child(3)
+            transition-delay: 300ms
+        &:hover
+            .banner
+                filter: drop-shadow(0 0 5px $mainGreen)
+            .content
+                border-color: $mainGreen
+                a
+                    color: $mainGreen
+                    span
+                        .st0
+                            fill: $mainGreen
+            &::after,&::before
+                background-color: $mainGreen
+        .banner
+            width: 100%
+            padding: 0 70px 0 0
+            transition: all 0.3s
+        .content
+            border: 1px solid $titleGray
+            display: flex
+            flex-direction: column
+            justify-content: space-evenly
+            padding: 15px
+            transition: all 0.3s
+            h6
+                color: $titleGray
+                font-size: 14px
+                font-weight: normal
+            h3
+                color: $mainGreen
+                font-size: 24px
+                font-weight: normal
+                overflow: hidden
+                text-overflow: ellipsis
+                white-space: nowrap
+            p
+                color: #fff
+                line-height: 1.2
+                display: -webkit-box
+                -webkit-box-orient: vertical
+                -webkit-line-clamp: 4
+                overflow: hidden
+            a
+                color: $titleGray
+                font-size: 16px
+                transition: all 0.3s
+                span
+                    display: inline-block
+                    width: 8px
+                    animation: arrow 0.5s infinite alternate
+                    .st0
+                        transition: all 0.3s
+        &.even
+            grid-template-columns: 480px 550px
+            .banner
+                order: 2
+                padding: 0 0 0 70px
+            &::before
+                left: initial
+                right: 50%
+        /* The circles on the timeline */
+        &::after
+            content: ''
+            position: absolute
+            +size(12px)
+            background-color: #9b9a9a
+            top: 50px
+            left: 49.5%
+            border-radius: 50%
+            z-index: 1
+            transition: all 0.3s
+        &::before
+            content: ''
+            position: absolute
+            +size(36px ,1px)
+            top: 55px
+            left: 50%
+            background-color: #9b9a9a
+            transition: all 0.3s
+.hidden
+    opacity: 0
+    filter: blur(5px)
+    transform: translateY(150px)
+    transition: all 1s
+.show
+    opacity: 1
+    filter: blur(0)
+    transform: translateX(0)
+
+footer
+    background-color: $backgroundGray
+    display: flex
+    align-items: center
+@keyframes arrow
+    100%
+        transform: translateX(3px)
+
+@media screen and ( max-width: 1200px )
+    .wrapper
+        width: 100%
+        .switch-page
+            margin: 25px
+    .timeline
+        .container
+            grid-template-columns: 400px 328px
+            grid-template-rows: 180px 50px
+            .content
+                h3
+                    font-size: 18px
+                p
+                    font-size: 14px
+                a
+                    font-size: 14px
+            &.even
+                grid-template-columns: 328px 400px

@@ -22,7 +22,7 @@ const bannerSwiperMb = new Swiper('.swiper-container-mb', {
     paginationClickable: true,
     loop: true,
     spaceBetween: 0,
-    speed: 2000,
+    speed: 1500,
     autoplay: {
         reverseDirection: false,
         disableOnInteraction: false

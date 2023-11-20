@@ -68,14 +68,12 @@ section.games
                             background: url("../images/engine.svg") no-repeat
                             +size(25px)
                             margin-right: 5px
-                            filter: drop-shadow(0 0 1px $mainGreen)
                             cursor: pointer
                             div
                                 position: absolute
-                                +size(25px)
+                                +size(30px)
                                 left: -12px
                                 top: 15px
-                                opacity: 0.6
                                 background: url("../images/click.svg") no-repeat
                                 animation: click 2.5s infinite
                     li
@@ -228,8 +226,17 @@ footer
                         justify-content: space-between
                         li.icon
                             figure
+                                position: relative
                                 display: block
-                                +size(20px)
+                                +size(25px)
+                                background: url("../images/engine.svg") no-repeat
+                                div
+                                    position: absolute
+                                    +size(25px)
+                                    left: -12px
+                                    top: 15px
+                                    background: url("../images/click.svg") no-repeat
+                                    animation: click 2.5s infinite
                         li
                             color: $titleGray
                             span
@@ -237,6 +244,8 @@ footer
                 .search-input
                     input
                         width: 100%
+                        padding: 8px 12px
+                        font-size: 14px
             form
                 margin: 0
                 div
