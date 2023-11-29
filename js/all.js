@@ -2,6 +2,8 @@
 window.addEventListener("scroll", () => {
     const topBtn = document.querySelector(".scroll-top");
     const header = document.querySelector("header");
+    list.classList.remove("showUp");
+    list.classList.remove("showUp-f");
     if (window.scrollY > 0) {
         topBtn.classList.add("show-up")
         header.classList.add("scroll-down");
@@ -32,7 +34,6 @@ loginBtn.forEach((target) => {
         })
         a.style.display = "flex";
         let f = a.querySelector(".forgot-password");
-        let rb = b.querySelector(".reset-btn");
         f.addEventListener("click", (e) => {
             e.preventDefault();
             a.style.display = "none";
@@ -40,8 +41,9 @@ loginBtn.forEach((target) => {
             b.querySelector("input").value = "";
         });
         let okBtn = r.querySelector(".ok-btn");
-        rb.addEventListener("click", () => {
+        b.addEventListener("submit", (e) => {
             a.style.display = "none";
+            e.preventDefault();
             b.style.display = "none";
             r.style.display = "flex";
         });
@@ -59,16 +61,24 @@ loginBtn.forEach((target) => {
 });
 
 // lang switch
+let list = document.querySelector(".switch-lang-list");
 function switchLang() {
-    const langSwitch = document.querySelectorAll(".lang");
-    let list = document.querySelector(".switch-lang-list");
-    langSwitch.forEach((e) => {
-        e.addEventListener("click", (e) => {
-            e.preventDefault();
+    const langSwitchTop = document.querySelector(".lang-top");
+    const langSwitchBottom = document.querySelector(".lang-footer");
+    langSwitchTop.addEventListener("click", (e) => {
+        e.preventDefault();
+        list.classList.remove("showUp-f");
+        setTimeout(() => {
             list.classList.toggle("showUp");
-        });
+        }, 50)
+    });
+    langSwitchBottom.addEventListener("click", (e) => {
+        e.preventDefault();
+        list.classList.remove("showUp");
+        setTimeout(() => {
+            list.classList.toggle("showUp-f");
+        }, 50)
     })
-
 }
 switchLang();
 
@@ -161,3 +171,16 @@ let slideToggle = (target, duration) => {
         return slideUp(target, duration);
     }
 }
+
+const lenis = new Lenis()
+
+lenis.on('scroll', (e) => {
+    // console.log(e)
+})
+
+function raf(time) {
+    lenis.raf(time)
+    requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)

@@ -19,7 +19,8 @@ section.game-screen .switch-lang {
 section.game-screen .screen {
   width: 100%;
   height: 620px;
-  background-color: #fff;
+  background: url("../images/demo.jpg") center no-repeat;
+  background-size: cover;
 }
 
 section.main .banner-and-values {
@@ -56,6 +57,7 @@ section.main article h2 {
 }
 section.main article p {
   color: #fff;
+  text-align: justify;
   line-height: 1.6;
 }
 section.main .similar-game {
@@ -166,5 +168,9 @@ footer {
     row-gap: 15px;
     -moz-column-gap: 15px;
          column-gap: 15px;
+  }
+  section.main article p {
+    font-size: 14px;
+    line-height: 1.4;
   }
 }/*# sourceMappingURL=each.css.map */

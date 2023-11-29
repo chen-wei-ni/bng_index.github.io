@@ -10,7 +10,7 @@ let mySwiper = new Swiper(".swiper-container1", {
     loop: true,
     allowTouchMove: false,
     slidesPerView: 'auto',
-    centeredSlides: true,
+    centeredSlides: false,
     spaceBetween: 20,
     speed: 2500,
     autoplay: {
@@ -233,6 +233,7 @@ const mbSwiper = new Swiper('.feature-slide-mb', {
     // loop: true,
     pagination: {
         el: ".swiper-pagination",
+        clickable: true
     },
 });
 
@@ -296,6 +297,9 @@ let partnerLogo = new Swiper(".swiper-container2", {
         disableOnInteraction: false
     },
     breakpoints: {
+        280: {
+            slidesPerView: 2
+        },
         320: {
             slidesPerView: 3
         },

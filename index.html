@@ -18,20 +18,20 @@
   <body>
     <div class="homepage">
       <header>
-        <div class="logo">
+        <a href="./index.html" class="logo">
           <img src="./images/others/bng_logo.svg" alt="BNG GAMES" />
-        </div>
+        </a>
         <nav>
           <div class="menu-mb-icon"></div>
           <ul>
-            <li><a href="" class="current-page">HOME</a></li>
-            <li><a href="">GAMES</a></li>
-            <li><a href="">NEWS</a></li>
-            <li><a href="">PARTNERS</a></li>
-            <li><a href="">CONTACT</a></li>
+            <li><a href="./index.html" class="current-page">HOME</a></li>
+            <li><a href="./game/games.html">GAMES</a></li>
+            <li><a href="./news/news.html">NEWS</a></li>
+            <li><a href="./partners/partners.html">PARTNERS</a></li>
+            <li><a href="./contact/contact.html">CONTACT</a></li>
             <li><a href="" class="login">LOGIN</a></li>
             <li class="pc-lang">
-              <a href="" class="lang"
+              <a href="" class="lang-top"
                 ><span class="flag">
                   <img src="./images/others/EN.svg" alt="" /> </span
                 >EN</a
@@ -70,7 +70,7 @@
         </div>
         </div>
       </header>
-      <div class="login-popup popup">
+      <form name="login" class="login-popup popup">
         <div class="input-block">
           <div class="login-close-btn">
             <img src="./images/others/menu_close.svg" alt="">
@@ -78,17 +78,17 @@
           <h3>LOGIN</h3>
           <div class="input-area">
             <label >Email</label>
-            <input type="email">
+            <input type="email" name="email" required>
             <label>Password</label>
-            <input type="password">
+            <input type="password" name="password" required>
           </div>
           <div class="submit-area">
             <button type="submit">login</button>
             <a href="" class="forgot-password">Forgot password?</a>
           </div>
         </div>
-      </div>
-      <div class="forgot-password-popup popup">
+      </form>
+      <form name="forgotPassword" class="forgot-password-popup popup">
         <div class="input-block">
           <div class="login-close-btn">
             <img src="./images/others/menu_close.svg" alt="">
@@ -96,13 +96,13 @@
           <h3>FORGOT PASSWORD</h3>
           <div class="input-area">
             <label>Email</label>
-            <input type="email">
+            <input type="email" required>
           </div>
           <div class="submit-area">
             <button type="submit" class="reset-btn">Reset Password</button>
           </div>
         </div>        
-      </div>
+      </form>
       <div class="email-sent-popup popup">
         <div class="input-block">
           <div class="login-close-btn">
@@ -131,7 +131,7 @@
           <h1>BNG GAMES</h1>
           <h2>MORE SURPRISES UNEXPECTED</h2>
           <div class="arrowDown">
-            <a href="#hot-games" >
+            <a href="#hot-games" onclick="lenis.scrollTo('#hot-games')">
               <img src="./images/others/arrowDown.png" alt="" />
             </a>
           </div>
@@ -156,7 +156,7 @@
             </p>
           </div>
           <div class="allgames-btn">
-            <a href="">
+            <a href="./game/games.html">
               <span>ALL GAMES</span>
               <span class="arrow-right"
                 ><img src="./images/others/allgame_arrow.svg" alt="arrow-right"
@@ -497,8 +497,8 @@
             Contact us and enjoy the most efficient service experience.
           </p>
           <div class="allgames-btn">
-            <a href="">
-              <span>ALL GAMES</span>
+            <a href="./news/news.html">
+              <span>ALL NEWS</span>
               <span class="arrow-right"
                 ><img src="./images/others/allgame_arrow.svg" alt="arrow-right"
               /></span>
@@ -755,13 +755,13 @@
               <img src="./images/others/bng_logo.svg" alt="BNG GAMES" />
             </div>
             <div class="footer-sns">
-              <a href="">
+              <a href="https://www.youtube.com/@asiabng3433" target="_blank">
                 <img src="./images/others/youtube.svg" alt="youtube" />
               </a>
-              <a href="">
+              <a href="https://www.facebook.com/asiabng" target="_blank">
                 <img src="./images/others/facebook.svg" alt="facebook" />
               </a>
-              <a href="">
+              <a href="https://twitter.com/BNG2017" target="_blank">
                 <img src="./images/others/twitter.svg" alt="X" />
               </a>
             </div>
@@ -806,11 +806,11 @@
           <div class="contact-infomation">
             <div class="footer-nav mb">
               <ul>
-                <li><a href="">HOME</a></li>
-                <li><a href="">GAMES</a></li>
-                <li><a href="">NEWS</a></li>
-                <li><a href="">PARTNERS</a></li>
-                <li><a href="">CONTACT</a></li>
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./game/games.html">GAMES</a></li>
+                <li><a href="./news/news.html">NEWS</a></li>
+                <li><a href="./partners/partners.html">PARTNERS</a></li>
+                <li><a href="./contact/contact.html">CONTACT</a></li>
                 <li><a href="" class="login">LOGIN</a></li>
               </ul>
             </div>
@@ -820,26 +820,26 @@
             </div>
             <div class="footer-all-links">
               <div class="footer-sns">
-                <a href="">
+                <a href="https://www.youtube.com/@asiabng3433" target="_blank">
                   <img src="./images/others/youtube.svg" alt="youtube" />
                 </a>
-                <a href="">
+                <a href="https://www.facebook.com/asiabng" target="_blank">
                   <img src="./images/others/facebook.svg" alt="facebook" />
                 </a>
-                <a href="">
+                <a href="https://twitter.com/BNG2017" target="_blank">
                   <img src="./images/others/twitter.svg" alt="X" />
                 </a>
               </div>
               <div class="footer-nav">
                 <ul>
-                  <li><a href="">HOME</a></li>
-                  <li><a href="">GAMES</a></li>
-                  <li><a href="">NEWS</a></li>
-                  <li><a href="">PARTNERS</a></li>
-                  <li><a href="">CONTACT</a></li>
+                  <li><a href="./index.html">HOME</a></li>
+                  <li><a href="./game/games.html">GAMES</a></li>
+                  <li><a href="./news/news.html">NEWS</a></li>
+                  <li><a href="./partners/partners.html">PARTNERS</a></li>
+                  <li><a href="./contact/contact.html">CONTACT</a></li>
                   <li><a href="" class="login">LOGIN</a></li>
                   <li>
-                    <a href="" class="lang"
+                    <a href="" class="lang-footer"
                       ><span><img src="./images/others/EN.svg" alt="" /></span
                       >EN</a
                     >
@@ -855,7 +855,10 @@
       </div>
     </div>
     <script src="./js/anime.min.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.28/bundled/lenis.min.js"
+    ></script>
+    <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/all.js"></script>
     <script src="./js/index.js"></script>
   </body>

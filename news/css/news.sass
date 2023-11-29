@@ -80,16 +80,16 @@ $backgroundBlack: #0e0e0e
             padding: 15px
             transition: all 0.3s
             h6
-                color: $titleGray
+                color: #9b9a9a
                 font-size: 14px
                 font-weight: normal
             h3
                 color: $mainGreen
                 font-size: 24px
+                white-space: nowrap
                 font-weight: normal
                 overflow: hidden
                 text-overflow: ellipsis
-                white-space: nowrap
             p
                 color: #fff
                 line-height: 1.2
@@ -98,7 +98,7 @@ $backgroundBlack: #0e0e0e
                 -webkit-line-clamp: 4
                 overflow: hidden
             a
-                color: $titleGray
+                color: #9b9a9a
                 font-size: 16px
                 transition: all 0.3s
                 span
@@ -148,6 +148,77 @@ footer
     background-color: $backgroundGray
     display: flex
     align-items: center
+// 彈跳新聞視窗
+.news-popup
+    display: none
+    position: fixed
+    top: 0
+    align-items: center
+    place-content: center
+    +size(100%,100vh)
+    background-color: rgba(#000,0.8)
+    z-index: 50
+    .container
+        position: relative
+        background-color: #262626
+        +size(900px,628px)
+        padding: 30px
+        margin: 20px
+        .close-btn
+            position: absolute
+            right: 0
+            top: -50px
+            +size(30px)
+            cursor: pointer
+        .info
+            display: grid
+            grid-template-columns: 1fr 1fr
+            column-gap: 20px
+            margin-bottom: 20px
+            .banner
+                width: 480px
+            .date-and-demo
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                text-align: center
+                border: 4px solid #3b3b3b
+                span
+                    color: #9b9a9a
+                p
+                    color: $mainGreen
+                    font-size: 24px
+                    margin-bottom: 25px
+                a
+                    display: block
+                    width: 150px
+                    font-size: 18px
+                    color: $mainGreen
+                    border: 1px solid $mainGreen
+                    padding: 10px 0
+                    border-radius: 100vmax
+                    transition: all 0.3s
+                    &:hover
+                        background-color: $mainGreen
+                        color: #000
+        p.content
+            color: #fff
+            width: 100%
+            height: calc(100% - 290px)
+            border-left: 4px solid $mainGreen
+            padding: 0 10px
+            text-indent: 1em
+            text-align: justify
+            overflow-y: scroll
+            &::-webkit-scrollbar-track
+                background-color: $backgroundGray
+            &::-webkit-scrollbar
+                width: 6px
+            &::-webkit-scrollbar-thumb
+                background: $wordGray
+                border-radius: 100vmax
+
 @keyframes arrow
     100%
         transform: translateX(3px)
@@ -170,3 +241,102 @@ footer
                     font-size: 14px
             &.even
                 grid-template-columns: 328px 400px
+@media screen and ( max-width: 767px )
+    .wrapper
+        padding-top: 70px
+        .switch-page
+            margin: 0 5px
+            ul
+                justify-content: space-around
+                border-top: none
+                padding: 10px 0
+                overflow-x: auto
+                li
+                    margin: 0 15px
+                    a
+                        white-space: nowrap
+    .timeline
+        padding: 0
+        display: flex
+        flex-direction: column
+        align-items: center
+        &::before
+            left: 4%
+        .container
+            grid-template-columns: none
+            grid-template-rows: none
+            width: 85%
+            border: 2px solid #9b9a9a
+            margin-bottom: 20px
+            margin-left: 15px
+            padding: 10px
+            .banner
+                padding: 0
+                display: block
+            &:hover
+                .banner
+                    filter: none
+            .content
+                border: none
+                padding: 0
+                h6
+                    margin: 10px 0 6px 0
+                h3
+                    margin-bottom: 5px
+                p
+                    margin-bottom: 10px
+            &.even
+                grid-template-columns: none
+                grid-template-rows: none
+                .banner
+                    padding: 0
+                    order: 0
+                &::before
+                    right: initial
+                    left: -20px
+            &::before
+                left: -20px
+                width: 20px
+            &::after
+                left: -30px
+            &::before,&::after
+                top: 50%
+                transform: translateY(-50%)
+    .news-popup
+        .container
+            +size(400px,600px)
+            padding: 10px
+            .close-btn
+                +size(20px)
+                top: -25px
+            .info
+                grid-template-columns: 1fr
+                margin-bottom: 10px
+                .banner
+                    width: 100%
+                .date-and-demo
+                    padding: 10px
+                    margin-top: 15px
+                    .mb-mode
+                        display: flex
+                        width: 100%
+                        justify-content: space-around
+                        span
+                            font-size: 14px
+                        p
+                            font-size: 18px
+                            margin-bottom: 20px
+                    a
+                        width: 90%
+                        padding: 5px 0
+            p.content
+                font-size: 14px
+                height: calc( 600px - 68%)
+
+@media screen and ( max-width: 320px )
+    .wrapper
+        .switch-page
+            ul
+                justify-content: start
+    .timeline .container .content h3
+        white-space: wrap

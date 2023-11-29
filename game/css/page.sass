@@ -22,6 +22,7 @@ body
     width: 100%
     position: relative
 .swiper-container-pc
+    +size(100%)
     overflow: hidden
     .swiper-pagination
         width: 300px
@@ -51,7 +52,7 @@ section.games
             justify-content: space-between
             padding-bottom: 20px
             border-bottom: 2px solid $titleGray
-            .provider-and-theme-pc
+            .provider-and-theme
                 color: $titleGray
                 ul
                     display: inline-flex
@@ -67,7 +68,7 @@ section.games
                             position: relative
                             background: url("../images/engine.svg") no-repeat
                             +size(25px)
-                            margin-right: 5px
+                            margin-left: 5px
                             cursor: pointer
                             div
                                 position: absolute
@@ -77,13 +78,13 @@ section.games
                                 background: url("../images/click.svg") no-repeat
                                 animation: click 2.5s infinite
                     li
-                        &:nth-child(2)
+                        &:nth-child(1)
                             &::after
                                 content: ""
                                 display: inline-block
                                 +size(2px,10px)
                                 background-color: #b6b6b6
-                                margin: 0 20px
+                                margin-left: 20px
                         span
                             padding-left: 5px
                             color: $mainGreen
@@ -149,7 +150,7 @@ section.games
     grid-row-gap: 48px
     // align-content: start
     justify-content: center
-    grid-template-columns: repeat(auto-fit, minmax(292px ,1fr))
+    grid-template-columns: repeat(auto-fit, minmax(292px ,292px))
     margin-bottom: 40px
     a
         position: relative
@@ -217,14 +218,16 @@ footer
         .filter-area
             .theme-and-search
                 flex-direction: column
-                .provider-and-theme-pc
-                    display: none
-                .provider-and-theme-mb
+                .provider-and-theme
                     margin-bottom: 10px
                     ul
                         display: flex
                         justify-content: space-between
                         li.icon
+                            order: -1
+                            margin-left: 0
+                            p
+                                display: none
                             figure
                                 position: relative
                                 display: block
@@ -241,6 +244,9 @@ footer
                             color: $titleGray
                             span
                                 color: $mainGreen
+                            &:nth-child(1)
+                                &::after
+                                    display: none
                 .search-input
                     input
                         width: 100%
@@ -260,6 +266,5 @@ footer
     .games-area
         grid-template-columns: repeat(2,1fr)
 @media screen and ( min-width: 767px )
-    .slide-banner .swiper-container-mb,
-    section.games .filter-area .theme-and-search .provider-and-theme-mb
+    .slide-banner .swiper-container-mb
         display: none

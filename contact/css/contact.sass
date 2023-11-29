@@ -1,0 +1,172 @@
+// color definition
+$mainGreen: #00ffc7
+$mainBlue: #00fcfb
+$mainGray: #9b9a9a
+$titleGray: #7a7a7a
+$wordGray: #575757
+$backgroundGray: #1c1c1c
+$backgroundBlack: #0e0e0e
+@mixin size($w,$h:$w)
+    width: $w
+    height: $h
+body
+    background-color: $backgroundGray
+.banner
+    +size(100%,580px)
+    background: url("../images/banner.jpg") top center no-repeat
+    background-size: cover
+section.main
+    background: linear-gradient(180deg,$backgroundGray 50%,$backgroundBlack)
+    form
+        margin: 0 auto
+        padding: 60px 0
+        width: 1170px
+        display: grid
+        grid-template-columns: 1.3fr 1fr
+        column-gap: 60px
+        .all-inputs
+            display: grid
+            gap: 20px
+            grid-template-areas: 'name phone''subject company''email email''message message'
+            div
+                display: flex
+                flex-direction: column
+                label
+                    color: $mainGreen
+                    font-size: 14px
+                    padding: 0 0 3px 5px
+            .name
+                grid-area: name
+            .phone
+                grid-area: phone
+            .subject
+                grid-area: subject
+                background: url("../images/arrow.svg") no-repeat
+                background-size: 10px
+                background-position: 95% 75%
+            .company
+                grid-area: company
+            .email
+                grid-area: email
+            .message
+                grid-area: message
+                textarea
+                    resize: none
+                    &::-webkit-scrollbar-track
+                        background-color: $backgroundGray
+                    &::-webkit-scrollbar
+                        width: 6px
+                    &::-webkit-scrollbar-thumb
+                        background: $wordGray
+                        border-radius: 100vmax
+            input,select,textarea
+                width: 100%
+                background-color: transparent
+                border: 2px $mainGray solid
+                font-size: 16px
+                padding: 6px 5px
+                border-radius: 8px
+                color: #fff
+            select
+                appearance: none
+                color: #fff
+                option
+                    color: $mainGray
+                    background-color: $backgroundGray
+        .contents
+            color: $mainGray
+            padding: 20px 0
+            p
+                line-height: 1.6
+                text-align: justify
+            .checkbox
+                margin: 20px 0
+                display: flex
+                align-items: baseline
+                input
+                    background-color: transparent
+                    border: 2px $mainGray solid
+                label
+                    line-height: 1.6
+                    padding-left: 10px
+                    text-align: justify
+            button
+                width: 100%
+                padding: 15px
+                font-size: 20px
+                background-color: $mainGreen
+                border: none
+                border-radius: 100vmax
+                cursor: pointer
+                transition: filter 0.3s
+                &:hover
+                    filter: brightness(110%)
+                &:active
+                    transform: translateY(2px)
+.submit-popup
+    position: fixed
+    display: none
+    top: 0
+    justify-content: center
+    align-items: center
+    +size(100%,100vh)
+    background-color: rgba(#000,0.8)
+    z-index: 50
+    .block
+        position: relative
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        width: 420px
+        height: 250px
+        background-color: #262626
+        box-shadow: 0 0 25px #000
+        .close-btn
+            position: absolute
+            +size(30px)
+            right: 0
+            top: -40px
+        figure
+            +size(80px)
+        h3
+            color: $mainGreen
+            font-weight: normal
+            font-size: 24px
+            letter-spacing: 1px
+        p
+            text-align: center
+            color: #fff
+            padding: 10px 0
+            font-size: 14px
+
+footer
+    display: flex
+    align-items: center
+    background-color: $backgroundGray
+
+@media screen and ( max-width: 1200px )
+    section.main
+        form
+            width: 100%
+            padding: 60px 40px
+            column-gap: 40px
+@media screen and ( max-width: 900px )
+    section.main
+        form
+            grid-template-columns: 1fr
+@media screen and ( max-width: 767px )
+    .banner
+        height: 50vw
+        background-image: url("../images/banner-mb.jpg")
+    section.main
+        form
+            padding: 20px 15px
+            .all-inputs
+                gap: 15px
+                .subject
+                    select
+                        padding-right: 20px
+    .submit-popup
+        .block
+            margin: 0 15px

@@ -447,7 +447,6 @@ section.our-partner
                 font-size: 80px
             h2
                 font-size: 50px
-                white-space: nowrap
     section
         .desc
             width: 100%
@@ -713,6 +712,40 @@ section.our-partner
 @media screen and ( max-width: 375px )
     section.news .news-slides .swiper-news-container .swiper-wrapper .swiper-slide a h5
         font-size: 12px
+@media screen and ( max-width: 360px )
+    section.bng-introduce
+        .bng-introduce-desc h1
+            width: 100%
+            font-size: 36px
+        .bng-introduce-main
+            height: 360px
+            .every-value .hexagon
+                +size(280px)
+                .eachValue
+                    width: 60px
+                    strong
+                        font-size: 1.6rem
+                    p
+                        font-size: 12px
+                    &:nth-child(1)
+                        top: 18px
+                        left: 12px
+                    &:nth-child(2)
+                        top: 18px
+                        left: 142px
+                    &:nth-child(3)
+                        top: 50px
+                        left: 210px
+                    &:nth-child(4)
+                        top: 40px
+                        left: 80px
+                    &:nth-child(5)
+                        top: 130px
+                        left: 210px
+@media screen and ( max-width: 320px )
+    .top_film .text-content h2
+        font-size: 18px
+
 @media screen and ( min-width: 767px )
     .our-features .feature-slide-mb
         display: none !important

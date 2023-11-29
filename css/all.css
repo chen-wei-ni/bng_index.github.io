@@ -7,7 +7,6 @@
 
 body {
   width: 100%;
-  scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;
   background-color: #0e0e0e;
@@ -28,6 +27,25 @@ img {
 
 ul {
   list-style: none;
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
 }
 
 header {
@@ -80,9 +98,9 @@ header nav ul li a .flag {
 }
 header .switch-lang-list {
   position: absolute;
-  opacity: 0;
+  display: none;
   top: 100px;
-  right: -1000px;
+  right: 15px;
   background: rgba(0, 0, 0, 0.6);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
@@ -90,9 +108,12 @@ header .switch-lang-list {
   transition: all 0.5s;
 }
 header .switch-lang-list.showUp {
-  opacity: 1;
+  display: block;
   top: 90px;
-  right: 15px;
+}
+header .switch-lang-list.showUp-f {
+  display: block;
+  top: 80vh;
 }
 header .switch-lang-list ul {
   display: flex;
@@ -248,6 +269,9 @@ footer .contact-infomation {
   justify-content: space-between;
   margin: 20px 0;
 }
+footer .contact-infomation .footer-all-links {
+  flex-shrink: 0;
+}
 footer .contact-infomation .contact-mail p span {
   font-weight: bold;
 }
@@ -306,7 +330,7 @@ footer .contact-infomation .footer-nav ul li:hover {
 .scroll-top {
   position: fixed;
   bottom: 0;
-  right: 1%;
+  right: 2%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -341,12 +365,6 @@ footer .contact-infomation .footer-nav ul li:hover {
     width: 100%;
     padding: 0 5%;
   }
-  footer .contact-infomation .footer-nav ul li {
-    padding: 0 10px;
-  }
-  footer .contact-infomation .footer-nav ul li a {
-    font-size: 13px;
-  }
 }
 @media screen and (max-width: 960px) {
   header .logo {
@@ -361,10 +379,10 @@ footer .contact-infomation .footer-nav ul li:hover {
 }
 @media screen and (max-width: 820px) {
   footer .contact-infomation .footer-nav ul li {
-    padding: 0 7px;
+    padding: 0 10px;
   }
   footer .contact-infomation .footer-nav ul li a {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -462,8 +480,11 @@ footer .contact-infomation .footer-nav ul li:hover {
     top: 5%;
     background: url("../images/others/menu_close.svg") right no-repeat;
   }
-  header .switch-lang-list.showUp {
+  header .switch-lang-list.showUp, header .switch-lang-list.showUp-f {
     display: none;
+  }
+  .popup {
+    padding: 0 15px;
   }
   footer {
     padding: 20px 0;
@@ -517,11 +538,16 @@ footer .contact-infomation .footer-nav ul li:hover {
     display: none;
   }
 }
+@media screen and (max-width: 320px) {
+  footer .logo {
+    width: 100px;
+  }
+}
 @media screen and (min-width: 767px) {
   header .switch-lang-list-mb,
   .switch-lang-list-mb,
   header nav ul li .mb-lang,
-  footer .footer-info .footer-sns,
+  footer .footer-info .logo-links-mb .footer-sns,
   footer .footer-info .mb,
   .footer-nav.mb {
     display: none !important;

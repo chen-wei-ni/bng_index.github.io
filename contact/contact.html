@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BNG GAMES</title>
+    <link rel="shortcut icon" href="data:," />
+    <link rel="stylesheet" href="../css/all.css" />
+    <link rel="stylesheet" href="./css/contact.css" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.28/bundled/lenis.min.js"
+    ></script>
+    <script defer src="../js/all.js"></script>
+    <script defer src="./js/contact.js"></script>
+  </head>
+  <body>
+    <header>
+      <a href="../index.html" class="logo">
+        <img src="../images/others/bng_logo.svg" alt="BNG GAMES" />
+      </a>
+      <nav>
+        <div class="menu-mb-icon"></div>
+        <ul>
+          <li><a href="../index.html">HOME</a></li>
+          <li><a href="../game/games.html">GAMES</a></li>
+          <li><a href="../news/news.html">NEWS</a></li>
+          <li><a href="../partners/partners.html">PARTNERS</a></li>
+          <li>
+            <a href="../contact/contact.html" class="current-page">CONTACT</a>
+          </li>
+          <li><a href="" class="login">LOGIN</a></li>
+          <li class="pc-lang">
+            <a href="" class="lang-top"
+              ><span class="flag">
+                <img src="../images/others/EN.svg" alt="" /> </span
+              >EN</a
+            >
+          </li>
+          <li>
+            <a href="" class="mb-lang"
+              ><span class="flag">
+                <img src="../images/others/EN.svg" alt="" /> </span
+              >EN</a
+            >
+          </li>
+          <div class="switch-lang-list-mb">
+            <ul>
+              <li><a href="">简体中文</a></li>
+              <li><a href="">English</a></li>
+              <li><a href="" class="selected">한국어</a></li>
+              <li><a href="">ภาษาไทย</a></li>
+              <li><a href="">Tiếng Việt</a></li>
+              <li><a href="">日本語</a></li>
+              <li><a href="">Bahasa Indonesia</a></li>
+            </ul>
+          </div>
+        </ul>
+      </nav>
+      <div class="switch-lang-list pc">
+        <ul>
+          <li><a href="">简体中文</a></li>
+          <li><a href="">English</a></li>
+          <li><a href="" class="selected">한국어</a></li>
+          <li><a href="">ภาษาไทย</a></li>
+          <li><a href="">Tiếng Việt</a></li>
+          <li><a href="">日本語</a></li>
+          <li><a href="">Bahasa Indonesia</a></li>
+        </ul>
+      </div>
+    </header>
+    <form class="login-popup popup">
+      <div class="input-block">
+        <div class="login-close-btn">
+          <img src="../images/others/menu_close.svg" alt="" />
+        </div>
+        <h3>LOGIN</h3>
+        <div class="input-area">
+          <label>Email</label>
+          <input type="email" name="email" required />
+          <label>Password</label>
+          <input type="password" name="password" required />
+        </div>
+        <div class="submit-area">
+          <button type="submit">login</button>
+          <a href="" class="forgot-password">Forgot password?</a>
+        </div>
+      </div>
+    </form>
+    <form class="forgot-password-popup popup">
+      <div class="input-block">
+        <div class="login-close-btn">
+          <img src="../images/others/menu_close.svg" alt="" />
+        </div>
+        <h3>FORGOT PASSWORD</h3>
+        <div class="input-area">
+          <label>Email</label>
+          <input type="email" required />
+        </div>
+        <div class="submit-area">
+          <button type="submit" class="reset-btn">Reset Password</button>
+        </div>
+      </div>
+    </form>
+    <div class="email-sent-popup popup">
+      <div class="input-block">
+        <div class="login-close-btn">
+          <img src="../images/others/menu_close.svg" alt="" />
+        </div>
+        <h3>EMAIL SENT</h3>
+        <p>
+          We've sent you an email to set up your new password. If you do not
+          receive the email, please make sure you enter the email you registered
+          with and check your mailbox
+        </p>
+        <div class="submit-area">
+          <button type="submit" class="ok-btn">OK</button>
+        </div>
+      </div>
+    </div>
+    <div class="banner"></div>
+    <section class="main">
+      <form id="form">
+        <div class="all-inputs">
+          <div class="name">
+            <label>Name *</label>
+            <input type="text" name="name" required />
+          </div>
+          <div class="phone">
+            <label>Phone</label>
+            <input type="tel" name="phone" required />
+          </div>
+          <div class="subject">
+            <label>Subject *</label>
+            <select name="subjects" id="sub-select">
+              <option value="" disabled selected></option>
+              <option value="business-cooperation">Business cooperation</option>
+              <option value="game-issues">Game issues</option>
+              <option value="cross-industry-cooperation">
+                Cross-industry cooperation
+              </option>
+            </select>
+          </div>
+          <div class="company">
+            <label>Company *</label>
+            <input type="text" name="company" required />
+          </div>
+          <div class="email">
+            <label>E-mail *</label>
+            <input type="email" name="email" value="" required />
+          </div>
+          <div class="message">
+            <label>Message *</label>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+              required
+              data-lenis-prevent
+            ></textarea>
+          </div>
+        </div>
+        <div class="contents">
+          <p>
+            Send us your enquiries by filling the contact form below and we'll
+            be in touch with you real soon. By filling up this form, you agree
+            and are willing to allow us to collect your contact details and
+            other information that may be required to enable us to effectively
+            and efficiently reply to all your enquiries.
+          </p>
+          <div class="checkbox">
+            <input type="checkbox" name="agree" id="" checked />
+            <label
+              >I agree to receive marketing promotional materials and news
+              tailored to me that is related to your products and services via
+              email.</label
+            >
+          </div>
+          <button name="submit" type="submit">SUBMIT ENQUIRY</button>
+        </div>
+      </form>
+    </section>
+    <div class="submit-popup">
+      <div class="block">
+        <div class="close-btn">
+          <svg
+            x="0px"
+            y="0px"
+            viewBox="0 0 30 30"
+            style="enable-background: new 0 0 30 30"
+            xml:space="preserve"
+          >
+            <style type="text/css">
+              .st0 {
+                fill: #9b9a9a;
+              }
+            </style>
+            <path
+              class="st0"
+              d="M2.6,28.5l-1.1-1.1c-0.3-0.3-0.3-0.9,0-1.2L26.2,1.5c0.3-0.3,0.9-0.3,1.2,0l1.1,1.1c0.3,0.3,0.3,0.9,0,1.2
+	L3.8,28.5C3.4,28.9,2.9,28.9,2.6,28.5z"
+            />
+            <path
+              class="st0"
+              d="M28.5,27.4l-1.1,1.1c-0.3,0.3-0.9,0.3-1.2,0L1.5,3.8c-0.3-0.3-0.3-0.9,0-1.2l1.1-1.1c0.3-0.3,0.9-0.3,1.2,0
+	l24.8,24.8C28.9,26.6,28.9,27.1,28.5,27.4z"
+            />
+          </svg>
+        </div>
+        <figure>
+          <img src="./images/submitOk.svg" alt="" />
+        </figure>
+        <h3>MAIL SENT SUCCESSFULLY</h3>
+        <p>
+          Thank you for the message ! <br />
+          Our manager will contact you as soon as possible.
+        </p>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-info">
+        <div class="logo-links-mb">
+          <div class="logo">
+            <img src="../images/others/bng_logo.svg" alt="BNG GAMES" />
+          </div>
+          <div class="footer-sns">
+            <a href="https://www.youtube.com/@asiabng3433" target="_blank">
+              <img src="../images/others/youtube.svg" alt="youtube" />
+            </a>
+            <a href="https://www.facebook.com/asiabng" target="_blank">
+              <img src="../images/others/facebook.svg" alt="facebook" />
+            </a>
+            <a href="https://twitter.com/BNG2017" target="_blank">
+              <img src="../images/others/twitter.svg" alt="X" />
+            </a>
+          </div>
+        </div>
+        <div class="line"></div>
+        <div class="footer-terms pc">
+          <div class="allrights">
+            <h6>ALL RIGHTS RESERVED</h6>
+            <p>
+              BNG's logos and graphic material is the company's intellectual
+              property and may not be copied, reproduced, distributed or
+              displayed without the written consent of BNG Entertainment.
+            </p>
+          </div>
+          <div class="about-bng">
+            <h6>ABOUT BNG</h6>
+            <p>
+              BNG is a progressive game studio creating fantastic cross-platform
+              HD video slots for free-to-play and online gambling market.
+            </p>
+          </div>
+        </div>
+        <div class="footer-terms mb">
+          <div class="allrights" data-foot="a">
+            <h6>ALL RIGHTS RESERVED +</h6>
+            <p>
+              BNG's logos and graphic material is the company's intellectual
+              property and may not be copied, reproduced, distributed or
+              displayed without the written consent of BNG Entertainment.
+            </p>
+          </div>
+          <div class="about-bng" data-foot="b">
+            <h6>ABOUT BNG +</h6>
+            <p>
+              BNG is a progressive game studio creating fantastic cross-platform
+              HD video slots for free-to-play and online gambling market.
+            </p>
+          </div>
+        </div>
+        <div class="contact-infomation">
+          <div class="footer-nav mb">
+            <ul>
+              <li><a href="../index.html">HOME</a></li>
+              <li><a href="../game/games.html">GAMES</a></li>
+              <li><a href="../news/news.html">NEWS</a></li>
+              <li><a href="../partners/partners.html">PARTNERS</a></li>
+              <li><a href="../contact/contact.html">CONTACT</a></li>
+              <li><a href="" class="login">LOGIN</a></li>
+            </ul>
+          </div>
+          <div class="contact-mail">
+            <p>For business inquiries: <span>sales@bng.games</span></p>
+            <p>All rights reserved © 2015-2023</p>
+          </div>
+          <div class="footer-all-links">
+            <div class="footer-sns">
+              <a href="https://www.youtube.com/@asiabng3433" target="_blank">
+                <img src="../images/others/youtube.svg" alt="youtube" />
+              </a>
+              <a href="https://www.facebook.com/asiabng" target="_blank">
+                <img src="../images/others/facebook.svg" alt="facebook" />
+              </a>
+              <a href="https://twitter.com/BNG2017" target="_blank">
+                <img src="../images/others/twitter.svg" alt="X" />
+              </a>
+            </div>
+            <div class="footer-nav">
+              <ul>
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="../game/games.html">GAMES</a></li>
+                <li><a href="../news/news.html">NEWS</a></li>
+                <li><a href="../partners/partners.html">PARTNERS</a></li>
+                <li><a href="../contact/contact.html">CONTACT</a></li>
+                <li><a href="" class="login">LOGIN</a></li>
+                <li>
+                  <a href="" class="lang-footer"
+                    ><span><img src="../images/others/EN.svg" alt="" /></span
+                    >EN</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="scroll-top">
+      <div></div>
+    </div>
+  </body>
+</html>

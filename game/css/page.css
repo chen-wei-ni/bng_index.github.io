@@ -8,6 +8,8 @@ body {
 }
 
 .swiper-container-pc {
+  width: 100%;
+  height: 100%;
   overflow: hidden;
 }
 .swiper-container-pc .swiper-pagination {
@@ -44,31 +46,31 @@ section.games .filter-area .theme-and-search {
   padding-bottom: 20px;
   border-bottom: 2px solid #7a7a7a;
 }
-section.games .filter-area .theme-and-search .provider-and-theme-pc {
+section.games .filter-area .theme-and-search .provider-and-theme {
   color: #7a7a7a;
 }
-section.games .filter-area .theme-and-search .provider-and-theme-pc ul {
+section.games .filter-area .theme-and-search .provider-and-theme ul {
   display: inline-flex;
   align-items: center;
 }
-section.games .filter-area .theme-and-search .provider-and-theme-pc ul li.icon {
+section.games .filter-area .theme-and-search .provider-and-theme ul li.icon {
   display: inline-flex;
   align-items: center;
   margin-left: 20px;
 }
-section.games .filter-area .theme-and-search .provider-and-theme-pc ul li.icon p {
+section.games .filter-area .theme-and-search .provider-and-theme ul li.icon p {
   display: inline-flex;
 }
-section.games .filter-area .theme-and-search .provider-and-theme-pc ul li.icon figure {
+section.games .filter-area .theme-and-search .provider-and-theme ul li.icon figure {
   display: block;
   position: relative;
   background: url("../images/engine.svg") no-repeat;
   width: 25px;
   height: 25px;
-  margin-right: 5px;
+  margin-left: 5px;
   cursor: pointer;
 }
-section.games .filter-area .theme-and-search .provider-and-theme-pc ul li.icon figure div {
+section.games .filter-area .theme-and-search .provider-and-theme ul li.icon figure div {
   position: absolute;
   width: 30px;
   height: 30px;
@@ -77,15 +79,15 @@ section.games .filter-area .theme-and-search .provider-and-theme-pc ul li.icon f
   background: url("../images/click.svg") no-repeat;
   animation: click 2.5s infinite;
 }
-section.games .filter-area .theme-and-search .provider-and-theme-pc ul li:nth-child(2)::after {
+section.games .filter-area .theme-and-search .provider-and-theme ul li:nth-child(1)::after {
   content: "";
   display: inline-block;
   width: 2px;
   height: 10px;
   background-color: #b6b6b6;
-  margin: 0 20px;
+  margin-left: 20px;
 }
-section.games .filter-area .theme-and-search .provider-and-theme-pc ul li span {
+section.games .filter-area .theme-and-search .provider-and-theme ul li span {
   padding-left: 5px;
   color: #00ffc7;
 }
@@ -169,7 +171,7 @@ section.games .filter-area form .all-options input[type=radio]:checked, section.
   grid-column-gap: 54px;
   grid-row-gap: 48px;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(292px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(292px, 292px));
   margin-bottom: 40px;
 }
 .games-area a {
@@ -255,24 +257,28 @@ footer {
   section.games .filter-area .theme-and-search {
     flex-direction: column;
   }
-  section.games .filter-area .theme-and-search .provider-and-theme-pc {
-    display: none;
-  }
-  section.games .filter-area .theme-and-search .provider-and-theme-mb {
+  section.games .filter-area .theme-and-search .provider-and-theme {
     margin-bottom: 10px;
   }
-  section.games .filter-area .theme-and-search .provider-and-theme-mb ul {
+  section.games .filter-area .theme-and-search .provider-and-theme ul {
     display: flex;
     justify-content: space-between;
   }
-  section.games .filter-area .theme-and-search .provider-and-theme-mb ul li.icon figure {
+  section.games .filter-area .theme-and-search .provider-and-theme ul li.icon {
+    order: -1;
+    margin-left: 0;
+  }
+  section.games .filter-area .theme-and-search .provider-and-theme ul li.icon p {
+    display: none;
+  }
+  section.games .filter-area .theme-and-search .provider-and-theme ul li.icon figure {
     position: relative;
     display: block;
     width: 25px;
     height: 25px;
     background: url("../images/engine.svg") no-repeat;
   }
-  section.games .filter-area .theme-and-search .provider-and-theme-mb ul li.icon figure div {
+  section.games .filter-area .theme-and-search .provider-and-theme ul li.icon figure div {
     position: absolute;
     width: 25px;
     height: 25px;
@@ -281,11 +287,14 @@ footer {
     background: url("../images/click.svg") no-repeat;
     animation: click 2.5s infinite;
   }
-  section.games .filter-area .theme-and-search .provider-and-theme-mb ul li {
+  section.games .filter-area .theme-and-search .provider-and-theme ul li {
     color: #7a7a7a;
   }
-  section.games .filter-area .theme-and-search .provider-and-theme-mb ul li span {
+  section.games .filter-area .theme-and-search .provider-and-theme ul li span {
     color: #00ffc7;
+  }
+  section.games .filter-area .theme-and-search .provider-and-theme ul li:nth-child(1)::after {
+    display: none;
   }
   section.games .filter-area .theme-and-search .search-input input {
     width: 100%;
@@ -313,8 +322,7 @@ footer {
   }
 }
 @media screen and (min-width: 767px) {
-  .slide-banner .swiper-container-mb,
-  section.games .filter-area .theme-and-search .provider-and-theme-mb {
+  .slide-banner .swiper-container-mb {
     display: none;
   }
 }/*# sourceMappingURL=page.css.map */
