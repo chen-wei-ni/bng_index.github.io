@@ -5,12 +5,11 @@ window.addEventListener("scroll", () => {
 // top film
 function opacityFilm() {
     const videoFrame = document.querySelector(".top_film");
-    const video = videoFrame.querySelector("video");
     const hotGame = document.getElementById("hot-games");
     a = function (e, t) {
         return Math.round(e * t) / t
     }
-    video.style.opacity = Math.min(1, Math.max(a(1 - window.scrollY / (.8 * videoFrame.offsetHeight), 100), 0));
+    videoFrame.style.opacity = Math.min(1, Math.max(a(1 - window.scrollY / (.8 * videoFrame.offsetHeight), 100), 0));
     //     videoFrame.offsetHeight < window.scrollY && (hotGame.style.opacity = Math.min(1, a(Math.max(window.scrollY - .5 * videoFrame.offsetHeight, 0) / (.5 * videoFrame.offsetHeight), 100)))
     // console.log(hotGame.style.opacity = Math.min(1, a(Math.max(window.scrollY - .5 * videoFrame.offsetHeight, 0) / (.5 * videoFrame.offsetHeight), 100)))
 }

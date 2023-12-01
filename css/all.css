@@ -411,8 +411,8 @@ footer .contact-infomation .footer-nav ul li:hover {
     display: none;
   }
   header nav .menu-mb-icon {
-    width: 25px;
-    height: 25px;
+    width: 28px;
+    height: 28.6px;
     background: url("../images/others/menu.svg") right no-repeat;
     transition: all 0.3s;
     cursor: pointer;

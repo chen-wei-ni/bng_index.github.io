@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   background-color: #1c1c1c;
 }
@@ -101,14 +102,28 @@ section.main form .contents .checkbox {
   display: flex;
   align-items: baseline;
 }
-section.main form .contents .checkbox input {
-  background-color: transparent;
-  border: 2px #9b9a9a solid;
-}
 section.main form .contents .checkbox label {
   line-height: 1.6;
   padding-left: 10px;
   text-align: justify;
+}
+section.main form .contents .checkbox input {
+  flex-shrink: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 1em;
+  height: 1em;
+  border: 1px solid #7a7a7a;
+  position: relative;
+}
+section.main form .contents .checkbox input:checked::before {
+  position: absolute;
+  top: -5px;
+  content: "✓";
+  font-size: 1em;
+  font-weight: 600;
+  color: #00ffc7;
 }
 section.main form .contents button {
   width: 100%;
@@ -194,7 +209,7 @@ footer {
 }
 @media screen and (max-width: 767px) {
   .banner {
-    height: 50vw;
+    height: 60vw;
     background-image: url("../images/banner-mb.jpg");
   }
   section.main form {
@@ -206,7 +221,7 @@ footer {
   section.main form .all-inputs .subject select {
     padding-right: 20px;
   }
-  .submit-popup .block {
+  section.main .block {
     margin: 0 15px;
   }
 }/*# sourceMappingURL=contact.css.map */
