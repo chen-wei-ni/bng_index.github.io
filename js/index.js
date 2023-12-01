@@ -1,6 +1,20 @@
 window.addEventListener("scroll", () => {
     scrollShowPrint();
-})
+    opacityFilm();
+});
+// top film
+function opacityFilm() {
+    const videoFrame = document.querySelector(".top_film");
+    const video = videoFrame.querySelector("video");
+    const hotGame = document.getElementById("hot-games");
+    a = function (e, t) {
+        return Math.round(e * t) / t
+    }
+    video.style.opacity = Math.min(1, Math.max(a(1 - window.scrollY / (.8 * videoFrame.offsetHeight), 100), 0));
+    //     videoFrame.offsetHeight < window.scrollY && (hotGame.style.opacity = Math.min(1, a(Math.max(window.scrollY - .5 * videoFrame.offsetHeight, 0) / (.5 * videoFrame.offsetHeight), 100)))
+    // console.log(hotGame.style.opacity = Math.min(1, a(Math.max(window.scrollY - .5 * videoFrame.offsetHeight, 0) / (.5 * videoFrame.offsetHeight), 100)))
+}
+
 // game 輪播
 const gameSlider = document.querySelector(".slide");
 const gameSlide = document.querySelectorAll(".swiper-slide");
@@ -53,7 +67,7 @@ function loadingStop() {
 }
 function loadingStart() {
     mySwiper.autoplay.start();
-    let s = ""
+    let s = "";
     if (window.innerWidth < 1280) {
         s = Math.abs(Math.abs(this.swiper.getTranslate()) - Math.abs(this.swiper.translate) / 380 * 2500);
         console.log(s)
@@ -65,7 +79,7 @@ function loadingStart() {
         s = Math.abs(Math.abs(this.swiper.getTranslate()) - Math.abs(this.swiper.translate) / 170 * 2500)
         this.swiper.slideTo(this.swiper.activeIndex, s);
     }
-    // 使用刚才计算出的速度，移動到當前slide，即将当前slide的移动到頭部的动画完成，開啟autoplay
+    // 使用剛才計算出的速度，移動到當前slide，即將當前slide的移動到頭部的動畫完成，開啟autoplay
 }
 
 // run 0 to 100%

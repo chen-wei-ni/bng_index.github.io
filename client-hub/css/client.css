@@ -247,6 +247,7 @@ footer {
   section.roadmap .games ul li .tag {
     width: 60px;
     height: 60px;
+    top: -7px;
   }
   section.roadmap .games ul li .tag strong {
     font-size: 32px;

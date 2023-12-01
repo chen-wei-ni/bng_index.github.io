@@ -121,7 +121,7 @@ section.main form .contents button {
   transition: filter 0.3s;
 }
 section.main form .contents button:hover {
-  filter: brightness(110%);
+  filter: hue-rotate(18deg);
 }
 section.main form .contents button:active {
   transform: translateY(2px);
