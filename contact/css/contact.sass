@@ -107,6 +107,7 @@ section.main
                 padding: 15px
                 font-size: 20px
                 background-color: $mainGreen
+                color: $backgroundGray
                 border: none
                 border-radius: 100vmax
                 cursor: pointer
@@ -180,5 +181,9 @@ footer
                     select
                         padding-right: 20px
             .contents .checkbox input
+                +size(1.2em)
+                &:checked
+                    &::before
+                        font-size: 1.2em
         .block
             margin: 0 15px

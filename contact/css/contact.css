@@ -130,6 +130,7 @@ section.main form .contents button {
   padding: 15px;
   font-size: 20px;
   background-color: #00ffc7;
+  color: #1c1c1c;
   border: none;
   border-radius: 100vmax;
   cursor: pointer;
@@ -220,6 +221,13 @@ footer {
   }
   section.main form .all-inputs .subject select {
     padding-right: 20px;
+  }
+  section.main form .contents .checkbox input {
+    width: 1.2em;
+    height: 1.2em;
+  }
+  section.main form .contents .checkbox input:checked::before {
+    font-size: 1.2em;
   }
   section.main .block {
     margin: 0 15px;
