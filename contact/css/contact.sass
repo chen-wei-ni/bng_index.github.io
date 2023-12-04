@@ -11,10 +11,20 @@ $backgroundBlack: #0e0e0e
     height: $h
 body
     background-color: $backgroundGray
-.banner
+.frame
     +size(100%,580px)
+    overflow: hidden
+.banner
+    +size(100%)
     background: url("../images/banner.jpg") top center no-repeat
     background-size: cover
+    opacity: 0
+    transform: scale(1.2)
+    transition: opacity 1s linear, filter 1s linear,transform 1s linear
+    &.grayscaleRemove
+        opacity: 1
+        transform: scale(1)
+        filter: grayscale(0) blur(0)
 section.main
     background: linear-gradient(180deg,$backgroundGray 50%,$backgroundBlack)
     form
@@ -157,7 +167,9 @@ footer
     display: flex
     align-items: center
     background-color: $backgroundGray
-
+@media screen and ( max-width: 1300px )
+    .frame
+        height: 36vw
 @media screen and ( max-width: 1200px )
     section.main
         form
@@ -169,8 +181,9 @@ footer
         form
             grid-template-columns: 1fr
 @media screen and ( max-width: 767px )
+    .frame
+        height: 50vw
     .banner
-        height: 60vw
         background-image: url("../images/banner-mb.jpg")
     section.main
         form

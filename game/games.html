@@ -79,7 +79,9 @@
             <input type="password" name="password" required />
           </div>
           <div class="submit-area">
-            <button type="submit">login</button>
+            <button type="submit">
+              login<a href="./client-hub/client-hub.html"></a>
+            </button>
             <a href="" class="forgot-password">Forgot password?</a>
           </div>
         </div>
@@ -224,34 +226,67 @@
             <div class="all-options">
               <div class="provider-options">
                 <span>Providers : </span>
-                <input type="radio" name="Providers" value="All" checked />
-                <label>All</label>
-                <input type="radio" name="Providers" value="BNG" />
-                <label>BNG</label>
-                <input type="radio" name="Providers" value="Playson" />
-                <label>Playson</label>
+                <input
+                  type="radio"
+                  name="Providers"
+                  value="All"
+                  id="all"
+                  checked
+                />
+                <label for="all">All</label>
+                <input type="radio" name="Providers" value="BNG" id="bng" />
+                <label for="bng">BNG</label>
+                <input
+                  type="radio"
+                  name="Providers"
+                  value="Playson"
+                  id="playson"
+                />
+                <label for="playson">Playson</label>
               </div>
               <div class="theme-options">
                 <span>Theme : </span>
-                <input type="checkbox" name="Theme" value="All" checked />
-                <label>All Games</label>
-                <input type="checkbox" name="Theme" value="BuyFeature" />
-                <label>Buy Feature</label>
-                <input type="checkbox" name="Theme" value="Hot" />
-                <label>Hot</label>
-                <input type="checkbox" name="Theme" value="New" />
-                <label>New</label>
-                <input type="checkbox" name="Theme" value="High" />
-                <label>High</label>
-                <input type="checkbox" name="Theme" value="Medium" />
-                <label>Medium</label>
-                <input type="checkbox" name="Theme" value="HoldandWin" />
-                <label>Hold and Win</label>
+                <input
+                  type="checkbox"
+                  name="Theme"
+                  value="All"
+                  id="allGames"
+                  checked
+                />
+                <label for="allGames">All Games</label>
+                <input
+                  type="checkbox"
+                  name="Theme"
+                  value="BuyFeature"
+                  id="buyFeature"
+                />
+                <label for="buyFeature">Buy Feature</label>
+                <input type="checkbox" name="Theme" value="Hot" id="hot" />
+                <label for="hot">Hot</label>
+                <input type="checkbox" name="Theme" value="New" id="new" />
+                <label for="new">New</label>
+                <input type="checkbox" name="Theme" value="High" id="high" />
+                <label for="high">High</label>
+                <input
+                  type="checkbox"
+                  name="Theme"
+                  value="Medium"
+                  id="medium"
+                />
+                <label for="medium">Medium</label>
+                <input
+                  type="checkbox"
+                  name="Theme"
+                  value="HoldandWin"
+                  id="holdandwin"
+                />
+                <label for="holdandwin">Hold and Win</label>
               </div>
             </div>
           </form>
         </div>
-        <div class="games-area"></div>
+        <div class="games-area" id="js-infinite-wrap"></div>
+        <div id="js-detective"></div>
       </section>
       <footer>
         <div class="footer-info">

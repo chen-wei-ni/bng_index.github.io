@@ -1,7 +1,7 @@
 // color definition
 $mainGreen: #00ffc7
 $mainBlue: #00fcfb
-$titleGray: #7a7a7a
+$titleGray: #393333
 $wordGray: #575757
 $backgroundGray: #1c1c1c
 $backgroundBlack: #0e0e0e
@@ -26,7 +26,7 @@ $backgroundBlack: #0e0e0e
         li
             margin: 0 20px
             a
-                color: $titleGray
+                color: #9b9a9a
                 transition: all 0.3s
                 &.selected
                     color: $mainGreen
@@ -35,7 +35,7 @@ $backgroundBlack: #0e0e0e
 .timeline
     position: relative
     margin: 20px auto
-    padding: 3rem 0
+    padding: 2rem 0
     &::before
         content: ""
         position: absolute
@@ -107,7 +107,7 @@ $backgroundBlack: #0e0e0e
                     animation: arrow 0.5s infinite alternate
                     .st0
                         transition: all 0.3s
-        &.even
+        &:nth-child(even)
             grid-template-columns: 480px 550px
             .banner
                 order: 2
@@ -138,7 +138,7 @@ $backgroundBlack: #0e0e0e
     opacity: 0
     filter: blur(5px)
     transform: translateY(150px)
-    transition: all 1s
+    transition: opacity 1s,filter 1s,transform 1s
 .show
     opacity: 1
     filter: blur(0)
@@ -239,7 +239,7 @@ footer
                     font-size: 14px
                 a
                     font-size: 14px
-            &.even
+            &:nth-child(even)
                 grid-template-columns: 328px 400px
 @media screen and ( max-width: 767px )
     .wrapper
@@ -285,7 +285,7 @@ footer
                     margin-bottom: 5px
                 p
                     margin-bottom: 10px
-            &.even
+            &:nth-child(even)
                 grid-template-columns: none
                 grid-template-rows: none
                 .banner

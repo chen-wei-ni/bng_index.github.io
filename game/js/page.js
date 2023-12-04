@@ -68,15 +68,14 @@ let checkboxes = document.querySelectorAll('input[type="checkbox"]');
 for (let i = 0; i < checkboxes.length; i++) {
     checkboxes[i].addEventListener("change", function () {
         if (i != 0) {
-            checkboxes[0].checked = false
+            checkboxes[0].checked = false;
         } else {
-            this.checked = true
-            checkboxes[1].checked = false
-            checkboxes[2].checked = false
-            checkboxes[3].checked = false
-            checkboxes[4].checked = false
-            checkboxes[5].checked = false
-            checkboxes[6].checked = false
+            checkboxes[1].checked = false;
+            checkboxes[2].checked = false;
+            checkboxes[3].checked = false;
+            checkboxes[4].checked = false;
+            checkboxes[5].checked = false;
+            checkboxes[6].checked = false;
         }
     })
 
@@ -131,8 +130,7 @@ let gamesData = [
         "theme": ["BuyFeature", "New"],
         "image": "./images/game-ex6_300x300.png",
         "url": "./gamedemo.html"
-    },
-
+    }
 ];
 
 // 使用 map 遍歷 querySelectorAll
@@ -146,7 +144,7 @@ function showGames() {
     let show = "";
     for (let i = 0; i < gamesData.length; i++) {
         if (rad[0].checked && rad2[0].checked) {
-            show += `<a href="${gamesData[i].url}" data-game="${gamesData[i].name}"><img src="${gamesData[i].image}"  alt="${gamesData[i].name}" /></a>`
+            show += `<a href="${gamesData[i].url}" data-game="${gamesData[i].name}"><img src="${gamesData[i].image}"  alt="${gamesData[i].name}" class="hidden" /></a>`
         }
     }
     gameArea.innerHTML = show
@@ -243,4 +241,5 @@ function filterFunction() {
         gameQuantity.textContent = 0;
     }
 }
+
 

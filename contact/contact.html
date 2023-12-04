@@ -82,7 +82,9 @@
           <input type="password" name="password" required />
         </div>
         <div class="submit-area">
-          <button type="submit">login</button>
+          <button type="submit">
+            login<a href="./client-hub/client-hub.html"></a>
+          </button>
           <a href="" class="forgot-password">Forgot password?</a>
         </div>
       </div>
@@ -118,7 +120,9 @@
         </div>
       </div>
     </div>
-    <div class="banner"></div>
+    <div class="frame">
+      <div class="banner"></div>
+    </div>
     <section class="main">
       <form id="form">
         <div class="all-inputs">
@@ -321,5 +325,10 @@
     <div class="scroll-top">
       <div></div>
     </div>
+    <script>
+      setTimeout(() => {
+        document.querySelector(".banner").classList.add("grayscaleRemove");
+      }, 50);
+    </script>
   </body>
 </html>

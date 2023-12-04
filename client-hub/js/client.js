@@ -34,6 +34,31 @@ let allFiles = [
         "name": "88 Dragon (Certificate)",
         "type": "Certificate"
     },
+    {
+        "_id": 8,
+        "name": "88 Dragon (License)",
+        "type": "License"
+    },
+    {
+        "_id": 9,
+        "name": "xxx oooo",
+        "type": "Other"
+    },
+    {
+        "_id": 10,
+        "name": "xxx oooo",
+        "type": "Other"
+    },
+    {
+        "_id": 11,
+        "name": "新官網(Game guide)",
+        "type": "GameGuide"
+    },
+    {
+        "_id": 12,
+        "name": "新官網(Game guide)",
+        "type": "GameGuide"
+    },
 ]
 // filter
 const rad = document.filesDownload.supportMaterials;

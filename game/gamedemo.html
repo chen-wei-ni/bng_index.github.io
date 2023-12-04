@@ -74,7 +74,9 @@
           <input type="password" name="password" required />
         </div>
         <div class="submit-area">
-          <button type="submit">login</button>
+          <button type="submit">
+            login<a href="./client-hub/client-hub.html"></a>
+          </button>
           <a href="" class="forgot-password">Forgot password?</a>
         </div>
       </div>
@@ -112,7 +114,85 @@
     </div>
     <section class="game-screen">
       <div class="switch-lang"></div>
-      <div class="screen"></div>
+      <iframe class="screen"></iframe>
+      <div class="lang-list" data-lenis-prevent>
+        <div class="radio">
+          <input type="radio" name="lang" id="lang-" />
+          <label for="lang-">German</label>
+        </div>
+        <div class="radio">
+          <input type="radio" name="lang" id="" checked />
+          <label>English</label>
+        </div>
+        <div class="radio">
+          <input type="radio" name="lang" id="" />
+          <label>Spanish</label>
+        </div>
+        <div class="radio">
+          <input type="radio" name="lang" id="" />
+          <label>Finnish</label>
+        </div>
+        <div class="radio">
+          <input type="radio" name="lang" id="" />
+          <label>French</label>
+        </div>
+        <div class="radio">
+          <input type="radio" name="lang" id="" />
+          <label>Indonesian</label>
+        </div>
+        <div class="radio">
+          <input type="radio" name="lang" id="" />
+          <label>Italian</label>
+        </div>
+        <div class="radio">
+          <input type="radio" name="lang" id="" />
+          <label>Japanese</label>
+        </div>
+        <div class="radio">
+          <input type="radio" name="lang" id="" />
+          <label>Korean</label>
+        </div>
+        <div class="radio">
+          <input type="radio" name="lang" id="" />
+          <label>Dutch</label>
+        </div>
+        <div class="radio">
+          <input type="radio" name="lang" id="" />
+          <label>Norwegian</label>
+        </div>
+        <div class="radio">
+          <input type="radio" name="lang" id="" />
+          <label>Portuguese</label>
+        </div>
+        <div class="radio">
+          <input type="radio" name="lang" id="" />
+          <label>Russian</label>
+        </div>
+        <div class="radio">
+          <input type="radio" name="lang" id="" />
+          <label>Swedish</label>
+        </div>
+        <div class="radio">
+          <input type="radio" name="lang" id="" />
+          <label>Thai</label>
+        </div>
+        <div class="radio">
+          <input type="radio" name="lang" id="" />
+          <label>Turkish</label>
+        </div>
+        <div class="radio">
+          <input type="radio" name="lang" id="" />
+          <label>Vietnamese</label>
+        </div>
+        <div class="radio">
+          <input type="radio" name="lang" id="" />
+          <label>Chinese</label>
+        </div>
+        <div class="radio">
+          <input type="radio" name="lang" id="" />
+          <label>Traditional Chinese</label>
+        </div>
+      </div>
     </section>
     <section class="main">
       <div class="banner-and-values">
@@ -208,11 +288,6 @@
           ></a>
         </div>
         <ul>
-          <li>
-            <a href=""
-              ><img src="./images/game-ex1.jpg" alt="Crystal Scarabs"
-            /></a>
-          </li>
           <li>
             <a href=""
               ><img src="./images/game-ex1.jpg" alt="Crystal Scarabs"
@@ -341,5 +416,11 @@
     </div>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.28/bundled/lenis.min.js"></script>
     <script src="../js/all.js"></script>
+    <script>
+      const langBtn = document.querySelector(".switch-lang");
+      langBtn.addEventListener("click", function () {
+        document.querySelector(".lang-list").classList.toggle("show");
+      });
+    </script>
   </body>
 </html>
