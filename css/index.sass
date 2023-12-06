@@ -199,7 +199,7 @@ section.bng-introduce
                         color: #00ffa2
                     p
                         color: #fff
-                        font-size: 26px
+                        font-size: 20px
                         letter-spacing: 1px
                     &:nth-child(1)
                         top: 50px
@@ -592,7 +592,7 @@ section.our-partner
 // ---- mobile
 @media screen and ( max-width: 767px )
     .top_film
-        height: 100vw
+        height: 90vh
         .text-content
             h1
                 font-size: 40px
@@ -618,7 +618,7 @@ section.our-partner
             p
                 padding: 0 10px
         .bng-introduce-main
-            height: 425px
+            height: 540px
             figure
                 +size(100%,400px)
                 left: -8%
@@ -712,7 +712,10 @@ section.our-partner
         .slide
             &::before , &::after
                 margin: 10px 0
-
+@media screen and ( max-width: 500px )
+    section.bng-introduce
+        .bng-introduce-main
+            height: 425px
 @media screen and ( max-width: 375px )
     section.news .news-slides .swiper-news-container .swiper-wrapper .swiper-slide a h5
         font-size: 12px

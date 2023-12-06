@@ -103,7 +103,7 @@ function menuShow() {
     let lang = document.querySelector(".mb-lang");
     lang.addEventListener("click", function (e) {
         e.preventDefault();
-        slideToggle(document.querySelector(".switch-lang-list-mb"), 200);
+        $(".switch-lang-list-mb").slideToggle();
     });
 }
 menuShow();
@@ -114,7 +114,7 @@ function footerShow() {
     let b = document.querySelectorAll(".footer-info .mb p")
     for (let i = 0; i < 2; i++) {
         a[i].addEventListener("click", function () {
-            slideToggle(b[i], 200);
+            $(b[i]).slideToggle();
         });
     }
 }
@@ -181,6 +181,5 @@ let slideToggle = (target, duration) => {
         return slideUp(target, duration);
     }
 }
-
 
 

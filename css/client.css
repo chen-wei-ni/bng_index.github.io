@@ -177,6 +177,10 @@ section.support-materials .docs-download-area .each-docs-download li span.downlo
   background-size: contain;
   cursor: pointer;
   flex-shrink: 0;
+  transition: opacity 0.3s;
+}
+section.support-materials .docs-download-area .each-docs-download li span.download-icon:hover {
+  opacity: 0.5;
 }
 
 footer {

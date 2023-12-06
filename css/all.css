@@ -552,6 +552,9 @@ footer .contact-information .footer-nav ul li:hover {
     width: 30px;
     margin-left: 8px;
   }
+  footer .logo {
+    width: 100px;
+  }
   footer .line {
     margin: 10px auto 0 auto;
   }

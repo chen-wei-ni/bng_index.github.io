@@ -226,7 +226,7 @@ section.bng-introduce .bng-introduce-main .every-value .hexagon .eachValue stron
 }
 section.bng-introduce .bng-introduce-main .every-value .hexagon .eachValue p {
   color: #fff;
-  font-size: 26px;
+  font-size: 20px;
   letter-spacing: 1px;
 }
 section.bng-introduce .bng-introduce-main .every-value .hexagon .eachValue:nth-child(1) {
@@ -720,7 +720,7 @@ section.our-partner .partner-logos .swiper-slide:hover {
 }
 @media screen and (max-width: 767px) {
   .top_film {
-    height: 100vw;
+    height: 90vh;
   }
   .top_film .text-content h1 {
     font-size: 40px;
@@ -755,7 +755,7 @@ section.our-partner .partner-logos .swiper-slide:hover {
     padding: 0 10px;
   }
   section.bng-introduce .bng-introduce-main {
-    height: 425px;
+    height: 540px;
   }
   section.bng-introduce .bng-introduce-main figure {
     width: 100%;
@@ -875,6 +875,11 @@ section.our-partner .partner-logos .swiper-slide:hover {
   }
   section.our-partner .slide::before, section.our-partner .slide::after {
     margin: 10px 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  section.bng-introduce .bng-introduce-main {
+    height: 425px;
   }
 }
 @media screen and (max-width: 375px) {
