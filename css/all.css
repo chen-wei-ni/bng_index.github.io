@@ -227,6 +227,7 @@ header .switch-lang-list ul li a.selected {
 .popup.forgot-password-popup .input-block p, .popup.email-sent-popup .input-block p {
   color: #fff;
   font-size: 14px;
+  text-align: center;
 }
 .popup.forgot-password-popup .input-block .submit-area, .popup.email-sent-popup .input-block .submit-area {
   justify-content: center;

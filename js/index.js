@@ -342,7 +342,7 @@ function scrollShowPrint() {
     let windowHeight = window.scrollY + window.innerHeight;
     desc.forEach((d) => {
         // 要吃到父組件的高度
-        let h = d.offsetParent.offsetHeight / 2.2 + d.offsetParent.offsetTop;
+        let h = d.offsetParent.offsetHeight / 2.5 + d.offsetParent.offsetTop;
         if (windowHeight > h) {
             d.classList.add("showUp");
         } else {
