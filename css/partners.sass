@@ -1,0 +1,68 @@
+// color definition
+$mainGreen: #00ffc7
+$mainBlue: #00fcfb
+$titleGray: #7a7a7a
+$wordGray: #575757
+$backgroundGray: #1c1c1c
+$backgroundBlack: #0e0e0e
+
+@mixin size($w,$h:$w)
+    width: $w
+    height: $h
+body
+    background-color: $backgroundGray
+.frame
+    +size(100%,580px)
+    overflow: hidden
+.banner
+    +size(100%)
+    background: url("../images/partners/banner.jpg")top center no-repeat
+    filter: grayscale(1) blur(4px)
+    transform: scale(1.2)
+    background-size: cover
+    opacity: 0
+    transition: opacity 1s linear, filter 1s linear,transform 1s linear
+    &.grayscaleRemove
+        opacity: 1
+        transform: scale(1)
+        filter: grayscale(0) blur(0)
+.partners-logo
+    width: 1170px
+    margin: 60px auto 20px auto
+    display: grid
+    grid-template-columns: repeat(5,1fr)
+    column-gap: 20px
+    row-gap: 20px
+    a
+        display: block
+        filter: grayscale(1) blur(5px)
+        opacity: 0
+        transform: translateY(150px)
+        transition: filter 1s, opacity 1s, transform 1s
+        &.show
+            opacity: 1
+            filter: blur(0) grayscale(1) brightness(80%)
+            transform: translateY(0)
+        &:hover
+            filter: grayscale(0) brightness(100%)
+
+footer
+    display: flex
+    align-items: center
+    background-color: $backgroundGray
+@media screen and ( max-width: 1300px )
+    .frame
+        height: 36vw
+    .partners-logo
+        width: 100%
+        padding: 0 40px
+        margin: 30px auto 0 auto
+@media screen and ( max-width: 767px )
+    .frame
+        height: 50vw
+    .banner
+        +size(100%)
+        background-image: url("../images/partners/banner-mb.jpg")
+    .partners-logo
+        grid-template-columns: repeat(2,1fr)
+        margin-bottom: 20px

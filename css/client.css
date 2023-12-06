@@ -1,0 +1,280 @@
+body {
+  background-color: #1c1c1c;
+}
+
+h2 {
+  color: #00ffc7;
+  text-align: center;
+  font-weight: normal;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+section.roadmap {
+  width: 100%;
+  padding: 120px 0 80px 0;
+  background: url("../images/client-hub/bg.jpg") top center no-repeat;
+}
+section.roadmap .games {
+  width: 1170px;
+  margin: 0 auto;
+}
+section.roadmap .games ul {
+  display: grid;
+  grid-template-columns: repeat(4, 235px);
+  place-content: center;
+  gap: 30px;
+}
+section.roadmap .games ul li {
+  position: relative;
+  transition: all 0.4s;
+}
+section.roadmap .games ul li .tag {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  right: -10px;
+  top: -10px;
+  background: url("../images/client-hub/symbol/tag.png") no-repeat;
+  background-size: contain;
+  color: #000;
+  line-height: 1;
+  padding-left: 5px;
+  filter: drop-shadow(0 2px 5px #000);
+}
+section.roadmap .games ul li .tag strong {
+  font-size: 40px;
+}
+section.roadmap .games ul li .tag span {
+  font-weight: 600;
+  font-size: 18px;
+}
+section.roadmap .games ul li a {
+  display: block;
+  box-shadow: 0 0 20px #000;
+}
+section.roadmap .games ul li:hover, section.roadmap .games ul li:focus {
+  box-shadow: 0 1.8em 1.2em -1em #000;
+  transform: translateY(-0.5em);
+}
+
+section.documentation {
+  background-color: #0e0e0e;
+  padding: 60px 0;
+}
+section.documentation .all-docs {
+  width: 1170px;
+  margin: 0 auto;
+}
+section.documentation .all-docs h2 {
+  color: #00ffc7;
+}
+section.documentation .all-docs .docs {
+  display: grid;
+  grid-template-columns: repeat(3, 220px);
+  gap: 20px;
+  justify-content: center;
+}
+section.documentation .all-docs .docs a {
+  display: inline-block;
+  padding: 10px 0;
+  border: 2px solid #7a7a7a;
+  border-radius: 100vmax;
+  color: #7a7a7a;
+  text-align: center;
+  transition: all 0.25s;
+}
+section.documentation .all-docs .docs a:hover, section.documentation .all-docs .docs a:focus {
+  color: #0e0e0e;
+  box-shadow: inset 0 0 0 2em #7a7a7a;
+  border-color: transparent;
+}
+
+section.support-materials {
+  padding: 60px 0 40px 0;
+}
+section.support-materials .docs-download-area {
+  width: 1170px;
+  margin: 0 auto;
+}
+section.support-materials .docs-download-area .filter-search-bar {
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px solid #00ffc7;
+  border-bottom: 2px solid #00ffc7;
+  padding: 20px 10px;
+}
+section.support-materials .docs-download-area .filter-search-bar .filter {
+  padding-top: 5px;
+}
+section.support-materials .docs-download-area .filter-search-bar .filter span {
+  color: #00ffc7;
+  margin-right: 10px;
+}
+section.support-materials .docs-download-area .filter-search-bar .filter label {
+  color: #fff;
+  margin-right: 10px;
+}
+section.support-materials .docs-download-area .filter-search-bar .filter input[type=radio] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  padding: 0;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #fff;
+  background-color: #7a7a7a;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+section.support-materials .docs-download-area .filter-search-bar .filter input[type=radio]:checked {
+  background-color: #00ffc7;
+}
+section.support-materials .docs-download-area .filter-search-bar .search-input input {
+  background-color: transparent;
+  outline: none;
+  border: 2px solid #7a7a7a;
+  border-radius: 100vmax;
+  padding: 5px 28px 5px 10px;
+  color: #00ffc7;
+  background: url("../images/client-hub/symbol/search.svg") no-repeat;
+  background-size: 18px;
+  background-position: 96% 50%;
+}
+section.support-materials .docs-download-area .each-docs-download {
+  padding: 15px 0;
+}
+section.support-materials .docs-download-area .each-docs-download li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+section.support-materials .docs-download-area .each-docs-download li span {
+  color: #fff;
+  display: block;
+}
+section.support-materials .docs-download-area .each-docs-download li span.docs-name {
+  white-space: nowrap;
+  margin-right: 10px;
+}
+section.support-materials .docs-download-area .each-docs-download li span.dashed {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to left, transparent 0%, transparent 50%, #575757 50%, #575757 100%);
+  background-size: 5px 1px;
+  background-repeat: repeat-x;
+  margin-right: 10px;
+}
+section.support-materials .docs-download-area .each-docs-download li span.download-icon {
+  width: 28px;
+  height: 28px;
+  background: url("../images/client-hub/symbol/download.svg") no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+footer {
+  background-color: #1c1c1c;
+}
+
+.a-letter {
+  position: fixed;
+  display: grid;
+  place-content: center;
+  right: 2%;
+  bottom: 130px;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #00ffc7;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+.a-letter p {
+  color: #00ffc7;
+  font-size: 18px;
+}
+.a-letter:hover {
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 1200px) {
+  section.roadmap .games {
+    width: 100%;
+  }
+  section.roadmap .games ul {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 5%;
+  }
+  section.documentation .all-docs {
+    width: 100%;
+  }
+  section.support-materials .docs-download-area {
+    width: 100%;
+    padding: 0 5%;
+  }
+}
+@media screen and (max-width: 767px) {
+  section.roadmap {
+    padding: 80px 0 40px 0;
+  }
+  section.roadmap .games ul {
+    grid-template-columns: repeat(4, 150px);
+    justify-content: start;
+    padding: 10px;
+    overflow-x: auto;
+  }
+  section.roadmap .games ul::-webkit-scrollbar-track {
+    background-color: #1c1c1c;
+  }
+  section.roadmap .games ul::-webkit-scrollbar {
+    height: 5px;
+  }
+  section.roadmap .games ul::-webkit-scrollbar-thumb {
+    background: #575757;
+    border-radius: 100vmax;
+  }
+  section.roadmap .games ul li .tag {
+    width: 60px;
+    height: 60px;
+    top: -7px;
+  }
+  section.roadmap .games ul li .tag strong {
+    font-size: 32px;
+  }
+  section.roadmap .games ul li .tag span {
+    font-size: 16px;
+  }
+  section.documentation .all-docs .docs {
+    grid-template-columns: 1fr;
+    padding: 0 5%;
+  }
+  section.documentation .all-docs .docs a {
+    padding: 15px 0;
+  }
+  section.support-materials {
+    padding: 40px 0 0px 0;
+  }
+  section.support-materials .docs-download-area .filter-search-bar {
+    flex-direction: column;
+    padding: 20px 0;
+    line-height: 1.5;
+  }
+  section.support-materials .docs-download-area .filter-search-bar .filter {
+    margin-bottom: 10px;
+  }
+  section.support-materials .docs-download-area .filter-search-bar .search-input input {
+    width: 100%;
+    padding: 10px 28px 10px 10px;
+    font-size: 16px;
+  }
+  .a-letter {
+    opacity: 0.2;
+  }
+}/*# sourceMappingURL=client.css.map */

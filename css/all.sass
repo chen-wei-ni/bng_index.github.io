@@ -167,9 +167,11 @@ header
                 border-radius: 10px
                 padding: 5px 0 5px 8px
                 margin-bottom: 12px
+                width: 100%
         .submit-area
             display: flex
             justify-content: space-between
+            align-items: center
             margin-top: 10px
             button
                 width: 120px
@@ -183,6 +185,7 @@ header
                 transition: color 0.2s
                 &:hover
                     color: #fff
+
     &.forgot-password-popup,&.email-sent-popup
         .input-block
             height: 200px
@@ -194,6 +197,28 @@ header
     &.email-sent-popup
         .submit-area
             margin-top: 15px
+
+// alert tag
+.input
+    position: relative
+    .alert
+        position: absolute
+        right: 0
+        top: 1rem
+        background-color: $mainGreen
+        color: #000
+        font-size: 14px
+        font-weight: 600
+        padding: 2.5px 5px 2.5px 2.5px
+        // display: none
+        &::before
+            content: ""
+            position: absolute
+            left: -12px
+            top: 50%
+            transform: translate(-50%,-50%)
+            border: 12px solid
+            border-color: transparent $mainGreen transparent transparent
 footer
     position: relative
     background-color: #0f0f0f
@@ -217,7 +242,7 @@ footer
                 color: $titleGray
             p
                 font-size: 14px
-    .contact-infomation
+    .contact-information
         display: flex
         align-items: baseline
         justify-content: space-between
@@ -228,6 +253,12 @@ footer
             p
                 span
                     font-weight: bold
+                    a
+                        color: $wordGray
+                        transition: color 0.4s
+                        &:hover
+                            color: #939393
+
         .footer-sns
             display: flex
             justify-content: flex-end
@@ -282,7 +313,7 @@ footer
     z-index: 50
     div
         +size(20px)
-        background: url('../images/others/scrollTop.svg') no-repeat
+        background: url('../images/others/tiny-symbol/scrollTop.svg') no-repeat
         background-size: contain
 
     &.show-up
@@ -311,7 +342,7 @@ footer
                         font-size: 16px
 @media screen and ( max-width: 820px )
     footer
-        .contact-infomation
+        .contact-information
             .footer-nav ul li
                 padding: 0 10px
                 a
@@ -338,7 +369,7 @@ footer
                                 display: none
             .menu-mb-icon
                 +size(28px,28.6px)
-                background: url("../images/others/menu.svg") right no-repeat
+                background: url("../images/others/tiny-symbol/menu.svg") right no-repeat
                 transition: all 0.3s
                 cursor: pointer
             &.openMenu
@@ -389,12 +420,29 @@ footer
                     position: absolute
                     right: 5%
                     top: 5%
-                    background: url("../images/others/menu_close.svg") right no-repeat
+                    background: url("../images/others/tiny-symbol/menu_close.svg") right no-repeat
         .switch-lang-list
             &.showUp,&.showUp-f
                 display: none
     .popup
         padding: 0 15px
+        .input-block
+        &.forgot-password-popup,&.email-sent-popup
+            .input-block
+                height: 210px
+            .submit-area
+                margin-top: 15px
+    // alert tag
+    .input
+        .alert
+            line-height: 0.9
+            padding: 0.25em
+            &::before
+                content: ""
+                left: 50%
+                top: 115%
+                border: 5px solid
+                border-color: $mainGreen transparent transparent transparent
     footer
         padding: 20px 0
         height: 100%
@@ -422,7 +470,7 @@ footer
             &.pc
                 display: none
 
-        .contact-infomation
+        .contact-information
             display: block
             text-align: center
             .footer-nav.mb
@@ -436,10 +484,18 @@ footer
         .footer-all-links
             display: none
 @media screen and ( max-width: 320px )
+    .popup
+        .input-block
+            padding: 0 1rem
+            h3
+                font-size: 20px
+        .submit-area a
+            margin-left: 2rem
+    .popup.email-sent-popup .input-block
+        height: 230px
     footer
         .logo
             width: 100px
-
 @media screen and ( min-width: 767px )
     header .switch-lang-list-mb,
     .switch-lang-list-mb,

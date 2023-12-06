@@ -1,3 +1,13 @@
+const lenis = new Lenis()
+lenis.on('scroll', (e) => {
+    // console.log(e)
+})
+function raf(time) {
+    lenis.raf(time)
+    requestAnimationFrame(raf)
+}
+requestAnimationFrame(raf);
+
 // header sticky
 window.addEventListener("scroll", () => {
     const topBtn = document.querySelector(".scroll-top");
@@ -24,37 +34,37 @@ const loginBtn = document.querySelectorAll(".login");
 loginBtn.forEach((target) => {
     target.addEventListener("click", function (e) {
         e.preventDefault();
-        let a = document.querySelector(".login-popup");
-        let b = document.querySelector(".forgot-password-popup");
-        let r = document.querySelector(".email-sent-popup");
-        let c = document.querySelectorAll(".login-close-btn");
-        let i = a.querySelectorAll("input");
+        let loginPop = document.querySelector(".login-popup");
+        let forgotPop = document.querySelector(".forgot-password-popup");
+        let respond = document.querySelector(".email-sent-popup");
+        let closeBtn = document.querySelectorAll(".login-close-btn");
+        let i = loginPop.querySelectorAll("input");
         i.forEach((e) => {
             e.value = "";
-        })
-        a.style.display = "flex";
-        let f = a.querySelector(".forgot-password");
-        f.addEventListener("click", (e) => {
-            e.preventDefault();
-            a.style.display = "none";
-            b.style.display = "flex";
-            b.querySelector("input").value = "";
         });
-        let okBtn = r.querySelector(".ok-btn");
-        b.addEventListener("submit", (e) => {
-            a.style.display = "none";
+        loginPop.style.display = "flex";
+        let forgotLink = loginPop.querySelector(".forgot-password");
+        forgotLink.addEventListener("click", (e) => {
             e.preventDefault();
-            b.style.display = "none";
-            r.style.display = "flex";
+            loginPop.style.display = "none";
+            forgotPop.style.display = "flex";
+            forgotPop.querySelector("input").value = "";
+        });
+        let okBtn = respond.querySelector(".ok-btn");
+        forgotPop.addEventListener("submit", (e) => {
+            loginPop.style.display = "none";
+            e.preventDefault();
+            forgotPop.style.display = "none";
+            respond.style.display = "flex";
         });
         okBtn.addEventListener("click", () => {
-            r.style.display = "none";
+            respond.style.display = "none";
         })
-        c.forEach((d) => {
+        closeBtn.forEach((d) => {
             d.addEventListener("click", () => {
-                a.style.display = "none";
-                b.style.display = "none";
-                r.style.display = "none";
+                loginPop.style.display = "none";
+                forgotPop.style.display = "none";
+                respond.style.display = "none";
             });
         });
     });
@@ -172,15 +182,5 @@ let slideToggle = (target, duration) => {
     }
 }
 
-const lenis = new Lenis()
 
-lenis.on('scroll', (e) => {
-    // console.log(e)
-})
 
-function raf(time) {
-    lenis.raf(time)
-    requestAnimationFrame(raf)
-}
-
-requestAnimationFrame(raf)

@@ -1,0 +1,272 @@
+// color definition
+$mainGreen: #00ffc7
+$mainBlue: #00fcfb
+$titleGray: #7a7a7a
+$wordGray: #575757
+$backgroundGray: #1c1c1c
+$backgroundBlack: #0e0e0e
+
+@mixin size($w,$h:$w)
+    width: $w
+    height: $h
+@mixin pos($l,$t:inherit)
+    position: absolute
+    left: $l
+    top: $t
+
+body
+    background-color: $backgroundGray
+
+// 輪播banner
+.slide-banner
+    width: 100%
+    position: relative
+.swiper-container-pc
+    +size(100%)
+    overflow: hidden
+    .swiper-pagination
+        width: 300px
+        padding: 4px 0 0 0
+        border-radius: 100vmax
+        bottom: 5%
+        left: 38%
+        transform: translateX(-50%)
+        background-color: rgba($wordGray,0.7)
+        span
+            +size(50px)
+            background: url("../images/game/topBn-pc/swiper-page1.png") no-repeat
+            background-size: contain
+            -webkit-filter: grayscale(1)
+            opacity: 1
+            &.swiper-pagination-bullet-active
+                -webkit-filter: saturate(1)
+
+// 遊戲
+section.games
+    margin-top: 40px
+    .filter-area
+        width: 1170px
+        margin: 0 auto
+        .theme-and-search
+            display: flex
+            justify-content: space-between
+            padding-bottom: 20px
+            border-bottom: 2px solid $titleGray
+            .provider-and-theme
+                color: $titleGray
+                ul
+                    display: inline-flex
+                    align-items: center
+                    li.icon
+                        display: inline-flex
+                        align-items: center
+                        margin-left: 20px
+                        p
+                            display: inline-flex
+                        figure
+                            display: block
+                            position: relative
+                            background: url("../images/game/symbol/engine.svg") no-repeat
+                            +size(25px)
+                            margin-left: 5px
+                            cursor: pointer
+                            div
+                                position: absolute
+                                +size(30px)
+                                left: -12px
+                                top: 15px
+                                background: url("../images/game/symbol/click.svg") no-repeat
+                                animation: click 2.5s infinite
+                    li
+                        &:nth-child(1)
+                            &::after
+                                content: ""
+                                display: inline-block
+                                +size(2px,10px)
+                                background-color: #b6b6b6
+                                margin-left: 20px
+                        span
+                            padding-left: 5px
+                            color: $mainGreen
+            .search-input
+                input
+                    background-color: transparent
+                    outline: none
+                    border: 2px solid $titleGray
+                    border-radius: 100vmax
+                    padding: 5px 28px 5px 10px
+                    color: $mainGreen
+                    background: url("../images/game/symbol/search.svg") no-repeat
+                    background-size: 18px
+                    background-position: 96% 50%
+        form
+            display: none
+            border-bottom: 2px solid $titleGray
+            padding: 20px 0
+            margin: 0 0 30px 0
+            .all-options
+                div
+                    text-indent: -70px
+                    margin-left: 70px
+                .provider-options
+                    margin-bottom: 5px
+                span
+                    color: $mainGreen
+                    margin-right: 10px
+                label
+                    color: #fff
+                    margin-right: 10px
+                input[type='radio'],input[type='checkbox']
+                    appearance: none
+                    padding: 0
+                    +size(10px)
+                    border: 1px solid #fff
+                    background-color: $titleGray
+                    border-radius: 50%
+                    cursor: pointer
+                    transition: 0.3s
+                    &:checked
+                        background-color: $mainGreen
+@keyframes click
+    0%
+        transform: scale(1)
+    5%
+        transform: scale(1.3)
+    8%
+        transform: scale(1)
+    12%
+        transform: scale(1.25)
+    15%
+        transform: scale(1)
+    100%
+        transform: scale(1)
+.rotate
+    animation: rotateAnimate .5s linear forwards
+.games-area
+    margin: 0 auto
+    padding: 20px 40px
+    display: grid
+    grid-column-gap: 54px
+    grid-row-gap: 48px
+    // align-content: start
+    justify-content: center
+    grid-template-columns: repeat(auto-fit, minmax(292px ,292px))
+    margin-bottom: 40px
+    a
+        position: relative
+        &::before,&::after
+            content: ""
+            position: absolute
+            z-index: 5
+            width: 0px
+            height: 0px
+            transition: 0.4s ease-in-out
+            opacity: 0
+        &::before
+            top: -8px
+            left: -8px
+            border-top: 2px solid $mainGreen
+            border-left: 2px solid $mainGreen
+        &::after
+            right: -8px
+            bottom: -8px
+            border-bottom: 2px solid $mainGreen
+            border-right: 2px solid $mainGreen
+        &:hover
+            &::before,&::after
+                width: calc(100% + 14px)
+                height: calc(100% + 14px)
+                opacity: 1
+
+footer
+    background-color: $backgroundGray
+
+@media screen and ( max-width: 1780px )
+    .games-area
+        grid-template-columns: repeat(5,1fr)
+@media screen and ( max-width: 1270px )
+    section.games
+        .filter-area
+            width: 100%
+            padding: 0 40px
+    .games-area
+        grid-template-columns: repeat(4,1fr)
+        row-gap: 30px
+        column-gap: 30px
+    .swiper-container-pc .swiper-pagination
+        width: 250px
+        bottom: 10px
+        span
+            +size(38px)
+@media screen and ( max-width: 767px )
+    section.games
+        .filter-area
+            width: 100%
+            padding: 0 20px
+    .slide-banner
+        margin-top: 60px
+        .swiper-container-pc
+            display: none
+        .swiper-container-mb
+            overflow: hidden
+            .swiper-pagination
+                top: inherit
+                bottom: inherit
+                .swiper-pagination-bullet
+                    border-radius: 0
+                    background-color: $mainGreen
+                    +size(30px,4px)
+    section.games
+        .filter-area
+            .theme-and-search
+                flex-direction: column
+                .provider-and-theme
+                    margin-bottom: 10px
+                    ul
+                        display: flex
+                        justify-content: space-between
+                        li.icon
+                            order: -1
+                            margin-left: 0
+                            p
+                                display: none
+                            figure
+                                position: relative
+                                display: block
+                                +size(25px)
+                                background: url("../images/game/symbol/engine.svg") no-repeat
+                                div
+                                    position: absolute
+                                    +size(25px)
+                                    left: -12px
+                                    top: 15px
+                                    background: url("../images/game/symbol/click.svg") no-repeat
+                                    animation: click 2.5s infinite
+                        li
+                            color: $titleGray
+                            span
+                                color: $mainGreen
+                            &:nth-child(1)
+                                &::after
+                                    display: none
+                .search-input
+                    input
+                        width: 100%
+                        padding: 8px 12px
+                        font-size: 14px
+            form
+                margin: 0
+                div
+                    line-height: 1.5
+    .games-area
+        padding: 20px 20px
+        margin-bottom: 0
+        grid-template-columns: repeat(3,1fr)
+        row-gap: 20px
+        column-gap: 20px
+@media screen and ( max-width: 440px )
+    .games-area
+        grid-template-columns: repeat(2,1fr)
+@media screen and ( min-width: 767px )
+    .slide-banner .swiper-container-mb
+        display: none

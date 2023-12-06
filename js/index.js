@@ -1,3 +1,4 @@
+// scroll events
 window.addEventListener("scroll", () => {
     scrollShowPrint();
     opacityFilm();
@@ -81,7 +82,7 @@ function loadingStart() {
     // 使用剛才計算出的速度，移動到當前slide，即將當前slide的移動到頭部的動畫完成，開啟autoplay
 }
 
-// run 0 to 100%
+// value run 0 to 100%
 let value1 = {
     a: 0,
     b: 0,
@@ -369,3 +370,4 @@ function scrollShowPrint() {
         return
     }
 }
+scrollShowPrint();

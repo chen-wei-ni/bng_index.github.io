@@ -198,10 +198,12 @@ header .switch-lang-list ul li a.selected {
   border-radius: 10px;
   padding: 5px 0 5px 8px;
   margin-bottom: 12px;
+  width: 100%;
 }
 .popup .input-block .submit-area {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 10px;
 }
 .popup .input-block .submit-area button {
@@ -231,6 +233,29 @@ header .switch-lang-list ul li a.selected {
 }
 .popup.email-sent-popup .submit-area {
   margin-top: 15px;
+}
+
+.input {
+  position: relative;
+}
+.input .alert {
+  position: absolute;
+  right: 0;
+  top: 1rem;
+  background-color: #00ffc7;
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 2.5px 5px 2.5px 2.5px;
+}
+.input .alert::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 12px solid;
+  border-color: transparent #00ffc7 transparent transparent;
 }
 
 footer {
@@ -264,57 +289,64 @@ footer .footer-terms div h6 {
 footer .footer-terms div p {
   font-size: 14px;
 }
-footer .contact-infomation {
+footer .contact-information {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
   margin: 20px 0;
 }
-footer .contact-infomation .footer-all-links {
+footer .contact-information .footer-all-links {
   flex-shrink: 0;
 }
-footer .contact-infomation .contact-mail p span {
+footer .contact-information .contact-mail p span {
   font-weight: bold;
 }
-footer .contact-infomation .footer-sns {
+footer .contact-information .contact-mail p span a {
+  color: #575757;
+  transition: color 0.4s;
+}
+footer .contact-information .contact-mail p span a:hover {
+  color: #939393;
+}
+footer .contact-information .footer-sns {
   display: flex;
   justify-content: flex-end;
 }
-footer .contact-infomation .footer-sns a {
+footer .contact-information .footer-sns a {
   width: 30px;
   margin-left: 10px;
   filter: brightness(60%);
   transition: filter 0.3s;
 }
-footer .contact-infomation .footer-sns a:hover {
+footer .contact-information .footer-sns a:hover {
   filter: brightness(110%);
 }
-footer .contact-infomation .footer-nav {
+footer .contact-information .footer-nav {
   margin: 10px 0;
 }
-footer .contact-infomation .footer-nav ul {
+footer .contact-information .footer-nav ul {
   display: flex;
 }
-footer .contact-infomation .footer-nav ul li {
+footer .contact-information .footer-nav ul li {
   position: relative;
   padding: 0 15px;
 }
-footer .contact-infomation .footer-nav ul li a {
+footer .contact-information .footer-nav ul li a {
   font-size: 16px;
   transition: 0.3s;
 }
-footer .contact-infomation .footer-nav ul li a span {
+footer .contact-information .footer-nav ul li a span {
   width: 16px;
   display: inline-block;
   margin-right: 2px;
 }
-footer .contact-infomation .footer-nav ul li:nth-last-child(1) {
+footer .contact-information .footer-nav ul li:nth-last-child(1) {
   padding-right: 0;
 }
-footer .contact-infomation .footer-nav ul li:nth-last-child(1)::after {
+footer .contact-information .footer-nav ul li:nth-last-child(1)::after {
   display: none;
 }
-footer .contact-infomation .footer-nav ul li::after {
+footer .contact-information .footer-nav ul li::after {
   content: "";
   position: absolute;
   right: 0;
@@ -324,7 +356,7 @@ footer .contact-infomation .footer-nav ul li::after {
   height: 40%;
   background-color: #7a7a7a;
 }
-footer .contact-infomation .footer-nav ul li:hover {
+footer .contact-information .footer-nav ul li:hover {
   color: #7a7a7a;
 }
 
@@ -346,7 +378,7 @@ footer .contact-infomation .footer-nav ul li:hover {
 .scroll-top div {
   width: 20px;
   height: 20px;
-  background: url("../images/others/scrollTop.svg") no-repeat;
+  background: url("../images/others/tiny-symbol/scrollTop.svg") no-repeat;
   background-size: contain;
 }
 .scroll-top.show-up {
@@ -379,10 +411,10 @@ footer .contact-infomation .footer-nav ul li:hover {
   }
 }
 @media screen and (max-width: 820px) {
-  footer .contact-infomation .footer-nav ul li {
+  footer .contact-information .footer-nav ul li {
     padding: 0 10px;
   }
-  footer .contact-infomation .footer-nav ul li a {
+  footer .contact-information .footer-nav ul li a {
     font-size: 13px;
   }
 }
@@ -414,7 +446,7 @@ footer .contact-infomation .footer-nav ul li:hover {
   header nav .menu-mb-icon {
     width: 28px;
     height: 28.6px;
-    background: url("../images/others/menu.svg") right no-repeat;
+    background: url("../images/others/tiny-symbol/menu.svg") right no-repeat;
     transition: all 0.3s;
     cursor: pointer;
   }
@@ -479,13 +511,30 @@ footer .contact-infomation .footer-nav ul li:hover {
     position: absolute;
     right: 5%;
     top: 5%;
-    background: url("../images/others/menu_close.svg") right no-repeat;
+    background: url("../images/others/tiny-symbol/menu_close.svg") right no-repeat;
   }
   header .switch-lang-list.showUp, header .switch-lang-list.showUp-f {
     display: none;
   }
   .popup {
     padding: 0 15px;
+  }
+  .popup.forgot-password-popup .input-block, .popup.email-sent-popup .input-block {
+    height: 210px;
+  }
+  .popup.forgot-password-popup .submit-area, .popup.email-sent-popup .submit-area {
+    margin-top: 15px;
+  }
+  .input .alert {
+    line-height: 0.9;
+    padding: 0.25em;
+  }
+  .input .alert::before {
+    content: "";
+    left: 50%;
+    top: 115%;
+    border: 5px solid;
+    border-color: #00ffc7 transparent transparent transparent;
   }
   footer {
     padding: 20px 0;
@@ -521,18 +570,18 @@ footer .contact-infomation .footer-nav ul li:hover {
   footer .footer-terms.pc {
     display: none;
   }
-  footer .contact-infomation {
+  footer .contact-information {
     display: block;
     text-align: center;
   }
-  footer .contact-infomation .footer-nav.mb ul {
+  footer .contact-information .footer-nav.mb ul {
     justify-content: center;
     flex-wrap: wrap;
   }
-  footer .contact-infomation .footer-nav.mb ul li {
+  footer .contact-information .footer-nav.mb ul li {
     padding: 0 15px;
   }
-  footer .contact-infomation .footer-nav.mb ul li a {
+  footer .contact-information .footer-nav.mb ul li a {
     font-size: 14px;
   }
   footer .footer-all-links {
@@ -540,6 +589,18 @@ footer .contact-infomation .footer-nav ul li:hover {
   }
 }
 @media screen and (max-width: 320px) {
+  .popup .input-block {
+    padding: 0 1rem;
+  }
+  .popup .input-block h3 {
+    font-size: 20px;
+  }
+  .popup .submit-area a {
+    margin-left: 2rem;
+  }
+  .popup.email-sent-popup .input-block {
+    height: 230px;
+  }
   footer .logo {
     width: 100px;
   }
