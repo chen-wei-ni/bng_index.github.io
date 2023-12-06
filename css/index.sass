@@ -412,6 +412,58 @@ section.our-partner
             transition: filter 0.3s
             &:hover
                 filter: grayscale(0%)
+// ---animate
+
+@keyframes linearGradient
+    0%
+        background-position: 0% 200%
+    100%
+        background-position: 200% 0%
+
+@keyframes lineto100
+    0%
+        width: 0
+    100%
+        width: 100%
+@keyframes highlight
+    60%
+        filter: saturate(200%) brightness(150%)
+@keyframes jump
+    0%
+        transform: translate3d(0,0,0)
+    50%
+        transform: translate3d(0,10px,0)
+    70%
+        transform: translate3d(0,-10px,0)
+    100%
+        transform: translate3d(0,0px,0)
+@keyframes bounce
+    0%, 20%, 50%, 80%, 100%
+        transform: translateY(0)
+    40%
+        transform: translateY(-15px)
+    60%
+        transform: translateY(-10px)
+@keyframes graduallyShow
+    0%
+        opacity: 0
+        transform: translate3d(0,25px,-60px)
+    100%
+        opacity: 1
+        transform: translate3d(0,0,0)
+@keyframes figurJump
+    0%
+        opacity: 0
+        transform: translateY(500px)
+    40%
+        opacity: 1
+        transform: translateY(0px)
+    60%
+        opacity: 1
+        transform: translateY(80px)
+    100%
+        opacity: 1
+        transform: translateY(0px)
 
 @media screen and ( max-width: 1600px )
     section.bng-introduce
@@ -487,58 +539,6 @@ section.our-partner
                 li
                     a
                         font-size: 14px
-// ---animate
-
-@keyframes linearGradient
-    0%
-        background-position: 0% 200%
-    100%
-        background-position: 200% 0%
-
-@keyframes lineto100
-    0%
-        width: 0
-    100%
-        width: 100%
-@keyframes highlight
-    60%
-        filter: saturate(200%) brightness(150%)
-@keyframes jump
-    0%
-        transform: translate3d(0,0,0)
-    50%
-        transform: translate3d(0,10px,0)
-    70%
-        transform: translate3d(0,-10px,0)
-    100%
-        transform: translate3d(0,0px,0)
-@keyframes bounce
-    0%, 20%, 50%, 80%, 100%
-        transform: translateY(0)
-    40%
-        transform: translateY(-15px)
-    60%
-        transform: translateY(-10px)
-@keyframes graduallyShow
-    0%
-        opacity: 0
-        transform: translate3d(0,25px,-60px)
-    100%
-        opacity: 1
-        transform: translate3d(0,0,0)
-@keyframes figurJump
-    0%
-        opacity: 0
-        transform: translateY(500px)
-    40%
-        opacity: 1
-        transform: translateY(0px)
-    60%
-        opacity: 1
-        transform: translateY(80px)
-    100%
-        opacity: 1
-        transform: translateY(0px)
 
 @media screen and ( max-width: 960px )
 
@@ -618,6 +618,7 @@ section.our-partner
             p
                 padding: 0 10px
         .bng-introduce-main
+            height: 425px
             figure
                 +size(100%,400px)
                 left: -8%
