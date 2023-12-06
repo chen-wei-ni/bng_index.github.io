@@ -77,6 +77,12 @@ section.hot-games {
   background-color: #1c1c1c;
   box-shadow: 0 -10px 35px #000;
 }
+section.hot-games .jump-position {
+  position: absolute;
+  top: -5%;
+  width: 20px;
+  height: 20px;
+}
 section.hot-games .hot-games-slides {
   width: 90%;
   margin: 0 auto;

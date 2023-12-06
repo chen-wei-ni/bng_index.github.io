@@ -341,6 +341,15 @@ function scrollShowPrint() {
     const man = document.querySelector("figure");
     let windowHeight = window.scrollY + window.innerHeight;
     let vh = v.offsetParent.offsetHeight / 2.2 + v.offsetParent.offsetTop;
+    desc.forEach((d) => {
+        // 要吃到父組件的高度
+        let h = d.offsetParent.offsetHeight / 2.2 + d.offsetParent.offsetTop;
+        if (windowHeight > h) {
+            d.classList.add("showUp");
+        } else {
+            return
+        }
+    });
     if (windowHeight > vh) {
         v.classList.add("showUp");
     }
@@ -349,15 +358,6 @@ function scrollShowPrint() {
         man.classList.add("showUp");
     }
     if (window.innerWidth > 767) {
-        desc.forEach((d) => {
-            // 要吃到父組件的高度
-            let h = d.offsetParent.offsetHeight / 2.2 + d.offsetParent.offsetTop;
-            if (windowHeight > h) {
-                d.classList.add("showUp");
-            } else {
-                return
-            }
-        });
         featureIcon.forEach((f) => {
             let fh = f.offsetParent.offsetHeight / 2.2 + f.offsetParent.offsetTop;
             if (windowHeight > fh) {
@@ -367,15 +367,6 @@ function scrollShowPrint() {
             }
         });
     } else {
-        desc.forEach((d) => {
-            // 要吃到父組件的高度
-            let h = d.offsetParent.offsetHeight / 5 + d.offsetParent.offsetTop;
-            if (windowHeight > h) {
-                d.classList.add("showUp");
-            } else {
-                return
-            }
-        });
         return
     }
 }
