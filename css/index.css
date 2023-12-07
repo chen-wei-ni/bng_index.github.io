@@ -434,6 +434,9 @@ section.news .news-slides .swiper-news-container .swiper-wrapper .swiper-slide .
   font-size: 28px;
   font-weight: bold;
 }
+section.news .news-slides .swiper-news-container .swiper-wrapper .swiper-slide .date-tag span.month {
+  font-weight: 600;
+}
 section.news .news-slides .swiper-news-container .swiper-wrapper .swiper-slide h5 {
   color: #00ffc7;
   font-size: 26px;
@@ -442,6 +445,11 @@ section.news .news-slides .swiper-news-container .swiper-wrapper .swiper-slide h
 }
 section.news .news-slides .swiper-news-container .swiper-wrapper .swiper-slide img {
   margin-bottom: 5px;
+}
+section.news .news-slides .swiper-news-container .swiper-wrapper .swiper-slide h6 {
+  color: #00ffc7;
+  font-weight: 600;
+  font-size: 16px;
 }
 section.news .news-slides .swiper-news-container .swiper-wrapper .swiper-slide p {
   width: 100%;
@@ -726,7 +734,7 @@ section.our-partner .partner-logos .swiper-slide:hover {
 }
 @media screen and (max-width: 767px) {
   .top_film {
-    height: 90vh;
+    height: 100%;
   }
   .top_film .text-content h1 {
     font-size: 40px;

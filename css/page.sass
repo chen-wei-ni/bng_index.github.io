@@ -89,6 +89,7 @@ section.games
                             padding-left: 5px
                             color: $mainGreen
             .search-input
+                position: relative
                 input
                     background-color: transparent
                     outline: none
@@ -96,9 +97,17 @@ section.games
                     border-radius: 100vmax
                     padding: 5px 28px 5px 10px
                     color: $mainGreen
+                .search-btn
+                    position: absolute
+                    right: 6px
+                    border: none
+                    outline: 0
+                    +size(22px,100%)
                     background: url("../images/game/symbol/search.svg") no-repeat
-                    background-size: 18px
+                    background-size: 22px 22px
                     background-position: 96% 50%
+                    cursor: pointer
+
         form
             display: none
             border-bottom: 2px solid $titleGray
@@ -109,7 +118,10 @@ section.games
                     text-indent: -70px
                     margin-left: 70px
                 .provider-options
+                    display: flex
                     margin-bottom: 5px
+                .theme-options
+                    display: flex
                 span
                     color: $mainGreen
                     margin-right: 10px
@@ -254,10 +266,19 @@ footer
                         width: 100%
                         padding: 8px 12px
                         font-size: 14px
+                    .search-btn
+                        right: 10px
             form
                 margin: 0
-                div
-                    line-height: 1.5
+                .all-options
+                    div
+                        line-height: 1.6
+                        text-indent: 0
+                        margin-left: 0
+                    .provider-options
+                        margin-bottom: 0.5em
+                .provider-options,.theme-options
+                    flex-direction: column
     .games-area
         padding: 20px 20px
         margin-bottom: 0

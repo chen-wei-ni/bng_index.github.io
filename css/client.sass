@@ -115,6 +115,7 @@ section.support-materials
                     &:checked
                         background-color: $mainGreen
             .search-input
+                position: relative
                 input
                     background-color: transparent
                     outline: none
@@ -122,9 +123,16 @@ section.support-materials
                     border-radius: 100vmax
                     padding: 5px 28px 5px 10px
                     color: $mainGreen
-                    background: url("../images/client-hub/symbol/search.svg") no-repeat
-                    background-size: 18px
+                .search-btn
+                    position: absolute
+                    right: 6px
+                    border: none
+                    outline: 0
+                    +size(22px,100%)
+                    background: url("../images/game/symbol/search.svg") no-repeat
+                    background-size: 22px 22px
                     background-position: 96% 50%
+                    cursor: pointer
         .each-docs-download
             padding: 15px 0
             li
@@ -231,6 +239,8 @@ footer
                         width: 100%
                         padding: 10px 28px 10px 10px
                         font-size: 16px
+                    .search-btn
+                        right: 10px
     .a-letter
         opacity: 0.2
         // bottom: 17%

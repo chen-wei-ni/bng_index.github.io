@@ -1,0 +1,125 @@
+// color definition
+$mainGreen: #00ffc7
+$mainBlue: #00fcfb
+$titleGray: #393333
+$wordGray: #575757
+$backgroundGray: #1c1c1c
+$backgroundBlack: #0e0e0e
+
+@mixin size($w,$h:$w)
+    width: $w
+    height: $h
+
+.wrapper
+    width: 1170px
+    margin: 0 auto
+    position: relative
+    padding-top: 80px
+    .category-bar
+        margin: 20px 0 40px 0
+        ol
+            list-style: none
+            display: flex
+            border-top: 2px solid $titleGray
+            border-bottom: 2px solid $titleGray
+            padding: 25px 0
+            color: #9b9a9a
+            li
+                margin-right: 0.8em
+                a
+                    transition: color 0.3s
+                    &:hover
+                        color: $wordGray
+.news-article
+    margin-bottom: 50px
+    .container
+        position: relative
+        .info
+            display: grid
+            grid-template-columns: 1fr 0.8fr
+            column-gap: 20px
+            margin-bottom: 20px
+            .banner
+                width: 100%
+            .date-and-demo
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                text-align: center
+                border: 4px solid #3b3b3b
+                span
+                    color: #9b9a9a
+                p
+                    color: $mainGreen
+                    font-size: 24px
+                    margin-bottom: 25px
+                a
+                    display: block
+                    width: 150px
+                    font-size: 18px
+                    color: $mainGreen
+                    border: 1px solid $mainGreen
+                    padding: 10px 0
+                    border-radius: 100vmax
+                    transition: all 0.3s
+                    &:hover
+                        background-color: $mainGreen
+                        color: #000
+        h3
+            color: $mainGreen
+            padding: 0 0 0.8em 0.5em
+            font-size: 24px
+            font-weight: 600
+        p.content
+            color: #fff
+            width: 100%
+            border-left: 4px solid $mainGreen
+            font-size: 18px
+            padding-left: 0.8em
+            text-indent: 1em
+            text-align: justify
+@media screen and ( max-width: 1200px )
+    .wrapper
+        padding-top: 70px
+        width: 100%
+        .category-bar
+            margin: 25px
+    .news-article
+        .container
+            margin: 25px
+@media screen and ( max-width: 767px )
+    .wrapper
+        .category-bar
+            margin: 0 5px
+            ol
+                border-top: none
+                padding: 10px 0
+                overflow-x: auto
+                li
+                    font-size: 14px
+    .news-article
+        margin-bottom: 0
+        .container
+            margin: 20px 5%
+            .info
+                grid-template-columns: 1fr
+                .date-and-demo
+                    padding: 20px 10px
+                    margin-top: 15px
+                    .mb-mode
+                        width: 100%
+                        display: flex
+                        justify-content: space-around
+                        margin-bottom: 15px
+                    p
+                        font-size: 20px
+                        margin-bottom: 0
+            h3
+                padding: 0
+                font-size: 20px
+                margin-bottom: 10px
+                padding-left: .5rem
+            p.content
+                font-size: 16px
+                padding-left: .5rem

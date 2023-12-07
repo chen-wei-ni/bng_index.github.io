@@ -37,16 +37,3 @@ function sortNews(hiddenElements) {
     });
 }
 
-// news popup
-const news = document.querySelectorAll(".hidden a");
-const popup = document.querySelector(".news-popup");
-const close = document.querySelector(".close-btn");
-close.addEventListener('click', () => {
-    popup.style.display = "none"
-});
-news.forEach((el) => {
-    el.addEventListener('click', function (e) {
-        e.preventDefault();
-        popup.style.display = "flex";
-    });
-});

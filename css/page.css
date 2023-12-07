@@ -91,6 +91,9 @@ section.games .filter-area .theme-and-search .provider-and-theme ul li span {
   padding-left: 5px;
   color: #00ffc7;
 }
+section.games .filter-area .theme-and-search .search-input {
+  position: relative;
+}
 section.games .filter-area .theme-and-search .search-input input {
   background-color: transparent;
   outline: none;
@@ -98,9 +101,18 @@ section.games .filter-area .theme-and-search .search-input input {
   border-radius: 100vmax;
   padding: 5px 28px 5px 10px;
   color: #00ffc7;
+}
+section.games .filter-area .theme-and-search .search-input .search-btn {
+  position: absolute;
+  right: 6px;
+  border: none;
+  outline: 0;
+  width: 22px;
+  height: 100%;
   background: url("../images/game/symbol/search.svg") no-repeat;
-  background-size: 18px;
+  background-size: 22px 22px;
   background-position: 96% 50%;
+  cursor: pointer;
 }
 section.games .filter-area form {
   display: none;
@@ -113,7 +125,11 @@ section.games .filter-area form .all-options div {
   margin-left: 70px;
 }
 section.games .filter-area form .all-options .provider-options {
+  display: flex;
   margin-bottom: 5px;
+}
+section.games .filter-area form .all-options .theme-options {
+  display: flex;
 }
 section.games .filter-area form .all-options span {
   color: #00ffc7;
@@ -304,11 +320,22 @@ footer {
     padding: 8px 12px;
     font-size: 14px;
   }
+  section.games .filter-area .theme-and-search .search-input .search-btn {
+    right: 10px;
+  }
   section.games .filter-area form {
     margin: 0;
   }
-  section.games .filter-area form div {
-    line-height: 1.5;
+  section.games .filter-area form .all-options div {
+    line-height: 1.6;
+    text-indent: 0;
+    margin-left: 0;
+  }
+  section.games .filter-area form .all-options .provider-options {
+    margin-bottom: 0.5em;
+  }
+  section.games .filter-area form .provider-options, section.games .filter-area form .theme-options {
+    flex-direction: column;
   }
   .games-area {
     padding: 20px 20px;

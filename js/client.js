@@ -64,35 +64,41 @@ let allFiles = [
 const rad = document.filesDownload.supportMaterials;
 const filesArea = document.querySelector(".each-docs-download");
 
-if (rad[0].checked) {
-    let show = "";
-    allFiles.forEach((evt) => {
-        if (rad[0].value.toUpperCase() == evt.type.toUpperCase()) {
+function onloadRad() {
+    if (rad[0].checked) {
+        let show = "";
+        allFiles.forEach((evt) => {
             show += `<li>
         <span class="docs-name">${evt.name}</span>
         <span class="dashed"></span>
         <span class="download-icon"></span>
         </li>
         `
-        }
-    })
-    filesArea.innerHTML = show
+        })
+        filesArea.innerHTML = show;
+    }
 }
+onloadRad();
 
 function sortby() {
     const files = allFiles;
     if (this.checked) {
         let show = "";
-        files.forEach((e) => {
-            if (this.value.toUpperCase() == e.type.toUpperCase()) {
-                show += `<li>
-                <span class="docs-name">${e.name}</span>
-                <span class="dashed"></span>
-                <span class="download-icon"></span>
-                </li>`
-            }
-        });
-        filesArea.innerHTML = show
+        console.log(this.value);
+        if (this.value == "all") {
+            onloadRad();
+        } else {
+            files.forEach((e) => {
+                if (this.value.toUpperCase() == e.type.toUpperCase()) {
+                    show += `<li>
+                    <span class="docs-name">${e.name}</span>
+                    <span class="dashed"></span>
+                    <span class="download-icon"></span>
+                    </li>`
+                }
+            });
+            filesArea.innerHTML = show;
+        }
     }
 }
 rad.forEach((evt) => {

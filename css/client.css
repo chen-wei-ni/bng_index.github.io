@@ -134,6 +134,9 @@ section.support-materials .docs-download-area .filter-search-bar .filter input[t
 section.support-materials .docs-download-area .filter-search-bar .filter input[type=radio]:checked {
   background-color: #00ffc7;
 }
+section.support-materials .docs-download-area .filter-search-bar .search-input {
+  position: relative;
+}
 section.support-materials .docs-download-area .filter-search-bar .search-input input {
   background-color: transparent;
   outline: none;
@@ -141,9 +144,18 @@ section.support-materials .docs-download-area .filter-search-bar .search-input i
   border-radius: 100vmax;
   padding: 5px 28px 5px 10px;
   color: #00ffc7;
-  background: url("../images/client-hub/symbol/search.svg") no-repeat;
-  background-size: 18px;
+}
+section.support-materials .docs-download-area .filter-search-bar .search-input .search-btn {
+  position: absolute;
+  right: 6px;
+  border: none;
+  outline: 0;
+  width: 22px;
+  height: 100%;
+  background: url("../images/game/symbol/search.svg") no-repeat;
+  background-size: 22px 22px;
   background-position: 96% 50%;
+  cursor: pointer;
 }
 section.support-materials .docs-download-area .each-docs-download {
   padding: 15px 0;
@@ -277,6 +289,9 @@ footer {
     width: 100%;
     padding: 10px 28px 10px 10px;
     font-size: 16px;
+  }
+  section.support-materials .docs-download-area .filter-search-bar .search-input .search-btn {
+    right: 10px;
   }
   .a-letter {
     opacity: 0.2;
