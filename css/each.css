@@ -65,7 +65,7 @@ section.game-screen .lang-list.show {
 section.main .banner-and-values {
   display: flex;
   align-items: center;
-  margin: 40px 0;
+  margin: 60px 0;
 }
 section.main .banner-and-values .banner {
   width: 350px;
@@ -73,10 +73,8 @@ section.main .banner-and-values .banner {
 }
 section.main .banner-and-values .values {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  row-gap: 25px;
-  -moz-column-gap: 40px;
-       column-gap: 40px;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 section.main .banner-and-values .values div {
   display: flex;
@@ -84,20 +82,26 @@ section.main .banner-and-values .values div {
   text-align: center;
 }
 section.main .banner-and-values .values div strong {
-  font-size: 32px;
+  font-size: 44px;
   color: #00ffc7;
 }
 section.main .banner-and-values .values div span {
+  font-size: 18px;
   color: #fff;
+}
+section.main .banner-and-values .values div.release b {
+  font-size: 20px;
+  margin-left: 5px;
+  color: #b6b6b6;
 }
 section.main article h2 {
   color: #00ffc7;
-  font-weight: normal;
+  font-weight: 500;
 }
 section.main article p {
   color: #fff;
   text-align: justify;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 section.main .similar-game {
   margin: 60px 0;
@@ -204,12 +208,19 @@ footer {
     flex-direction: column;
     margin: 20px 0;
   }
-  section.main .banner-and-values .banner {
-    width: 100%;
-    margin-right: 0;
-  }
   section.main .banner-and-values .values {
-    margin: 30px 0 10px 0;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 25px;
+    margin: 20px 0 10px 0;
+  }
+  section.main .banner-and-values .values div strong {
+    font-size: 28px;
+  }
+  section.main .banner-and-values .values div span {
+    font-size: 16px;
+  }
+  section.main .similar-game {
+    margin: 40px 0;
   }
   section.main .similar-game ul {
     grid-template-columns: repeat(2, 1fr);

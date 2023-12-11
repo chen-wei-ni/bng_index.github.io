@@ -20,20 +20,20 @@ h2
     font-size: 32px
     margin-bottom: 30px
 section.roadmap
+    position: relative
     width: 100%
     padding: 120px 0 80px 0
     background: url("../images/client-hub/bg.jpg") top center no-repeat
     .games
+        position: relative
         width: 1170px
+        padding: 20px 10px 30px 10px
         margin: 0 auto
+        overflow: hidden
         ul
-            display: grid
-            grid-template-columns: repeat(4,235px)
-            place-content: center
-            gap: 30px
             li
                 position: relative
-                transition: all 0.4s
+                transition: box-shadow 0.4s,transform 0.4s
                 .tag
                     position: absolute
                     display: flex
@@ -53,12 +53,98 @@ section.roadmap
                     span
                         font-weight: 600
                         font-size: 18px
-                a
-                    display: block
-                    box-shadow: 0 0 20px #000
+                figure
+                    box-shadow: 0 1em 1.2em -1em #000
                 &:hover,&:focus
-                    box-shadow: 0 1.8em 1.2em -1em #000
+                    box-shadow: 0 1.5em 1.2em -1em #000
                     transform: translateY(-0.5em)
+        .swiper-pagination
+            bottom: -5px
+            span
+                background-color: $mainGreen
+                border-radius: 0
+                +size(30px,5px)
+    .swiper-button-next
+        +size(35px)
+        top: 60%
+        right: calc( (100% - 1170px)/2.5 )
+        &::after
+            content: ""
+            +size(100%)
+            background: url('../images/client-hub/symbol/navi.svg') no-repeat
+    .swiper-button-prev
+        +size(35px)
+        top: 60%
+        left: calc( (100% - 1170px)/2.5 )
+        &::after
+            content: ""
+            +size(100%)
+            background: url('../images/client-hub/symbol/navi-l.svg') no-repeat
+.product-popup
+    position: fixed
+    top: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    +size(100%,100vh)
+    z-index: 50
+    background-color: rgba(#000,0.8)
+    display: none
+    .container
+        +size(600px,420px)
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+        background-color: $backgroundGray
+        padding: 20px
+        box-shadow: 0 0 25px #000
+        .close-btn
+            +size(30px)
+            position: absolute
+            right: 0
+            top: -40px
+            cursor: pointer
+    .banner
+        width: 250px
+        margin-right: 15px
+        box-shadow: 0 1em 1.2em -1em #000
+        img
+            &.pc
+                display: block
+            &.mb
+                display: none
+    .game-content
+        width: 300px
+        height: 100%
+        overflow-y: scroll
+        padding-right: 5px
+        &::-webkit-scrollbar-track
+            // background-color: $backgroundGray
+        &::-webkit-scrollbar
+            width: 5px
+        &::-webkit-scrollbar-thumb
+            background: $wordGray
+            border-radius: 100vmax
+        ul
+            display: flex
+            justify-content: center
+            flex-direction: column
+            li
+                color: #fff
+                font-weight: 500
+                border-bottom: dashed 1px $wordGray
+                padding: 7px 0
+                &:nth-last-child(1)
+                    border-bottom: none
+                span
+                    width: 100%
+                    display: block
+                    line-height: 1.2
+                    &:nth-child(2)
+                        font-weight: normal
+                        color: #b5b5b5
+
 section.documentation
     background-color: $backgroundBlack
     padding: 60px 0
@@ -91,29 +177,31 @@ section.support-materials
         margin: 0 auto
         .filter-search-bar
             display: flex
+            align-items: center
             justify-content: space-between
             border-top: 2px solid $mainGreen
             border-bottom: 2px solid $mainGreen
-            padding: 20px 10px
+            padding: 20px 0
             .filter
+                display: flex
                 padding-top: 5px
+                .select-option
+                    color: #fff
+                    background-color: transparent
+                    border: 1px solid $titleGray
+                    border-radius: 100vmax
+                    padding: 0.2em 0.8em
+                    margin-right: 8px
+                    line-height: 1.8
+                    cursor: pointer
+                    &.active
+                        border: none
+                        background-color: $mainGreen
+                        color: $backgroundGray
+                        font-weight: 500
                 span
                     color: $mainGreen
                     margin-right: 10px
-                label
-                    color: #fff
-                    margin-right: 10px
-                input[type='radio']
-                    appearance: none
-                    padding: 0
-                    +size(10px)
-                    border: 1px solid #fff
-                    background-color: $titleGray
-                    border-radius: 50%
-                    cursor: pointer
-                    transition: 0.3s
-                    &:checked
-                        background-color: $mainGreen
             .search-input
                 position: relative
                 input
@@ -180,36 +268,44 @@ footer
         font-size: 18px
     &:hover
         opacity: 0.6
+@media screen and ( max-width: 1600px )
+    section.roadmap
+        .swiper-button-next
+            top: 60%
+            right: calc( (100% - 1170px)/4 )
+        .swiper-button-prev
+            top: 60%
+            left: calc( (100% - 1170px)/4 )
+@media screen and ( max-width: 1300px )
+    section.roadmap
+        .swiper-button-next
+            top: 60%
+            right: .5%
+        .swiper-button-prev
+            top: 60%
+            left: .5%
 @media screen and ( max-width: 1200px )
     section.roadmap
         .games
-            width: 100%
-            ul
-                grid-template-columns: repeat(4,1fr)
-                padding: 0 5%
+            width: 90%
     section.documentation
         .all-docs
             width: 100%
     section.support-materials
         .docs-download-area
             width: 100%
-            padding: 0 5%
+            padding: 0 3%
+@media screen and ( max-width: 960px)
+    section.support-materials
+        .docs-download-area .filter-search-bar .filter .select-option
+            font-size: 14px
+            padding: .2em .6em
+
 @media screen and ( max-width: 767px)
     section.roadmap
         padding: 80px 0 40px 0
         .games
             ul
-                grid-template-columns: repeat(4,150px)
-                justify-content: start
-                padding: 10px
-                overflow-x: auto
-                &::-webkit-scrollbar-track
-                    background-color: $backgroundGray
-                &::-webkit-scrollbar
-                    height: 5px
-                &::-webkit-scrollbar-thumb
-                    background: $wordGray
-                    border-radius: 100vmax
                 li
                     .tag
                         +size(60px)
@@ -218,6 +314,25 @@ footer
                             font-size: 32px
                         span
                             font-size: 16px
+        .swiper-button-next,.swiper-button-prev
+            display: none
+    .product-popup .container
+        width: 100%
+        height: 560px
+        flex-direction: column
+        margin: 0 20px
+        .banner
+            width: 212px
+            margin: 10px 0 30px 0
+            img
+                &.pc
+                    display: none
+                &.mb
+                    display: block
+        .game-content
+            width: 100%
+            ul
+                text-align: center
     section.documentation
         .all-docs
             .docs
@@ -233,8 +348,14 @@ footer
                 padding: 20px 0
                 line-height: 1.5
                 .filter
-                    margin-bottom: 10px
+                    width: 100%
+                    flex-wrap: wrap
+                    margin-bottom: 5px
+                    .select-option
+                        margin-bottom: 10px
+                        padding: .25em .8em
                 .search-input
+                    width: 100%
                     input
                         width: 100%
                         padding: 10px 28px 10px 10px
@@ -244,3 +365,6 @@ footer
     .a-letter
         opacity: 0.2
         // bottom: 17%
+@media screen and ( max-width: 320px)
+    section.support-materials .docs-download-area .each-docs-download li span
+        font-size: 14px

@@ -9,7 +9,8 @@ function raf(time) {
 requestAnimationFrame(raf);
 
 // header sticky
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll", headerStick);
+function headerStick() {
     const topBtn = document.querySelector(".scroll-top");
     const header = document.querySelector("header");
     list.classList.remove("showUp");
@@ -26,8 +27,9 @@ window.addEventListener("scroll", () => {
     } else {
         header.classList.remove("scroll-down");
         topBtn.classList.remove("show-up");
-    }
-});
+    };
+};
+
 
 // login area
 const loginBtn = document.querySelectorAll(".login");

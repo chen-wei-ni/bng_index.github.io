@@ -86,7 +86,7 @@ let gamesData = [
         "_id": 1,
         "name": "Crystal scarabs",
         "provider": "BNG",
-        "theme": ["BuyFeature", "New", "High"],
+        "theme": ["Buy Feature", "New", "High"],
         "image": "./images/game/games-icon/game-ex1.jpg",
         "url": "./gamedemo.html"
     },
@@ -94,7 +94,7 @@ let gamesData = [
         "_id": 2,
         "name": "Olaf Viking",
         "provider": "BNG",
-        "theme": ["Hot", "New", "Medium", "HoldandWin"],
+        "theme": ["Hot", "New", "Medium", "Hold and Win"],
         "image": "./images/game/games-icon/game-ex2.jpg",
         "url": "./gamedemo.html"
     },
@@ -110,7 +110,7 @@ let gamesData = [
         "_id": 4,
         "name": "3 Hot Chillies",
         "provider": "BNG",
-        "theme": ["Hot", "New", "Medium", "HoldandWin"],
+        "theme": ["Hot", "New", "Medium", "Hold and Win"],
         "image": "./images/game/games-icon/game-ex4.jpg",
         "url": "./gamedemo.html"
     },
@@ -118,7 +118,7 @@ let gamesData = [
         "_id": 5,
         "name": "777 Coins",
         "provider": "BNG",
-        "theme": ["New", "Medium", "HoldandWin"],
+        "theme": ["New", "Medium", "Hold and Win"],
         "image": "./images/game/games-icon/game-ex5.jpg",
         "url": "./gamedemo.html"
     },
@@ -127,23 +127,72 @@ let gamesData = [
         "_id": 6,
         "name": "Energy Coins",
         "provider": "Playson",
-        "theme": ["BuyFeature", "New"],
+        "theme": ["Buy Feature", "New"],
         "image": "./images/game/games-icon/game-ex6_300x300.png",
         "url": "./gamedemo.html"
-    }
+    },
+    {
+        "_id": 7,
+        "name": "Energy Coins",
+        "provider": "BNG",
+        "theme": ["Buy Feature", "Medium", "Hold and Win"],
+        "image": "./images/game/games-icon/game-ex1.jpg",
+        "url": "./gamedemo.html"
+    },
+    {
+        "_id": 8,
+        "name": "Olaf Viking",
+        "provider": "BNG",
+        "theme": ["Hot", "New", "High", "Hold and Win"],
+        "image": "./images/game/games-icon/game-ex2.jpg",
+        "url": "./gamedemo.html"
+    },
+    {
+        "_id": 9,
+        "name": "African Spirit",
+        "provider": "BNG",
+        "theme": ["Hot", "Medium"],
+        "image": "./images/game/games-icon/game-ex3.jpg",
+        "url": "./gamedemo.html"
+    },
+    {
+        "_id": 10,
+        "name": "3 Hot Chillies",
+        "provider": "BNG",
+        "theme": ["Hot", "New", "Medium", "Hold and Win"],
+        "image": "./images/game/games-icon/game-ex4.jpg",
+        "url": "./gamedemo.html"
+    },
+    {
+        "_id": 11,
+        "name": "777 Coins",
+        "provider": "BNG",
+        "theme": ["High", "Hold and Win"],
+        "image": "./images/game/games-icon/game-ex5.jpg",
+        "url": "./gamedemo.html"
+    },
+
+    {
+        "_id": 12,
+        "name": "Energy Coins",
+        "provider": "Playson",
+        "theme": ["Buy Feature", "Hot", "Hold and Win"],
+        "image": "./images/game/games-icon/game-ex6_300x300.png",
+        "url": "./gamedemo.html"
+    },
 ];
 
 // 使用 map 遍歷 querySelectorAll
-const rad = document.games.Providers;
-const rad2 = document.games.Theme;
-const allRad = document.games.querySelectorAll("input");
+const rad = document.querySelectorAll(".rad");
+const rad2 = document.querySelectorAll(".rad2");
+const allRad = document.games.querySelectorAll(".filter-element");
 const gameArea = document.querySelector(".games-area");
 const gameQuantity = document.querySelector(".game-quantity");
 function showGames() {
     gameQuantity.textContent = gamesData.length;
     let show = "";
     for (let i = 0; i < gamesData.length; i++) {
-        if (rad[0].checked && rad2[0].checked) {
+        if (rad[0].classList.length == 4) {
             show += `<a href="${gamesData[i].url}" data-game="${gamesData[i].name}"><img src="${gamesData[i].image}"  alt="${gamesData[i].name}" class="hidden" /></a>`
         }
     }
@@ -152,94 +201,96 @@ function showGames() {
 showGames();
 
 function filterItems(arr, query) {
-    return arr.filter((el) => el.provider.toLowerCase().includes(query.value.toLowerCase()));
+    return arr.filter((el) => el.provider.toLowerCase().includes(query.toLowerCase()));
 }
 function filterItems2(arr, query) {
-    return arr.filter((el) => el.theme.includes(query.value));
+    return arr.filter((el) => el.theme.includes(query));
 }
-function sortFun() {
-    let arr = [];
+rad.forEach((e) => {
+    e.addEventListener("click", () => {
+        for (let i = 0; i < rad.length; i++) {
+            rad[i].classList.remove("active");
+        }
+        e.classList.add("active");
+    });
+});
+rad2.forEach((e) => {
+    e.addEventListener("click", () => {
+        for (let i = 0; i < rad2.length; i++) {
+            rad2[i].classList.remove("active");
+        }
+        e.classList.add("active");
+    });
+});
+function sortFun(e) {
     let show = [];
-    if (rad[0].checked) {
-        if (rad2[0].checked) {
+    if (rad[0].classList.length == 4) {
+        if (rad2[0].classList.length == 4) {
             gamesData.forEach((e) => {
-                show += `<a href="${e.url}" class="hidden" data-game="${e.name}"><img src="${e.image}" alt="${e.name}" /></a>`
+                show += `<a href="${e.url}"  data-game="${e.name}"><img src="${e.image}" alt="${e.name}" /></a>`
             })
             gameArea.innerHTML = show;
-            gameQuantity.textContent = gamesData.length
+            gameQuantity.textContent = gamesData.length;
         } else {
             for (let i = 1; i < rad2.length; i++) {
-                if (rad2[i].checked) {
-                    let game = "";
-                    arr = filterItems2(gamesData, rad2[i])
-                    show = show.concat(arr);
-                    show.sort(function (a, b) {
-                        return a._id - b._id
+                if (rad2[i].classList.length == 4) {
+                    arr = filterItems2(gamesData, rad2[i].innerText);
+                    arr.forEach((e) => {
+                        show += `<a href="${e.url}"  data-game="${e.name}"><img src="${e.image}" alt="${e.name}" /></a>`
                     });
-                    let uniqueArr = [...new Set(show)];
-                    uniqueArr.forEach((u) => {
-                        game += `<a href="${u.url}" class="hidden" data-game="${u.name}"><img src="${u.image}"  alt="${u.name}" /></a>`
-                    });
-                    gameArea.innerHTML = game;
-                    gameQuantity.textContent = uniqueArr.length
+                    gameArea.innerHTML = show;
+                    gameQuantity.textContent = arr.length
                 }
             }
         }
     } else {
         for (let i = 1; i < rad.length; i++) {
-            if (rad[i].checked) {
-                arr = filterItems(gamesData, rad[i]);
-                if (rad2[0].checked == false) {
+            if (rad[i].classList.length == 4) {
+                arr = filterItems(gamesData, rad[i].innerText);
+                if (rad2[0].classList.length !== 4) {
                     for (let j = 1; j < rad2.length; j++) {
-                        if (rad2[j].checked) {
-                            let game = "";
-                            arr2 = filterItems2(arr, rad2[j])
-                            show = show.concat(arr2);
-                            show.sort(function (a, b) {
-                                return a._id - b._id
+                        if (rad2[j].classList.length == 4) {
+                            arr2 = filterItems2(arr, rad2[j].innerText);
+                            arr2.forEach((e) => {
+                                show += `<a href="${e.url}"  data-game="${e.name}"><img src="${e.image}" alt="${e.name}" /></a>`
                             });
-                            let uniqueArr = [...new Set(show)];
-                            uniqueArr.forEach((u) => {
-                                game += `<a href="${u.url}" class="hidden" data-game="${u.name}"><img src="${u.image}" alt="${u.name}" /></a>`
-                            });
-                            gameArea.innerHTML = game;
-                            gameQuantity.textContent = uniqueArr.length
+                            gameArea.innerHTML = show;
+                            gameQuantity.textContent = arr2.length
                         }
                     }
                 } else {
-                    let game = "";
-                    arr.forEach((a) => {
-                        game += `<a href="${a.url}" class="hidden" data-game="${a.name}"><img src="${a.image}"  alt="${a.name}" /></a>`
+                    arr.forEach((e) => {
+                        show += `<a href="${e.url}"  data-game="${e.name}"><img src="${e.image}" alt="${e.name}" /></a>`
                     });
-                    gameArea.innerHTML = game;
+                    gameArea.innerHTML = show;
                     gameQuantity.textContent = arr.length
                 }
             }
         }
     }
-}
-
-allRad.forEach((e) => {
-    e.addEventListener("change", sortFun);
+};
+allRad.forEach(function (e) {
+    e.addEventListener("click", sortFun);
 });
 
+
 // search input  
-function filterFunction() {
-    const input = document.getElementById('search-game');
-    const filterItem = document.querySelectorAll('.games-area a');
-    let num = 0
-    for (let i = 0; i < filterItem.length; i++) {
-        if (filterItem[i].dataset.game.toUpperCase().indexOf(input.value.toUpperCase()) > -1) {
-            filterItem[i].style.display = "";
-            num += 1
-            gameQuantity.textContent = num;
-        } else {
-            filterItem[i].style.display = "none";
-        }
-    }
-    if (num == 0) {
-        gameQuantity.textContent = 0;
-    }
-}
+// function filterFunction() {
+//     const input = document.getElementById('search-game');
+//     const filterItem = document.querySelectorAll('.games-area a');
+//     let num = 0
+//     for (let i = 0; i < filterItem.length; i++) {
+//         if (filterItem[i].dataset.game.toUpperCase().indexOf(input.value.toUpperCase()) > -1) {
+//             filterItem[i].style.display = "";
+//             num += 1
+//             gameQuantity.textContent = num;
+//         } else {
+//             filterItem[i].style.display = "none";
+//         }
+//     }
+//     if (num == 0) {
+//         gameQuantity.textContent = 0;
+//     }
+// }
 
 

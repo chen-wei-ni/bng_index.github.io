@@ -120,40 +120,39 @@ section.games .filter-area form {
   padding: 20px 0;
   margin: 0 0 30px 0;
 }
-section.games .filter-area form .all-options div {
-  text-indent: -70px;
-  margin-left: 70px;
-}
 section.games .filter-area form .all-options .provider-options {
-  display: flex;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
 }
-section.games .filter-area form .all-options .theme-options {
+section.games .filter-area form .all-options .theme-options, section.games .filter-area form .all-options .provider-options {
   display: flex;
+  align-items: center;
+}
+section.games .filter-area form .all-options .filter-siders {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+section.games .filter-area form .all-options .filter-siders .filter-element {
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #7a7a7a;
+  border-radius: 100vmax;
+  padding: 0.2em 0.8em;
+  margin-right: 8px;
+  line-height: 1.8;
+  cursor: pointer;
+}
+section.games .filter-area form .all-options .filter-siders .filter-element.active {
+  border: none;
+  background-color: #00ffc7;
+  color: #1c1c1c;
+  font-weight: 500;
 }
 section.games .filter-area form .all-options span {
+  font-size: 24px;
+  font-weight: 500;
   color: #00ffc7;
   margin-right: 10px;
-}
-section.games .filter-area form .all-options label {
-  color: #fff;
-  margin-right: 10px;
-}
-section.games .filter-area form .all-options input[type=radio], section.games .filter-area form .all-options input[type=checkbox] {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  padding: 0;
-  width: 10px;
-  height: 10px;
-  border: 1px solid #fff;
-  background-color: #7a7a7a;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: 0.3s;
-}
-section.games .filter-area form .all-options input[type=radio]:checked, section.games .filter-area form .all-options input[type=checkbox]:checked {
-  background-color: #00ffc7;
 }
 
 @keyframes click {
@@ -249,6 +248,11 @@ footer {
     height: 38px;
   }
 }
+@media screen and (max-width: 840px) {
+  section.games .filter-area form .all-options .filter-siders .filter-element {
+    font-size: 14px;
+  }
+}
 @media screen and (max-width: 767px) {
   section.games .filter-area {
     width: 100%;
@@ -325,6 +329,10 @@ footer {
   }
   section.games .filter-area form {
     margin: 0;
+    padding: 10px 0;
+  }
+  section.games .filter-area form .all-options span {
+    font-size: 20px;
   }
   section.games .filter-area form .all-options div {
     line-height: 1.6;
@@ -334,8 +342,15 @@ footer {
   section.games .filter-area form .all-options .provider-options {
     margin-bottom: 0.5em;
   }
-  section.games .filter-area form .provider-options, section.games .filter-area form .theme-options {
+  section.games .filter-area form .all-options .provider-options, section.games .filter-area form .all-options .theme-options {
+    align-items: start;
     flex-direction: column;
+  }
+  section.games .filter-area form .all-options .theme-options .filter-siders .filter-element {
+    margin-bottom: 8px;
+  }
+  section.games .filter-area form .all-options .filter-siders {
+    margin-top: 5px;
   }
   .games-area {
     padding: 20px 20px;
