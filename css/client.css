@@ -139,11 +139,7 @@ section.roadmap .swiper-button-prev::after {
   overflow-y: scroll;
   padding-right: 5px;
 }
-.product-popup .game-content::-webkit-scrollbar-track {
-  background-color: #0e0e0e;
-}
 .product-popup .game-content::-webkit-scrollbar {
-  background-color: transparent;
   width: 8px;
 }
 .product-popup .game-content::-webkit-scrollbar-thumb {
@@ -405,6 +401,9 @@ footer {
   }
   .product-popup .container .game-content {
     width: 100%;
+  }
+  .product-popup .container .game-content::-webkit-scrollbar-track {
+    background-color: #0e0e0e;
   }
   .product-popup .container .game-content ul {
     text-align: center;

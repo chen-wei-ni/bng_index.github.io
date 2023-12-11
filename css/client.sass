@@ -12,7 +12,6 @@ $backgroundBlack: #0e0e0e
 
 body
     background-color: $backgroundGray
-
 h2
     color: $mainGreen
     text-align: center
@@ -120,9 +119,8 @@ section.roadmap
         overflow-y: scroll
         padding-right: 5px
         &::-webkit-scrollbar-track
-            background-color: $backgroundBlack
+            // background-color: $backgroundBlack
         &::-webkit-scrollbar
-            background-color: transparent
             width: 8px
         &::-webkit-scrollbar-thumb
             background: $mainGray
@@ -332,6 +330,8 @@ footer
                     display: block
         .game-content
             width: 100%
+            &::-webkit-scrollbar-track
+                background-color: $backgroundBlack
             ul
                 text-align: center
     section.documentation
