@@ -48,11 +48,11 @@ swiperSlides.forEach((evt) => {
     let closeBtn = document.querySelector(".close-btn");
     evt.addEventListener("click", function () {
         popup.style.display = "flex";
-        document.querySelector("body").style.height = "100vh";
-        document.querySelector("body").style.overflow = "hidden";
+        lenis.stop();
     });
     closeBtn.addEventListener("click", () => {
         popup.style.display = "";
+        lenis.start();
     });
 
 });

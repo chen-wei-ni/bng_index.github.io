@@ -36,6 +36,7 @@ const loginBtn = document.querySelectorAll(".login");
 loginBtn.forEach((target) => {
     target.addEventListener("click", function (e) {
         e.preventDefault();
+        lenis.stop();
         let loginPop = document.querySelector(".login-popup");
         let forgotPop = document.querySelector(".forgot-password-popup");
         let respond = document.querySelector(".email-sent-popup");
@@ -61,12 +62,14 @@ loginBtn.forEach((target) => {
         });
         okBtn.addEventListener("click", () => {
             respond.style.display = "none";
+            lenis.start();
         })
         closeBtn.forEach((d) => {
             d.addEventListener("click", () => {
                 loginPop.style.display = "none";
                 forgotPop.style.display = "none";
                 respond.style.display = "none";
+                lenis.start();
             });
         });
     });
@@ -100,7 +103,7 @@ function menuShow() {
     let btn = document.querySelector(" nav .menu-mb-icon");
     btn.addEventListener("click", function () {
         menu.classList.toggle("openMenu");
-        console.log(menu.className)
+        // console.log(menu.className)
     });
     let lang = document.querySelector(".mb-lang");
     lang.addEventListener("click", function (e) {
