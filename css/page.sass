@@ -70,6 +70,9 @@ section.games
                             +size(25px)
                             margin-left: 5px
                             cursor: pointer
+                            transition: opacity 0.3s
+                            &:hover
+                                opacity: 0.6
                             div
                                 position: absolute
                                 +size(30px)
@@ -131,11 +134,14 @@ section.games
                         margin-right: 8px
                         line-height: 1.8
                         cursor: pointer
+                        transition: border-color 0.3s
                         &.active
                             border: none
                             background-color: $mainGreen
                             color: $backgroundGray
                             font-weight: 500
+                        &:hover
+                            border-color: $mainGreen
                 span
                     font-size: 24px
                     font-weight: 500

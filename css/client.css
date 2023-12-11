@@ -230,12 +230,16 @@ section.support-materials .docs-download-area .filter-search-bar .filter .select
   margin-right: 8px;
   line-height: 1.8;
   cursor: pointer;
+  transition: border-color 0.3s;
 }
 section.support-materials .docs-download-area .filter-search-bar .filter .select-option.active {
   border: none;
   background-color: #00ffc7;
   color: #1c1c1c;
   font-weight: 500;
+}
+section.support-materials .docs-download-area .filter-search-bar .filter .select-option:hover {
+  border-color: #00ffc7;
 }
 section.support-materials .docs-download-area .filter-search-bar .filter span {
   color: #00ffc7;
@@ -315,6 +319,7 @@ footer {
   width: 50px;
   height: 50px;
   border: 2px solid #00ffc7;
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
   cursor: pointer;
   transition: opacity 0.3s;
@@ -385,7 +390,7 @@ footer {
   }
   .product-popup .container {
     width: 100%;
-    height: 560px;
+    height: 540px;
     flex-direction: column;
     margin: 0 20px;
   }
@@ -442,9 +447,6 @@ footer {
   }
   section.support-materials .docs-download-area .filter-search-bar .search-input .search-btn {
     right: 10px;
-  }
-  .a-letter {
-    opacity: 0.2;
   }
 }
 @media screen and (max-width: 320px) {

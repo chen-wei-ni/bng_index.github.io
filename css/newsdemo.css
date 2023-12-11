@@ -22,7 +22,7 @@
   transition: color 0.3s;
 }
 .wrapper .category-bar ol li a:hover {
-  color: #575757;
+  color: #00ffc7;
 }
 
 .news-article {

@@ -50,7 +50,8 @@ $backgroundBlack: #0e0e0e
         background-color: inherit
         display: grid
         grid-template-columns: 550px 480px
-        grid-template-rows: 250px 50px
+        // grid-template-rows: 250px 50px
+        margin-bottom: 50px
         justify-content: center
         &:nth-child(2)
             transition-delay: 200ms
@@ -61,13 +62,14 @@ $backgroundBlack: #0e0e0e
                 filter: drop-shadow(0 0 5px $mainGreen)
             .content
                 border-color: $mainGreen
-                a
+                .readmore
                     color: $mainGreen
                     span
                         .st0
                             fill: $mainGreen
             &::after,&::before
                 background-color: $mainGreen
+
         .banner
             width: 100%
             padding: 0 70px 0 0
@@ -97,7 +99,8 @@ $backgroundBlack: #0e0e0e
                 -webkit-box-orient: vertical
                 -webkit-line-clamp: 4
                 overflow: hidden
-            a
+            .readmore
+                display: inline
                 color: #9b9a9a
                 font-size: 16px
                 transition: all 0.3s
@@ -160,8 +163,8 @@ footer
             margin: 25px
     .timeline
         .container
-            grid-template-columns: 400px 328px
-            grid-template-rows: 180px 50px
+            grid-template-columns: 480px 408px
+            // grid-template-rows: 180px 50px
             .content
                 h3
                     font-size: 18px
@@ -170,7 +173,13 @@ footer
                 a
                     font-size: 14px
             &:nth-child(even)
-                grid-template-columns: 328px 400px
+                grid-template-columns: 408px 480px
+@media screen and ( max-width: 920px )
+    .timeline
+        .container
+            grid-template-columns: 395px 325px
+            &:nth-child(even)
+                grid-template-columns: 325px 395px
 @media screen and ( max-width: 767px )
     .wrapper
         padding-top: 70px
@@ -198,7 +207,7 @@ footer
             width: 85%
             border: 2px solid #9b9a9a
             margin-bottom: 20px
-            margin-left: 15px
+            // margin-left: 15px
             padding: 10px
             .banner
                 padding: 0
@@ -232,6 +241,9 @@ footer
             &::before,&::after
                 top: 50%
                 transform: translateY(-50%)
+@media screen and ( max-width: 500px )
+    .timeline .container
+        margin-left: 15px
 @media screen and ( max-width: 320px )
     .wrapper
         .switch-page

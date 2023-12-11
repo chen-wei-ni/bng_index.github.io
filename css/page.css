@@ -69,6 +69,10 @@ section.games .filter-area .theme-and-search .provider-and-theme ul li.icon figu
   height: 25px;
   margin-left: 5px;
   cursor: pointer;
+  transition: opacity 0.3s;
+}
+section.games .filter-area .theme-and-search .provider-and-theme ul li.icon figure:hover {
+  opacity: 0.6;
 }
 section.games .filter-area .theme-and-search .provider-and-theme ul li.icon figure div {
   position: absolute;
@@ -141,12 +145,16 @@ section.games .filter-area form .all-options .filter-siders .filter-element {
   margin-right: 8px;
   line-height: 1.8;
   cursor: pointer;
+  transition: border-color 0.3s;
 }
 section.games .filter-area form .all-options .filter-siders .filter-element.active {
   border: none;
   background-color: #00ffc7;
   color: #1c1c1c;
   font-weight: 500;
+}
+section.games .filter-area form .all-options .filter-siders .filter-element:hover {
+  border-color: #00ffc7;
 }
 section.games .filter-area form .all-options span {
   font-size: 24px;

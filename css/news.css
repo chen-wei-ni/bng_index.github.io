@@ -49,7 +49,7 @@
   background-color: inherit;
   display: grid;
   grid-template-columns: 550px 480px;
-  grid-template-rows: 250px 50px;
+  margin-bottom: 50px;
   justify-content: center;
   /* The circles on the timeline */
 }
@@ -65,10 +65,10 @@
 .timeline .container:hover .content {
   border-color: #00ffc7;
 }
-.timeline .container:hover .content a {
+.timeline .container:hover .content .readmore {
   color: #00ffc7;
 }
-.timeline .container:hover .content a span .st0 {
+.timeline .container:hover .content .readmore span .st0 {
   fill: #00ffc7;
 }
 .timeline .container:hover::after, .timeline .container:hover::before {
@@ -108,17 +108,18 @@
   -webkit-line-clamp: 4;
   overflow: hidden;
 }
-.timeline .container .content a {
+.timeline .container .content .readmore {
+  display: inline;
   color: #9b9a9a;
   font-size: 16px;
   transition: all 0.3s;
 }
-.timeline .container .content a span {
+.timeline .container .content .readmore span {
   display: inline-block;
   width: 8px;
   animation: arrow 0.5s infinite alternate;
 }
-.timeline .container .content a span .st0 {
+.timeline .container .content .readmore span .st0 {
   transition: all 0.3s;
 }
 .timeline .container:nth-child(even) {
@@ -187,8 +188,7 @@ footer {
     margin: 25px;
   }
   .timeline .container {
-    grid-template-columns: 400px 328px;
-    grid-template-rows: 180px 50px;
+    grid-template-columns: 480px 408px;
   }
   .timeline .container .content h3 {
     font-size: 18px;
@@ -200,7 +200,15 @@ footer {
     font-size: 14px;
   }
   .timeline .container:nth-child(even) {
-    grid-template-columns: 328px 400px;
+    grid-template-columns: 408px 480px;
+  }
+}
+@media screen and (max-width: 920px) {
+  .timeline .container {
+    grid-template-columns: 395px 325px;
+  }
+  .timeline .container:nth-child(even) {
+    grid-template-columns: 325px 395px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -237,7 +245,6 @@ footer {
     width: 85%;
     border: 2px solid #9b9a9a;
     margin-bottom: 20px;
-    margin-left: 15px;
     padding: 10px;
   }
   .timeline .container .banner {
@@ -282,6 +289,11 @@ footer {
   .timeline .container::before, .timeline .container::after {
     top: 50%;
     transform: translateY(-50%);
+  }
+}
+@media screen and (max-width: 500px) {
+  .timeline .container {
+    margin-left: 15px;
   }
 }
 @media screen and (max-width: 320px) {
