@@ -101,15 +101,20 @@ switchLang();
 let menu = document.querySelector("nav");
 function menuShow() {
     let btn = document.querySelector(" nav .menu-mb-icon");
+    let lang = document.querySelector(".mb-lang");
     btn.addEventListener("click", function () {
         menu.classList.toggle("openMenu");
-        // console.log(menu.className)
+        if (menu.classList.length == 1) {
+            lenis.stop();
+        } else {
+            lenis.start();
+        }
     });
-    let lang = document.querySelector(".mb-lang");
     lang.addEventListener("click", function (e) {
         e.preventDefault();
         $(".switch-lang-list-mb").slideToggle();
     });
+    lenis.start();
 }
 menuShow();
 
