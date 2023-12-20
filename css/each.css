@@ -41,10 +41,10 @@ section.game-screen .lang-list .radio label {
   cursor: pointer;
   color: #fff;
 }
-section.game-screen .lang-list .radio input[type=radio] {
+section.game-screen .lang-list .radio input[type="radio"] {
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding: 0;
   width: 10px;
   height: 10px;
@@ -54,7 +54,7 @@ section.game-screen .lang-list .radio input[type=radio] {
   transition: 0.3s;
   cursor: pointer;
 }
-section.game-screen .lang-list .radio input[type=radio]:checked {
+section.game-screen .lang-list .radio input[type="radio"]:checked {
   background-color: #00ffc7;
 }
 section.game-screen .lang-list.show {
@@ -136,13 +136,14 @@ section.main .similar-game ul {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   -moz-column-gap: 25px;
-       column-gap: 25px;
+  column-gap: 25px;
   margin-top: 25px;
 }
 section.main .similar-game ul li a {
   position: relative;
 }
-section.main .similar-game ul li a::before, section.main .similar-game ul li a::after {
+section.main .similar-game ul li a::before,
+section.main .similar-game ul li a::after {
   content: "";
   position: absolute;
   z-index: 5;
@@ -163,7 +164,8 @@ section.main .similar-game ul li a::after {
   border-bottom: 3px solid #00ffc7;
   border-right: 3px solid #00ffc7;
 }
-section.main .similar-game ul li a:hover::before, section.main .similar-game ul li a:hover::after {
+section.main .similar-game ul li a:hover::before,
+section.main .similar-game ul li a:hover::after {
   width: calc(100% + 3px);
   height: calc(100% + 3px);
   opacity: 1;
@@ -181,7 +183,7 @@ footer {
   }
   section.main .similar-game ul {
     -moz-column-gap: 20px;
-         column-gap: 20px;
+    column-gap: 20px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -201,7 +203,7 @@ footer {
     justify-content: center;
     grid-template-columns: 1fr 1fr;
     -moz-column-gap: 30px;
-         column-gap: 30px;
+    column-gap: 30px;
     padding: 1em 2em;
   }
   section.main .banner-and-values {
@@ -226,7 +228,7 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     row-gap: 15px;
     -moz-column-gap: 15px;
-         column-gap: 15px;
+    column-gap: 15px;
   }
   section.main article p {
     font-size: 14px;
@@ -236,7 +238,7 @@ footer {
 @media screen and (max-width: 300px) {
   section.game-screen .lang-list {
     -moz-column-gap: 10px;
-         column-gap: 10px;
+    column-gap: 10px;
     padding: 1em;
   }
-}/*# sourceMappingURL=each.css.map */
+}

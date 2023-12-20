@@ -34,7 +34,7 @@ section.main form {
   display: grid;
   grid-template-columns: 1.3fr 1fr;
   -moz-column-gap: 60px;
-       column-gap: 60px;
+  column-gap: 60px;
 }
 section.main form .all-inputs {
   display: grid;
@@ -84,7 +84,9 @@ section.main form .all-inputs .message textarea::-webkit-scrollbar-thumb {
   background: #575757;
   border-radius: 100vmax;
 }
-section.main form .all-inputs input, section.main form .all-inputs select, section.main form .all-inputs textarea {
+section.main form .all-inputs input,
+section.main form .all-inputs select,
+section.main form .all-inputs textarea {
   width: 100%;
   background-color: transparent;
   border: 2px #9b9a9a solid;
@@ -95,8 +97,8 @@ section.main form .all-inputs input, section.main form .all-inputs select, secti
 }
 section.main form .all-inputs select {
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #fff;
 }
 section.main form .all-inputs select option {
@@ -124,8 +126,8 @@ section.main form .contents .checkbox label {
 section.main form .contents .checkbox input {
   flex-shrink: 0;
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   width: 1em;
   height: 1em;
   border: 1px solid #7a7a7a;
@@ -221,7 +223,7 @@ footer {
     width: 100%;
     padding: 60px 40px;
     -moz-column-gap: 40px;
-         column-gap: 40px;
+    column-gap: 40px;
   }
 }
 @media screen and (max-width: 900px) {
@@ -255,4 +257,4 @@ footer {
   section.main .block {
     margin: 0 15px;
   }
-}/*# sourceMappingURL=contact.css.map */
+}

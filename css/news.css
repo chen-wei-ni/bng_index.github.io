@@ -71,7 +71,8 @@
 .timeline .container:hover .content .readmore span .st0 {
   fill: #00ffc7;
 }
-.timeline .container:hover::after, .timeline .container:hover::before {
+.timeline .container:hover::after,
+.timeline .container:hover::before {
   background-color: #00ffc7;
 }
 .timeline .container .banner {
@@ -95,10 +96,12 @@
 .timeline .container .content h3 {
   color: #00ffc7;
   font-size: 24px;
-  white-space: nowrap;
   font-weight: normal;
   overflow: hidden;
   text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
 }
 .timeline .container .content p {
   color: #fff;
@@ -286,7 +289,8 @@ footer {
   .timeline .container::after {
     left: -30px;
   }
-  .timeline .container::before, .timeline .container::after {
+  .timeline .container::before,
+  .timeline .container::after {
     top: 50%;
     transform: translateY(-50%);
   }
@@ -303,4 +307,4 @@ footer {
   .timeline .container .content h3 {
     white-space: wrap;
   }
-}/*# sourceMappingURL=news.css.map */
+}

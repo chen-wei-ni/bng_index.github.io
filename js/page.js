@@ -86,7 +86,7 @@ let gamesData = [
         "_id": 1,
         "name": "Crystal scarabs",
         "provider": "BNG",
-        "theme": ["Buy Feature", "New", "High"],
+        "theme": ["Buy Feature", "New", "High Volatility"],
         "image": "./images/game/games-icon/game-ex1.jpg",
         "url": "./gamedemo.html"
     },
@@ -94,7 +94,7 @@ let gamesData = [
         "_id": 2,
         "name": "Olaf Viking",
         "provider": "BNG",
-        "theme": ["Hot", "New", "Medium", "Hold and Win"],
+        "theme": ["Hot", "New", "Medium Volatility", "Hold and Win"],
         "image": "./images/game/games-icon/game-ex2.jpg",
         "url": "./gamedemo.html"
     },
@@ -102,7 +102,7 @@ let gamesData = [
         "_id": 3,
         "name": "African Spirit",
         "provider": "BNG",
-        "theme": ["Hot", "High"],
+        "theme": ["Hot", "High Volatility"],
         "image": "./images/game/games-icon/game-ex3.jpg",
         "url": "./gamedemo.html"
     },
@@ -110,7 +110,7 @@ let gamesData = [
         "_id": 4,
         "name": "3 Hot Chillies",
         "provider": "BNG",
-        "theme": ["Hot", "New", "Medium", "Hold and Win"],
+        "theme": ["Hot", "New", "Medium Volatility", "Hold and Win"],
         "image": "./images/game/games-icon/game-ex4.jpg",
         "url": "./gamedemo.html"
     },
@@ -118,7 +118,7 @@ let gamesData = [
         "_id": 5,
         "name": "777 Coins",
         "provider": "BNG",
-        "theme": ["New", "Medium", "Hold and Win"],
+        "theme": ["New", "Medium Volatility", "Hold and Win"],
         "image": "./images/game/games-icon/game-ex5.jpg",
         "url": "./gamedemo.html"
     },
@@ -135,7 +135,7 @@ let gamesData = [
         "_id": 7,
         "name": "Energy Coins",
         "provider": "BNG",
-        "theme": ["Buy Feature", "Medium", "Hold and Win"],
+        "theme": ["Buy Feature", "Medium Volatility", "Hold and Win"],
         "image": "./images/game/games-icon/game-ex1.jpg",
         "url": "./gamedemo.html"
     },
@@ -143,7 +143,7 @@ let gamesData = [
         "_id": 8,
         "name": "Olaf Viking",
         "provider": "BNG",
-        "theme": ["Hot", "New", "High", "Hold and Win"],
+        "theme": ["Hot", "New", "High Volatility", "Hold and Win"],
         "image": "./images/game/games-icon/game-ex2.jpg",
         "url": "./gamedemo.html"
     },
@@ -151,7 +151,7 @@ let gamesData = [
         "_id": 9,
         "name": "African Spirit",
         "provider": "BNG",
-        "theme": ["Hot", "Medium"],
+        "theme": ["Hot", "Medium Volatility"],
         "image": "./images/game/games-icon/game-ex3.jpg",
         "url": "./gamedemo.html"
     },
@@ -159,7 +159,7 @@ let gamesData = [
         "_id": 10,
         "name": "3 Hot Chillies",
         "provider": "BNG",
-        "theme": ["Hot", "New", "Medium", "Hold and Win"],
+        "theme": ["Hot", "New", "Medium Volatility", "Hold and Win"],
         "image": "./images/game/games-icon/game-ex4.jpg",
         "url": "./gamedemo.html"
     },
@@ -167,7 +167,7 @@ let gamesData = [
         "_id": 11,
         "name": "777 Coins",
         "provider": "BNG",
-        "theme": ["High", "Hold and Win"],
+        "theme": ["High Volatility", "Hold and Win"],
         "image": "./images/game/games-icon/game-ex5.jpg",
         "url": "./gamedemo.html"
     },

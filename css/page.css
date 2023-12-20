@@ -13,7 +13,7 @@ body {
   overflow: hidden;
 }
 .swiper-container-pc .swiper-pagination {
-  width: 300px;
+  width: initial;
   padding: 4px 0 0 0;
   border-radius: 100vmax;
   bottom: 5%;
@@ -61,7 +61,13 @@ section.games .filter-area .theme-and-search .provider-and-theme ul li.icon {
 section.games .filter-area .theme-and-search .provider-and-theme ul li.icon p {
   display: inline-flex;
 }
-section.games .filter-area .theme-and-search .provider-and-theme ul li.icon figure {
+section.games
+  .filter-area
+  .theme-and-search
+  .provider-and-theme
+  ul
+  li.icon
+  figure {
   display: block;
   position: relative;
   background: url("../images/game/symbol/engine.svg") no-repeat;
@@ -71,10 +77,23 @@ section.games .filter-area .theme-and-search .provider-and-theme ul li.icon figu
   cursor: pointer;
   transition: opacity 0.3s;
 }
-section.games .filter-area .theme-and-search .provider-and-theme ul li.icon figure:hover {
+section.games
+  .filter-area
+  .theme-and-search
+  .provider-and-theme
+  ul
+  li.icon
+  figure:hover {
   opacity: 0.6;
 }
-section.games .filter-area .theme-and-search .provider-and-theme ul li.icon figure div {
+section.games
+  .filter-area
+  .theme-and-search
+  .provider-and-theme
+  ul
+  li.icon
+  figure
+  div {
   position: absolute;
   width: 30px;
   height: 30px;
@@ -83,7 +102,12 @@ section.games .filter-area .theme-and-search .provider-and-theme ul li.icon figu
   background: url("../images/game/symbol/click.svg") no-repeat;
   animation: click 2.5s infinite;
 }
-section.games .filter-area .theme-and-search .provider-and-theme ul li:nth-child(1)::after {
+section.games
+  .filter-area
+  .theme-and-search
+  .provider-and-theme
+  ul
+  li:nth-child(1)::after {
   content: "";
   display: inline-block;
   width: 2px;
@@ -127,7 +151,8 @@ section.games .filter-area form {
 section.games .filter-area form .all-options .provider-options {
   margin-bottom: 20px;
 }
-section.games .filter-area form .all-options .theme-options, section.games .filter-area form .all-options .provider-options {
+section.games .filter-area form .all-options .theme-options,
+section.games .filter-area form .all-options .provider-options {
   display: flex;
   align-items: center;
 }
@@ -147,13 +172,23 @@ section.games .filter-area form .all-options .filter-siders .filter-element {
   cursor: pointer;
   transition: border-color 0.3s;
 }
-section.games .filter-area form .all-options .filter-siders .filter-element.active {
+section.games
+  .filter-area
+  form
+  .all-options
+  .filter-siders
+  .filter-element.active {
   border: none;
   background-color: #00ffc7;
   color: #1c1c1c;
   font-weight: 500;
 }
-section.games .filter-area form .all-options .filter-siders .filter-element:hover {
+section.games
+  .filter-area
+  form
+  .all-options
+  .filter-siders
+  .filter-element:hover {
   border-color: #00ffc7;
 }
 section.games .filter-area form .all-options span {
@@ -200,7 +235,8 @@ section.games .filter-area form .all-options span {
 .games-area a {
   position: relative;
 }
-.games-area a::before, .games-area a::after {
+.games-area a::before,
+.games-area a::after {
   content: "";
   position: absolute;
   z-index: 5;
@@ -221,7 +257,8 @@ section.games .filter-area form .all-options span {
   border-bottom: 2px solid #00ffc7;
   border-right: 2px solid #00ffc7;
 }
-.games-area a:hover::before, .games-area a:hover::after {
+.games-area a:hover::before,
+.games-area a:hover::after {
   width: calc(100% + 14px);
   height: calc(100% + 14px);
   opacity: 1;
@@ -245,10 +282,9 @@ footer {
     grid-template-columns: repeat(4, 1fr);
     row-gap: 30px;
     -moz-column-gap: 30px;
-         column-gap: 30px;
+    column-gap: 30px;
   }
   .swiper-container-pc .swiper-pagination {
-    width: 250px;
     bottom: 10px;
   }
   .swiper-container-pc .swiper-pagination span {
@@ -279,7 +315,10 @@ footer {
     top: inherit;
     bottom: inherit;
   }
-  .slide-banner .swiper-container-mb .swiper-pagination .swiper-pagination-bullet {
+  .slide-banner
+    .swiper-container-mb
+    .swiper-pagination
+    .swiper-pagination-bullet {
     border-radius: 0;
     background-color: #00ffc7;
     width: 30px;
@@ -299,17 +338,36 @@ footer {
     order: -1;
     margin-left: 0;
   }
-  section.games .filter-area .theme-and-search .provider-and-theme ul li.icon p {
+  section.games
+    .filter-area
+    .theme-and-search
+    .provider-and-theme
+    ul
+    li.icon
+    p {
     display: none;
   }
-  section.games .filter-area .theme-and-search .provider-and-theme ul li.icon figure {
+  section.games
+    .filter-area
+    .theme-and-search
+    .provider-and-theme
+    ul
+    li.icon
+    figure {
     position: relative;
     display: block;
     width: 25px;
     height: 25px;
     background: url("../images/game/symbol/engine.svg") no-repeat;
   }
-  section.games .filter-area .theme-and-search .provider-and-theme ul li.icon figure div {
+  section.games
+    .filter-area
+    .theme-and-search
+    .provider-and-theme
+    ul
+    li.icon
+    figure
+    div {
     position: absolute;
     width: 25px;
     height: 25px;
@@ -324,7 +382,12 @@ footer {
   section.games .filter-area .theme-and-search .provider-and-theme ul li span {
     color: #00ffc7;
   }
-  section.games .filter-area .theme-and-search .provider-and-theme ul li:nth-child(1)::after {
+  section.games
+    .filter-area
+    .theme-and-search
+    .provider-and-theme
+    ul
+    li:nth-child(1)::after {
     display: none;
   }
   section.games .filter-area .theme-and-search .search-input input {
@@ -350,11 +413,18 @@ footer {
   section.games .filter-area form .all-options .provider-options {
     margin-bottom: 0.5em;
   }
-  section.games .filter-area form .all-options .provider-options, section.games .filter-area form .all-options .theme-options {
+  section.games .filter-area form .all-options .provider-options,
+  section.games .filter-area form .all-options .theme-options {
     align-items: start;
     flex-direction: column;
   }
-  section.games .filter-area form .all-options .theme-options .filter-siders .filter-element {
+  section.games
+    .filter-area
+    form
+    .all-options
+    .theme-options
+    .filter-siders
+    .filter-element {
     margin-bottom: 8px;
   }
   section.games .filter-area form .all-options .filter-siders {
@@ -366,7 +436,7 @@ footer {
     grid-template-columns: repeat(3, 1fr);
     row-gap: 20px;
     -moz-column-gap: 20px;
-         column-gap: 20px;
+    column-gap: 20px;
   }
 }
 @media screen and (max-width: 440px) {
@@ -378,4 +448,4 @@ footer {
   .slide-banner .swiper-container-mb {
     display: none;
   }
-}/*# sourceMappingURL=page.css.map */
+}
