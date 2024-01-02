@@ -10,19 +10,14 @@
   height: 100%;
   position: relative;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 .top_film .mask {
   width: 101%;
   height: 101%;
   position: absolute;
   top: 0;
-  background: radial-gradient(
-    ellipse at 50% 50%,
-    transparent 0%,
-    rgba(0, 0, 0, 0.9) 60%,
-    #000 100%
-  );
+  background: radial-gradient(ellipse at 50% 50%, transparent 0%, rgba(0, 0, 0, 0.9) 60%, #000 100%);
 }
 .top_film .text-content {
   position: absolute;
@@ -164,8 +159,7 @@ section.bng-introduce {
   padding: 0;
   padding-top: 80px;
   margin: 0 auto;
-  background: #0e0e0e url("../images/others/bng-introduce/valueBackground.jpg")
-    top center no-repeat;
+  background: #0e0e0e url("../images/others/bng-introduce/valueBackground.jpg") top center no-repeat;
   background-size: cover;
 }
 section.bng-introduce .bng-introduce-desc {
@@ -196,8 +190,7 @@ section.bng-introduce .bng-introduce-main {
 }
 section.bng-introduce .bng-introduce-main figure {
   position: absolute;
-  background: url("../images/others/bng-introduce/man.png") left bottom
-    no-repeat;
+  background: url("../images/others/bng-introduce/man.png") left bottom no-repeat;
   width: 100%;
   height: 714px;
   background-size: contain;
@@ -229,21 +222,11 @@ section.bng-introduce .bng-introduce-main .every-value .hexagon .eachValue {
   line-height: 1.2;
   text-shadow: 0 0 10px #000;
 }
-section.bng-introduce
-  .bng-introduce-main
-  .every-value
-  .hexagon
-  .eachValue
-  span {
+section.bng-introduce .bng-introduce-main .every-value .hexagon .eachValue span {
   font-size: 60px;
   color: #00ffa2;
 }
-section.bng-introduce
-  .bng-introduce-main
-  .every-value
-  .hexagon
-  .eachValue
-  strong {
+section.bng-introduce .bng-introduce-main .every-value .hexagon .eachValue strong {
   font-size: 84px;
   color: #00ffa2;
 }
@@ -252,43 +235,23 @@ section.bng-introduce .bng-introduce-main .every-value .hexagon .eachValue p {
   font-size: 20px;
   letter-spacing: 1px;
 }
-section.bng-introduce
-  .bng-introduce-main
-  .every-value
-  .hexagon
-  .eachValue:nth-child(1) {
+section.bng-introduce .bng-introduce-main .every-value .hexagon .eachValue:nth-child(1) {
   top: 50px;
   left: 30px;
 }
-section.bng-introduce
-  .bng-introduce-main
-  .every-value
-  .hexagon
-  .eachValue:nth-child(2) {
+section.bng-introduce .bng-introduce-main .every-value .hexagon .eachValue:nth-child(2) {
   top: 45px;
   left: 410px;
 }
-section.bng-introduce
-  .bng-introduce-main
-  .every-value
-  .hexagon
-  .eachValue:nth-child(3) {
+section.bng-introduce .bng-introduce-main .every-value .hexagon .eachValue:nth-child(3) {
   top: 150px;
   left: 592px;
 }
-section.bng-introduce
-  .bng-introduce-main
-  .every-value
-  .hexagon
-  .eachValue:nth-child(4) {
+section.bng-introduce .bng-introduce-main .every-value .hexagon .eachValue:nth-child(4) {
   top: 150px;
   left: 210px;
 }
-section.bng-introduce
-  .bng-introduce-main
-  .every-value
-  .hexagon
-  .eachValue:nth-child(5) {
+section.bng-introduce .bng-introduce-main .every-value .hexagon .eachValue:nth-child(5) {
   top: 380px;
   left: 592px;
 }
@@ -368,18 +331,10 @@ section.our-features .feature-content .feature-picture .pc .switch-content-pc {
   left: 10.5%;
   top: 6.5%;
 }
-section.our-features
-  .feature-content
-  .feature-picture
-  .pc
-  .switch-content-pc:nth-child(1) {
+section.our-features .feature-content .feature-picture .pc .switch-content-pc:nth-child(1) {
   z-index: 2;
 }
-section.our-features
-  .feature-content
-  .feature-picture
-  .pc
-  .switch-content-pc.gradually-dark {
+section.our-features .feature-content .feature-picture .pc .switch-content-pc.gradually-dark {
   filter: brightness(30%);
   transition: filter 500ms;
 }
@@ -399,18 +354,10 @@ section.our-features .feature-content .feature-picture .mb .switch-content-mb {
   left: 14%;
   width: 165px;
 }
-section.our-features
-  .feature-content
-  .feature-picture
-  .mb
-  .switch-content-mb:nth-child(1) {
+section.our-features .feature-content .feature-picture .mb .switch-content-mb:nth-child(1) {
   z-index: 2;
 }
-section.our-features
-  .feature-content
-  .feature-picture
-  .mb
-  .switch-content-mb.gradually-dark {
+section.our-features .feature-content .feature-picture .mb .switch-content-mb.gradually-dark {
   filter: brightness(30%);
   transition: filter 500ms;
 }
@@ -461,19 +408,10 @@ section.news .news-slides .swiper-news-container .swiper-wrapper .swiper-slide {
   border: 3px solid #333333;
   transition: border 0.3s;
 }
-section.news
-  .news-slides
-  .swiper-news-container
-  .swiper-wrapper
-  .swiper-slide:hover {
+section.news .news-slides .swiper-news-container .swiper-wrapper .swiper-slide:hover {
   border-color: #00ffc7;
 }
-section.news
-  .news-slides
-  .swiper-news-container
-  .swiper-wrapper
-  .swiper-slide
-  .date-tag {
+section.news .news-slides .swiper-news-container .swiper-wrapper .swiper-slide .date-tag {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -486,62 +424,29 @@ section.news
   top: -11px;
   right: 15px;
 }
-section.news
-  .news-slides
-  .swiper-news-container
-  .swiper-wrapper
-  .swiper-slide
-  .date-tag
-  span {
+section.news .news-slides .swiper-news-container .swiper-wrapper .swiper-slide .date-tag span {
   line-height: 1;
   display: block;
   margin-left: 5px;
   color: #000;
 }
-section.news
-  .news-slides
-  .swiper-news-container
-  .swiper-wrapper
-  .swiper-slide
-  .date-tag
-  span.date {
+section.news .news-slides .swiper-news-container .swiper-wrapper .swiper-slide .date-tag span.date {
   font-size: 28px;
   font-weight: bold;
 }
-section.news
-  .news-slides
-  .swiper-news-container
-  .swiper-wrapper
-  .swiper-slide
-  .date-tag
-  span.month {
+section.news .news-slides .swiper-news-container .swiper-wrapper .swiper-slide .date-tag span.month {
   font-weight: 600;
 }
-section.news
-  .news-slides
-  .swiper-news-container
-  .swiper-wrapper
-  .swiper-slide
-  h5 {
+section.news .news-slides .swiper-news-container .swiper-wrapper .swiper-slide h5 {
   color: #00ffc7;
   font-size: 26px;
   font-weight: normal;
   margin-bottom: 5px;
 }
-section.news
-  .news-slides
-  .swiper-news-container
-  .swiper-wrapper
-  .swiper-slide
-  img {
+section.news .news-slides .swiper-news-container .swiper-wrapper .swiper-slide img {
   margin-bottom: 5px;
 }
-section.news
-  .news-slides
-  .swiper-news-container
-  .swiper-wrapper
-  .swiper-slide
-  h6 {
+section.news .news-slides .swiper-news-container .swiper-wrapper .swiper-slide h6 {
   color: #fff;
   font-weight: 600;
   line-height: 1.6;
@@ -551,14 +456,9 @@ section.news
   -webkit-line-clamp: 1;
   overflow: hidden;
 }
-section.news
-  .news-slides
-  .swiper-news-container
-  .swiper-wrapper
-  .swiper-slide
-  p {
+section.news .news-slides .swiper-news-container .swiper-wrapper .swiper-slide p {
   width: 100%;
-  color: #9d9d9d;
+  color: #9D9D9D;
   font-size: 0.9rem;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -570,11 +470,7 @@ section.news .news-slides .swiper-news-container .swiper-pagination {
   top: inherit;
   bottom: inherit;
 }
-section.news
-  .news-slides
-  .swiper-news-container
-  .swiper-pagination
-  .swiper-pagination-bullet {
+section.news .news-slides .swiper-news-container .swiper-pagination .swiper-pagination-bullet {
   border-radius: 0;
   background-color: #00ffc7;
   width: 30px;
@@ -596,21 +492,13 @@ section.our-partner .slide {
   margin: 0 auto;
   overflow: hidden;
 }
-section.our-partner .slide::before,
-section.our-partner .slide::after {
+section.our-partner .slide::before, section.our-partner .slide::after {
   content: "";
   width: 100%;
   height: 2px;
   display: block;
   margin: 20px 0;
-  background: linear-gradient(
-    to right,
-    #00ffe9 0%,
-    #00ffc7 40%,
-    #b7ffee 55%,
-    #00ffc7 70%,
-    #00ffe9 100%
-  );
+  background: linear-gradient(to right, #00FFE9 0%, #00FFC7 40%, #B7FFEE 55%, #00FFC7 70%, #00FFE9 100%);
   background-size: 200% 100%;
   animation: linearGradient 4s infinite both;
 }
@@ -662,11 +550,7 @@ section.our-partner .partner-logos .swiper-slide:hover {
   }
 }
 @keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
+  0%, 20%, 50%, 80%, 100% {
     transform: translateY(0);
   }
   40% {
@@ -712,19 +596,10 @@ section.our-partner .partner-logos .swiper-slide:hover {
   section.bng-introduce .bng-introduce-main .every-value {
     left: 50%;
   }
-  section.news
-    .news-slides
-    .swiper-news-container
-    .swiper-wrapper
-    .swiper-slide {
+  section.news .news-slides .swiper-news-container .swiper-wrapper .swiper-slide {
     padding: 10px;
   }
-  section.news
-    .news-slides
-    .swiper-news-container
-    .swiper-wrapper
-    .swiper-slide
-    h5 {
+  section.news .news-slides .swiper-news-container .swiper-wrapper .swiper-slide h5 {
     font-size: 1.3rem;
   }
 }
@@ -743,12 +618,7 @@ section.our-partner .partner-logos .swiper-slide:hover {
     transform: scale(0.85);
     left: 35%;
   }
-  section.news
-    .news-slides
-    .swiper-news-container
-    .swiper-wrapper
-    .swiper-slide
-    h5 {
+  section.news .news-slides .swiper-news-container .swiper-wrapper .swiper-slide h5 {
     font-size: 1.1rem;
   }
 }
@@ -792,11 +662,7 @@ section.our-partner .partner-logos .swiper-slide:hover {
   section.our-features .feature-content .feature-picture .pc {
     width: 600px;
   }
-  section.our-features
-    .feature-content
-    .feature-picture
-    .pc
-    .switch-content-pc {
+  section.our-features .feature-content .feature-picture .pc .switch-content-pc {
     left: 10%;
     top: 6%;
   }
@@ -842,11 +708,7 @@ section.our-partner .partner-logos .swiper-slide:hover {
   section.our-features .feature-content .feature-picture .pc {
     width: 500px;
   }
-  section.our-features
-    .feature-content
-    .feature-picture
-    .pc
-    .switch-content-pc {
+  section.our-features .feature-content .feature-picture .pc .switch-content-pc {
     left: 10%;
     top: 5%;
   }
@@ -855,11 +717,7 @@ section.our-partner .partner-logos .swiper-slide:hover {
     height: 100%;
     left: 60%;
   }
-  section.our-features
-    .feature-content
-    .feature-picture
-    .mb
-    .switch-content-mb {
+  section.our-features .feature-content .feature-picture .mb .switch-content-mb {
     top: 5%;
     width: 130px;
   }
@@ -937,75 +795,43 @@ section.our-partner .partner-logos .swiper-slide:hover {
   section.bng-introduce .bng-introduce-main .every-value .hexagon .eachValue {
     width: 80px;
   }
-  section.bng-introduce
-    .bng-introduce-main
-    .every-value
-    .hexagon
-    .eachValue
-    span {
+  section.bng-introduce .bng-introduce-main .every-value .hexagon .eachValue span {
     font-size: 2rem;
   }
-  section.bng-introduce
-    .bng-introduce-main
-    .every-value
-    .hexagon
-    .eachValue
-    strong {
+  section.bng-introduce .bng-introduce-main .every-value .hexagon .eachValue strong {
     font-size: 2.2rem;
   }
   section.bng-introduce .bng-introduce-main .every-value .hexagon .eachValue p {
     font-size: 14px;
     letter-spacing: 0;
   }
-  section.bng-introduce
-    .bng-introduce-main
-    .every-value
-    .hexagon
-    .eachValue:nth-child(1) {
+  section.bng-introduce .bng-introduce-main .every-value .hexagon .eachValue:nth-child(1) {
     top: 25px;
     left: 18px;
   }
-  section.bng-introduce
-    .bng-introduce-main
-    .every-value
-    .hexagon
-    .eachValue:nth-child(2) {
+  section.bng-introduce .bng-introduce-main .every-value .hexagon .eachValue:nth-child(2) {
     top: 25px;
     left: 195px;
   }
-  section.bng-introduce
-    .bng-introduce-main
-    .every-value
-    .hexagon
-    .eachValue:nth-child(3) {
+  section.bng-introduce .bng-introduce-main .every-value .hexagon .eachValue:nth-child(3) {
     top: 70px;
     left: 285px;
   }
-  section.bng-introduce
-    .bng-introduce-main
-    .every-value
-    .hexagon
-    .eachValue:nth-child(4) {
+  section.bng-introduce .bng-introduce-main .every-value .hexagon .eachValue:nth-child(4) {
     top: 65px;
     left: 105px;
   }
-  section.bng-introduce
-    .bng-introduce-main
-    .every-value
-    .hexagon
-    .eachValue:nth-child(5) {
+  section.bng-introduce .bng-introduce-main .every-value .hexagon .eachValue:nth-child(5) {
     top: 170px;
     left: 285px;
   }
   section.our-features .our-features-desc {
     padding-top: 20px;
   }
-  section.our-features .feature-icons,
-  section.our-features .feature-desc {
+  section.our-features .feature-icons, section.our-features .feature-desc {
     display: none;
   }
-  section.our-features .feature-content .feature-picture .pc,
-  section.our-features .feature-content .feature-picture .mb {
+  section.our-features .feature-content .feature-picture .pc, section.our-features .feature-content .feature-picture .mb {
     display: none;
   }
   section.our-features .feature-slide-mb .content {
@@ -1034,10 +860,7 @@ section.our-partner .partner-logos .swiper-slide:hover {
     border-left: 1px solid #00ffc7;
     padding-left: 10px;
   }
-  section.our-features
-    .feature-slide-mb
-    .swiper-pagination
-    .swiper-pagination-bullet {
+  section.our-features .feature-slide-mb .swiper-pagination .swiper-pagination-bullet {
     border-radius: 0;
     background-color: #00ffc7;
     width: 30px;
@@ -1046,48 +869,21 @@ section.our-partner .partner-logos .swiper-slide:hover {
   section.news .news-slides .swiper-news-container {
     width: 95%;
   }
-  section.news
-    .news-slides
-    .swiper-news-container
-    .swiper-wrapper
-    .swiper-slide:hover {
+  section.news .news-slides .swiper-news-container .swiper-wrapper .swiper-slide:hover {
     border-color: initial;
   }
-  section.news
-    .news-slides
-    .swiper-news-container
-    .swiper-wrapper
-    .swiper-slide
-    .date-tag {
+  section.news .news-slides .swiper-news-container .swiper-wrapper .swiper-slide .date-tag {
     width: 48px;
     height: 48px;
   }
-  section.news
-    .news-slides
-    .swiper-news-container
-    .swiper-wrapper
-    .swiper-slide
-    .date-tag
-    span.date {
+  section.news .news-slides .swiper-news-container .swiper-wrapper .swiper-slide .date-tag span.date {
     font-size: 24px;
   }
-  section.news
-    .news-slides
-    .swiper-news-container
-    .swiper-wrapper
-    .swiper-slide
-    .date-tag
-    span.month {
+  section.news .news-slides .swiper-news-container .swiper-wrapper .swiper-slide .date-tag span.month {
     font-weight: 600;
     font-size: 14px;
   }
-  section.news
-    .news-slides
-    .swiper-news-container
-    .swiper-wrapper
-    .swiper-slide
-    a
-    h5 {
+  section.news .news-slides .swiper-news-container .swiper-wrapper .swiper-slide a h5 {
     font-size: 14px;
     font-weight: bold;
   }
@@ -1097,8 +893,7 @@ section.our-partner .partner-logos .swiper-slide:hover {
   section.our-partner h3 {
     font-size: 28px;
   }
-  section.our-partner .slide::before,
-  section.our-partner .slide::after {
+  section.our-partner .slide::before, section.our-partner .slide::after {
     margin: 10px 0;
   }
 }
@@ -1108,13 +903,7 @@ section.our-partner .partner-logos .swiper-slide:hover {
   }
 }
 @media screen and (max-width: 375px) {
-  section.news
-    .news-slides
-    .swiper-news-container
-    .swiper-wrapper
-    .swiper-slide
-    a
-    h5 {
+  section.news .news-slides .swiper-news-container .swiper-wrapper .swiper-slide a h5 {
     font-size: 12px;
   }
 }
@@ -1133,54 +922,29 @@ section.our-partner .partner-logos .swiper-slide:hover {
   section.bng-introduce .bng-introduce-main .every-value .hexagon .eachValue {
     width: 60px;
   }
-  section.bng-introduce
-    .bng-introduce-main
-    .every-value
-    .hexagon
-    .eachValue
-    strong {
+  section.bng-introduce .bng-introduce-main .every-value .hexagon .eachValue strong {
     font-size: 1.6rem;
   }
   section.bng-introduce .bng-introduce-main .every-value .hexagon .eachValue p {
     font-size: 12px;
   }
-  section.bng-introduce
-    .bng-introduce-main
-    .every-value
-    .hexagon
-    .eachValue:nth-child(1) {
+  section.bng-introduce .bng-introduce-main .every-value .hexagon .eachValue:nth-child(1) {
     top: 18px;
     left: 12px;
   }
-  section.bng-introduce
-    .bng-introduce-main
-    .every-value
-    .hexagon
-    .eachValue:nth-child(2) {
+  section.bng-introduce .bng-introduce-main .every-value .hexagon .eachValue:nth-child(2) {
     top: 18px;
     left: 142px;
   }
-  section.bng-introduce
-    .bng-introduce-main
-    .every-value
-    .hexagon
-    .eachValue:nth-child(3) {
+  section.bng-introduce .bng-introduce-main .every-value .hexagon .eachValue:nth-child(3) {
     top: 50px;
     left: 210px;
   }
-  section.bng-introduce
-    .bng-introduce-main
-    .every-value
-    .hexagon
-    .eachValue:nth-child(4) {
+  section.bng-introduce .bng-introduce-main .every-value .hexagon .eachValue:nth-child(4) {
     top: 40px;
     left: 80px;
   }
-  section.bng-introduce
-    .bng-introduce-main
-    .every-value
-    .hexagon
-    .eachValue:nth-child(5) {
+  section.bng-introduce .bng-introduce-main .every-value .hexagon .eachValue:nth-child(5) {
     top: 130px;
     left: 210px;
   }
@@ -1194,4 +958,4 @@ section.our-partner .partner-logos .swiper-slide:hover {
   .our-features .feature-slide-mb {
     display: none !important;
   }
-}
+}/*# sourceMappingURL=index.css.map */

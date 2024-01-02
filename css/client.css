@@ -53,8 +53,7 @@ section.roadmap .games ul li .tag span {
 section.roadmap .games ul li figure {
   box-shadow: 0 1em 1.2em -1em #000;
 }
-section.roadmap .games ul li:hover,
-section.roadmap .games ul li:focus {
+section.roadmap .games ul li:hover, section.roadmap .games ul li:focus {
   box-shadow: 0 1.5em 1.2em -1em #000;
   transform: translateY(-0.5em);
 }
@@ -197,8 +196,7 @@ section.documentation .all-docs .docs a {
   text-align: center;
   transition: all 0.25s;
 }
-section.documentation .all-docs .docs a:hover,
-section.documentation .all-docs .docs a:focus {
+section.documentation .all-docs .docs a:hover, section.documentation .all-docs .docs a:focus {
   color: #0e0e0e;
   box-shadow: inset 0 0 0 2em #7a7a7a;
   border-color: transparent;
@@ -223,11 +221,7 @@ section.support-materials .docs-download-area .filter-search-bar .filter {
   display: flex;
   padding-top: 5px;
 }
-section.support-materials
-  .docs-download-area
-  .filter-search-bar
-  .filter
-  .select-option {
+section.support-materials .docs-download-area .filter-search-bar .filter .select-option {
   color: #fff;
   background-color: transparent;
   border: 1px solid #7a7a7a;
@@ -238,21 +232,13 @@ section.support-materials
   cursor: pointer;
   transition: border-color 0.3s;
 }
-section.support-materials
-  .docs-download-area
-  .filter-search-bar
-  .filter
-  .select-option.active {
+section.support-materials .docs-download-area .filter-search-bar .filter .select-option.active {
   border: none;
   background-color: #00ffc7;
   color: #1c1c1c;
   font-weight: 500;
 }
-section.support-materials
-  .docs-download-area
-  .filter-search-bar
-  .filter
-  .select-option:hover {
+section.support-materials .docs-download-area .filter-search-bar .filter .select-option:hover {
   border-color: #00ffc7;
 }
 section.support-materials .docs-download-area .filter-search-bar .filter span {
@@ -262,11 +248,7 @@ section.support-materials .docs-download-area .filter-search-bar .filter span {
 section.support-materials .docs-download-area .filter-search-bar .search-input {
   position: relative;
 }
-section.support-materials
-  .docs-download-area
-  .filter-search-bar
-  .search-input
-  input {
+section.support-materials .docs-download-area .filter-search-bar .search-input input {
   background-color: transparent;
   outline: none;
   border: 2px solid #7a7a7a;
@@ -274,11 +256,7 @@ section.support-materials
   padding: 5px 28px 5px 10px;
   color: #00ffc7;
 }
-section.support-materials
-  .docs-download-area
-  .filter-search-bar
-  .search-input
-  .search-btn {
+section.support-materials .docs-download-area .filter-search-bar .search-input .search-btn {
   position: absolute;
   right: 6px;
   border: none;
@@ -303,37 +281,19 @@ section.support-materials .docs-download-area .each-docs-download li span {
   color: #fff;
   display: block;
 }
-section.support-materials
-  .docs-download-area
-  .each-docs-download
-  li
-  span.docs-name {
+section.support-materials .docs-download-area .each-docs-download li span.docs-name {
   white-space: nowrap;
   margin-right: 10px;
 }
-section.support-materials
-  .docs-download-area
-  .each-docs-download
-  li
-  span.dashed {
+section.support-materials .docs-download-area .each-docs-download li span.dashed {
   width: 100%;
   height: 1px;
-  background: linear-gradient(
-    to left,
-    transparent 0%,
-    transparent 50%,
-    #575757 50%,
-    #575757 100%
-  );
+  background: linear-gradient(to left, transparent 0%, transparent 50%, #575757 50%, #575757 100%);
   background-size: 5px 1px;
   background-repeat: repeat-x;
   margin-right: 10px;
 }
-section.support-materials
-  .docs-download-area
-  .each-docs-download
-  li
-  span.download-icon {
+section.support-materials .docs-download-area .each-docs-download li span.download-icon {
   width: 28px;
   height: 28px;
   background: url("../images/client-hub/symbol/download.svg") no-repeat;
@@ -342,11 +302,7 @@ section.support-materials
   flex-shrink: 0;
   transition: opacity 0.3s;
 }
-section.support-materials
-  .docs-download-area
-  .each-docs-download
-  li
-  span.download-icon:hover {
+section.support-materials .docs-download-area .each-docs-download li span.download-icon:hover {
   opacity: 0.5;
 }
 
@@ -409,11 +365,7 @@ footer {
   }
 }
 @media screen and (max-width: 960px) {
-  section.support-materials
-    .docs-download-area
-    .filter-search-bar
-    .filter
-    .select-option {
+  section.support-materials .docs-download-area .filter-search-bar .filter .select-option {
     font-size: 14px;
     padding: 0.2em 0.6em;
   }
@@ -433,8 +385,7 @@ footer {
   section.roadmap .games ul li .tag span {
     font-size: 16px;
   }
-  section.roadmap .swiper-button-next,
-  section.roadmap .swiper-button-prev {
+  section.roadmap .swiper-button-next, section.roadmap .swiper-button-prev {
     display: none;
   }
   .product-popup .container {
@@ -482,34 +433,19 @@ footer {
     flex-wrap: wrap;
     margin-bottom: 5px;
   }
-  section.support-materials
-    .docs-download-area
-    .filter-search-bar
-    .filter
-    .select-option {
+  section.support-materials .docs-download-area .filter-search-bar .filter .select-option {
     margin-bottom: 10px;
     padding: 0.25em 0.8em;
   }
-  section.support-materials
-    .docs-download-area
-    .filter-search-bar
-    .search-input {
+  section.support-materials .docs-download-area .filter-search-bar .search-input {
     width: 100%;
   }
-  section.support-materials
-    .docs-download-area
-    .filter-search-bar
-    .search-input
-    input {
+  section.support-materials .docs-download-area .filter-search-bar .search-input input {
     width: 100%;
     padding: 10px 28px 10px 10px;
     font-size: 16px;
   }
-  section.support-materials
-    .docs-download-area
-    .filter-search-bar
-    .search-input
-    .search-btn {
+  section.support-materials .docs-download-area .filter-search-bar .search-input .search-btn {
     right: 10px;
   }
 }
@@ -517,4 +453,4 @@ footer {
   section.support-materials .docs-download-area .each-docs-download li span {
     font-size: 14px;
   }
-}
+}/*# sourceMappingURL=client.css.map */

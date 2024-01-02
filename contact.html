@@ -134,7 +134,7 @@
         <div class="all-inputs">
           <div class="input name">
             <label>Name *</label>
-            <input type="text" name="name" />
+            <input type="text" name="name" required />
             <span class="alert">This field cannot be left blank</span>
           </div>
           <div class="input phone">
@@ -143,7 +143,7 @@
           </div>
           <div class="input subject">
             <label for="sub-select">Subject *</label>
-            <select name="subjects" id="sub-select">
+            <select name="subjects" id="sub-select" required>
               <option value="" disabled selected></option>
               <option value="business-cooperation">Business cooperation</option>
               <option value="game-issues">Game issues</option>
@@ -155,12 +155,18 @@
           </div>
           <div class="input company">
             <label for="form-company">Company *</label>
-            <input type="text" name="company" id="form-company" />
+            <input type="text" name="company" id="form-company" required />
             <span class="alert">This field cannot be left blank</span>
           </div>
           <div class="input email">
             <label for="form-email">E-mail *</label>
-            <input type="email" name="email" value="" id="form-email" />
+            <input
+              type="email"
+              name="email"
+              value=""
+              id="form-email"
+              required
+            />
             <span class="alert">This field cannot be left blank</span>
           </div>
           <div class="input message">
@@ -171,6 +177,7 @@
               cols="30"
               rows="10"
               data-lenis-prevent
+              required
             ></textarea>
             <span class="alert">This field cannot be left blank</span>
           </div>

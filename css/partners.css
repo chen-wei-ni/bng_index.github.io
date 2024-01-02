@@ -30,7 +30,7 @@ body {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   -moz-column-gap: 20px;
-  column-gap: 20px;
+       column-gap: 20px;
   row-gap: 20px;
 }
 .partners-logo a {
@@ -78,4 +78,4 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 20px;
   }
-}
+}/*# sourceMappingURL=partners.css.map */
